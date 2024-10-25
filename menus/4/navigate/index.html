@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<!--begin::Head-->
+<head>
+<title>Jyanam LMS</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport"/>
+<link href="/static/assets/media/logos/favicon.ico" rel="shortcut icon"/>
+<link href="..\..\..\static\js\manifest.json" rel="manifest"/>
+<!--begin::Fonts(mandatory for all pages)-->
+<link href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" rel="stylesheet">
+<!--end::Fonts-->
+<link href="..\..\..\static\media\student_dashboard\jnyanam_brand_logo.svg" rel="icon" sizes="196x196" type="image/svg"/>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet"/>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<!--begin::Vendor Stylesheets(used for this page only)-->
+<!--end::Global Stylesheets Bundle-->
+<!--begin::Custom Stylesheets-->
+<link href="..\..\..\static\css\student_dashboard\themeforest_student_dashboard_base.css" rel="stylesheet" type="text/css">
+<!--end::Custom Stylesheets-->
+<script>// Frame-busting to prevent site from being loaded within a frame without permission (click-jacking) if (window.top != window.self) { window.top.location.replace(window.self.location.href); }</script>
+</link></link></head>
+<!--end::Head-->
+<!--begin::Body-->
+<body>
+<!--begin::Navbar-->
+<nav class="navbar">
+<div class="logo">
+<a href="..\..\../index.html">
+<img alt="Logo" src="..\..\..\static\media\student_dashboard\New_orange_design\Jnyanam with logo 1.svg"/>
+</a>
+</div>
+<button class="toggle-button" id="toggle-button">
+<img alt="Toggle Menu" src="..\..\..\static\media\navbar-icons\general.svg"/>
+</button>
+<ul id="icon-list" style="margin-left: auto;">
+<li>
+<a href="..\..\../index.html">
+<img alt="Notification Icon" src="..\..\..\static\media\student_dashboard\New_orange_design\home-new.svg" style="width: 25px; height: auto;"/>
+</a>
+</li>
+<li>
+<a href="#/index.html">
+<img alt="Notification Icon" src="..\..\..\static\media\student_dashboard\New_orange_design\notification-new.svg"/>
+</a>
+</li>
+<li>
+<a href="#/index.html">
+<img alt="Notification Icon" src="..\..\..\static\media\student_dashboard\New_orange_design\mic-new.svg"/>
+</a>
+</li>
+<li>
+<a href="#/index.html">
+<img alt="language Icon" class="language-icon" src="..\..\..\static\media\student_dashboard\New_orange_design\language-new.svg" style="width: 25px;"/>
+</a>
+</li>
+<li>
+<a href="#/index.html" id="icon-trigger">
+<img alt="Notification Icon" src="..\..\..\static\media\student_dashboard\New_orange_design\devices-new.svg" style="width: 25px; height: auto;"/>
+</a>
+<div class="dropdown-card" id="dropdown-card">
+<h2 class="dropdown-title">Install Jnyanam App</h2>
+<br/>
+<img alt="QR Code" class="dropdown-image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXIAAAFyAQAAAADAX2ykAAAClElEQVR4nO2bX4rjMAyHP60D85hAD9CjODfYIw17pLlBfZQeYCB+LDhoH/yn7c7u7AykpgHpIU2a7+EHQpYsK6J8x8KPb+FgvPHGG2+88cb/i5diAzIDhHZHrO/mjnqM34of8o8/AcQDwDoAq2gQUHAJAOmjx/jH8LFGaJic4hengFOZAREZeusxfht++PBPHBKMCfF/2zo9m37jP7c//athbnfikhL76jF+W776d1QgljSrAML4Lvi38thJj/EP4YOIiEyAX0DmOIA/vyiw5vK5rx7jN+Jz/F4jVImraDgmNExICex+eox/BC8yXctkpzKzCuBy/ObonjvqMX4rHlVVxS8AoypeVfVUX6guFcwvnk2/8V/jxwT+POTWFV5Ta2K57PPOeozfhi/5NwhkJzMuiH+b8h2wipaeVg89xm/Ll2X4NCbyWuw1oSdcXqRhTKhqqtyz6Tf+P6bNii8Xp3l95s7Jln93yd/Eb+06V2uP1efm3/3xOa8Ko1NhvORcq+Hn+6BhcpQkPF6sv7FPvu6PcoXs6mXUdkmU7Gzxu0O++BecljJqaVm35V+vln93yrf6KlGaHHeevp4Em393zceXm7VY5jggcrwI4XgRVbX8u1P+Zn0mh+5C3f+OrWt1bVw+m37jP7eb86N66quI11XwZ8mDWZKns7roMX5bvu6PsrmkRIEgoOGYBoiHRJAyZPd8+o3/Eu/rWZHIBGVprjm5JOaeeozfmG/zk141T03mrkYQkVpY99Rj/GN4/TWBnqKIvC6U1sYptnH3Z9dv/L19mI/1C+B1HZR4aO0s2x/tnB/L1Eb5SKXuf+X1PECYuusxfhu+7X+B0qYqtVQpslp9Zf3nPfJi33cbb7zxxhtvfHf+NyTykkBB4tP8AAAAAElFTkSuQmCC"/>
+<br/>
+<button class="install-app-btn">Install app</button>
+</div>
+</li>
+<li>
+<a class="profile-icon-trigger" href="#/index.html">
+<img alt="Profile Icon" class="profile-icon" src="..\..\..\static\media\student_dashboard\profile_icon.svg"/>
+</a>
+</li>
+</ul>
+</nav>
+<!--end::Navbar-->
+<!-- Modal Structure -->
+<div class="modal-overlay" id="profileModal">
+<div class="modal-box">
+<form action="/logout/" method="POST">
+<input name="csrfmiddlewaretoken" type="hidden" value="jZAl1tUa1OaYdUT6wSJZhKBn9liGCf9U0i8plcUkg6DtTLQvyDOGizVqPEcp0xY7"/>
+<div class="edit-button">
+<a href="/accounts/login//index.html"></a>
+<button>Sign out</button>
+</div>
+<div class="modal-content">
+<img alt="default image" class="profile-image" src="..\..\..\static\media\avatars\300-1.jpg"/>
+<h4></h4>
+<p class="role"></p>
+<div class="info-container">
+<div class="info-item">
+<img alt="Email Icon" class="info-icon" src="..\..\..\static\media\student_dashboard\New_orange_design\communication.svg"/>
+<span></span>
+</div>
+<hr class="info-separator"/>
+<div class="info-item">
+<img alt="Password Icon" class="info-icon" src="..\..\..\static\media\student_dashboard\New_orange_design\users.svg"/>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+<!-- End::Modal Structure -->
+<div class="icon-box" id="icon-box">
+<!-- Home Section -->
+<a href="..\..\../index.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: inherit; width: 100%;">
+<div style="display: flex; align-items: center;">
+<img alt="Home Icon" src="..\..\..\static\media\student_dashboard\New_orange_design\home-new.svg" style="height: 25px; margin-right: 8px;"/>
+<h3 class="notification-text" style="margin: 0;">Home</h3>
+</div>
+</a>
+<div class="custom-line"></div>
+<!-- Notification Section -->
+<a href="#/index.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: inherit; width: 100%;">
+<div style="display: flex; align-items: center;">
+<img alt="Notification Icon" src="..\..\..\static\media\student_dashboard\New_orange_design\notification-new.svg" style="height: 30px; margin-right: 8px; padding-bottom: 4px;"/>
+<h3 class="notification-text">Notification</h3>
+</div>
+<img alt="Arrow Icon" src="..\..\..\static\media\student_dashboard\New_orange_design\arrows.svg" style="height: 20px;"/>
+</a>
+<div class="custom-line"></div>
+<!-- Microphone Section -->
+<a href="#/index.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: inherit; width: 100%;">
+<div style="display: flex; align-items: center;">
+<img alt="Microphone Icon" class="microphone-icon" src="..\..\..\static\media\student_dashboard\New_orange_design\mic-new.svg" style="height: 30px; margin-right: 8px; padding-bottom: 4px;"/>
+<h3 class="notification-text">Microphone</h3>
+</div>
+</a>
+<div class="custom-line"></div>
+<!-- Language Section -->
+<a href="#/index.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: inherit; width: 100%;">
+<div style="display: flex; align-items: center;">
+<img alt="Language Icon" class="language-icon" src="..\..\..\static\media\student_dashboard\New_orange_design\language-new.svg" style="height: 30px; margin-right: 8px; padding-bottom: 4px;"/>
+<h3 class="notification-text">Language</h3>
+</div>
+<img alt="Arrow Icon" src="..\..\..\static\media\student_dashboard\New_orange_design\arrows.svg" style="height: 20px;"/>
+</a>
+<div class="custom-line"></div>
+<!-- Install App Section -->
+<a href="#/index.html" id="install-app" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: inherit; width: 100%;">
+<div style="display: flex; align-items: center;">
+<img alt="Install App Icon" src="..\..\..\static\media\student_dashboard\New_orange_design\devices-new.svg" style="height: 25px; margin-right: 8px;"/>
+<h3 class="notification-text">Install app</h3>
+</div>
+<img alt="Arrow Icon" src="..\..\..\static\media\student_dashboard\New_orange_design\arrows.svg" style="height: 20px;"/>
+</a>
+<!-- Hidden card that will appear on click -->
+<div class="install-app-card" id="install-app-card">
+<!-- Back Option -->
+<button class="back-button" id="back-button">←</button>
+<h2>Install Jnyanam App</h2>
+<img alt="QR Code" class="dropdown-image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXIAAAFyAQAAAADAX2ykAAAClElEQVR4nO2bX4rjMAyHP60D85hAD9CjODfYIw17pLlBfZQeYCB+LDhoH/yn7c7u7AykpgHpIU2a7+EHQpYsK6J8x8KPb+FgvPHGG2+88cb/i5diAzIDhHZHrO/mjnqM34of8o8/AcQDwDoAq2gQUHAJAOmjx/jH8LFGaJic4hengFOZAREZeusxfht++PBPHBKMCfF/2zo9m37jP7c//athbnfikhL76jF+W776d1QgljSrAML4Lvi38thJj/EP4YOIiEyAX0DmOIA/vyiw5vK5rx7jN+Jz/F4jVImraDgmNExICex+eox/BC8yXctkpzKzCuBy/ObonjvqMX4rHlVVxS8AoypeVfVUX6guFcwvnk2/8V/jxwT+POTWFV5Ta2K57PPOeozfhi/5NwhkJzMuiH+b8h2wipaeVg89xm/Ll2X4NCbyWuw1oSdcXqRhTKhqqtyz6Tf+P6bNii8Xp3l95s7Jln93yd/Eb+06V2uP1efm3/3xOa8Ko1NhvORcq+Hn+6BhcpQkPF6sv7FPvu6PcoXs6mXUdkmU7Gzxu0O++BecljJqaVm35V+vln93yrf6KlGaHHeevp4Em393zceXm7VY5jggcrwI4XgRVbX8u1P+Zn0mh+5C3f+OrWt1bVw+m37jP7eb86N66quI11XwZ8mDWZKns7roMX5bvu6PsrmkRIEgoOGYBoiHRJAyZPd8+o3/Eu/rWZHIBGVprjm5JOaeeozfmG/zk141T03mrkYQkVpY99Rj/GN4/TWBnqKIvC6U1sYptnH3Z9dv/L19mI/1C+B1HZR4aO0s2x/tnB/L1Eb5SKXuf+X1PECYuusxfhu+7X+B0qYqtVQpslp9Zf3nPfJi33cbb7zxxhtvfHf+NyTykkBB4tP8AAAAAElFTkSuQmCC" style="width: 90%; height: 40%; margin: 0 auto; display: block;"/>
+<br/>
+<button class="install-app-btn">Install app</button>
+</div>
+<div class="custom-line"></div>
+<!-- Profile Section -->
+<!-- Profile Section with Modal Trigger -->
+<a class="profile-icon-trigger-1" href="#/index.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: inherit; width: 100%;">
+<div style="display: flex; align-items: center;">
+<img alt="Profile Icon" src="..\..\..\static\media\student_dashboard\profile_icon.svg" style="height: 30px; margin-right: 8px; padding-bottom: 3px; padding-top: 3px;"/>
+<h3 class="notification-text">Profile</h3>
+</div>
+<img alt="Arrow Icon" src="..\..\..\static\media\student_dashboard\New_orange_design\arrows.svg" style="height: 20px;"/>
+</a>
+</div>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="..\..\..\static\css\student_dashboard\themeforest_navigate_menu_detail.css" rel="stylesheet" type="text/css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<div class="menu-main-content">
+<div class="second-navigation-bar">
+<div class="menu-nav-left">
+<div class="back-button-1">
+<a class="back-button" href="..\..\1\navigate/index.html">
+<img alt="Back" class="back-icon" src="..\..\..\static\media\student_dashboard\New_orange_design\backbutton.svg"/>
+</a>
+</div>
+<span class="nav-text">
+<!-- Breadcrumb navigation dynamically generated -->
+<a href="..\..\../index.html">Home</a> /
+                
+                <span class="">
+<a href="..\..\1\navigate/index.html">
+                        Student
+                    </a> /
+                    
+                </span>
+<span class="span-whitespace">
+                    
+                    January
+                    
+                </span>
+</span>
+</div>
+<!-- Right side with current date -->
+<div class="menu-nav-right">
+<span class="nav-date" id="current-date"></span>
+</div>
+</div>
+<div class="card-container">
+<link href="..\..\..\static\css\student_dashboard\partials\_themeforest_navigate_course_card.css" rel="stylesheet" type="text/css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;display=swap" rel="stylesheet"/>
+<style>
+</style>
+<div class="individual-course-card container-fluid wrapper">
+<div class="course-card-content">
+<div class="course-card-header">
+<p class="course-card-title-2">Week 1</p>
+<p class="course-card-description" title="Week 1">
+                Week 1
+            </p>
+<img alt="Course Thumbnail" class="course-default-thumbnail-mobile img-fluid" src="..\..\..\static\media\student_dashboard\course_card\default-thumbnail-mobile.svg"/>
+<div class="course-card-icons">
+<span class="icon"><img alt="Icon 4" id="videos" src="..\..\..\static\media\student_dashboard\course_card\video-icon.svg">
+<p class="video-course-icon">Video
+                        (7)
+                    </p>
+</img></span>
+<span class="icon">
+<img alt="Icon 3" id="files" src="..\..\..\static\media\student_dashboard\course_card\file-icon.svg"/>
+<p class="file-course-icon">File(3)<p>
+</p></p></span>
+<span class="icon markdown_icon">
+<img alt="Icon 2" id="markdown_contents" src="..\..\..\static\media\student_dashboard\course_card\markdown-icon.svg"/>
+<p class="markdown-course-icon">Markdown(0)</p>
+</span>
+<span class="icon assessments_icon"><img alt="Icon 1" id="assessments" src="..\..\..\static\media\student_dashboard\course_card\assessments-icon.svg"/>
+<p class="assessments-course-icon">Assessments
+                            (3)</p>
+</span>
+</div>
+</div>
+<div class="course-card-lists">
+<div class="prerequisite-courses">
+<div class="prerequisites-title">
+<span class="exclamation-mark">
+<img alt="Exclamation-Mark" class="prerequisite-Exclamation-Mark" src="..\..\..\static\media\student_dashboard\course_card\exclamation-mark.svg"/>
+</span>
+                    Prerequisites
+                    <span class="prerequisite-arrow-icon" onclick="toggleContent()">
+<!-- <i class="fas fa-chevron-down arrow-icon"></i> -->
+</span>
+</div>
+<ul>
+<div class="mandatory-course hidden-content">
+<span class="mandatory-title">Mandatory</span>
+<hr/>
+<li><span class="mandatory-course-title">No mandatory course available.</span></li>
+</div>
+<div class="optional-course hidden-content">
+<span class="optional-title">Optional</span>
+<hr/>
+<li>
+<img alt="Incomplete icon" class="optional-incomplete-icon" src="..\..\..\static\media\student_dashboard\course_card\incomplete-icon.svg"/>
+<span class="optional-course-title">Week 1</span>
+</li>
+</div>
+</ul>
+<div class="divider">
+</div>
+</div>
+<div class="chapters-list">
+<div class="chapter-heading">
+<span class="chapter-header-icon">
+<img alt="Chapter-icon" src="..\..\..\static\media\student_dashboard\course_card\chapter-icon.svg"/>
+</span>
+                    Chapters
+                    <span class="chapter-icon" onclick="toggleChapterContent()">
+<!-- <i class="fas fa-chevron-down arrow-icon-2"></i> -->
+</span>
+</div>
+<div class="chapter-container hidden-chapter" style="margin-top:-5px">
+<ul>
+<li>
+<img alt="Incomplete Icon" class="incomplete-icon" src="..\..\..\static\media\student_dashboard\course_card\incomplete-icon.svg"/>
+<div class="chapter-title">
+                                Monday
+                            </div>
+</li>
+<li>
+<img alt="Incomplete Icon" class="incomplete-icon" src="..\..\..\static\media\student_dashboard\course_card\incomplete-icon.svg"/>
+<div class="chapter-title">
+                                Chapter 2
+                            </div>
+</li>
+</ul>
+</div>
+<div class="divider" style="margin-top:0px"></div>
+</div>
+</div>
+<div class="course-card-info container">
+<div class="row mb-3">
+<div class="col-12">
+<div class="course-dates d-flex align-items-center">
+<img alt="Calendar Icon" class="calendar-icon" src="..\..\..\static\media\student_dashboard\course_card\time.svg"/>
+<span class="start-title me-2">Start</span>
+<div class="start-date">
+<div class="start-schedule-date">
+                                    07 Sep,24
+                                </div>
+</div>
+</div>
+</div>
+</div>
+<div class="row mb-3">
+<div class="col-12">
+<div class="course-dates d-flex align-items-center">
+<img alt="Calendar Icon" class="calendar-icon me-2" src="..\..\..\static\media\student_dashboard\course_card\watch.svg"/>
+<span class="end-title me-2">End</span>
+<div class="end-date">
+<div class="end-schedule-date">
+                                    24 Sep,24
+                                </div>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-12">
+<div class="course-progress">
+<div class="donut-container" data-percentage="0" id="donut-1">
+<svg class="donut" viewbox="0 0 32 32">
+<circle class="donut-hole" cx="16" cy="16" r="14"></circle>
+<circle class="donut-ring" cx="16" cy="16" r="14"></circle>
+<circle class="donut-segment" cx="16" cy="16" r="14"></circle>
+<text class="donut-text" dy=".3em" x="50%" y="50%">0%</text>
+</svg>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="redirection-tag-laptop">
+<button class="content-redirection-button-laptop" onclick="window.location.href='../../course/1/chapters/index.html'" type="button">
+<span class="button-text">
+<img alt="Chapter Thumbnail" class="start-icon img-fluid" src="..\..\..\static\media\student_dashboard\course_card\soft-2.png"/>
+</span>
+<span class="start-text">Start</span>
+</button>
+</div>
+<div class="redirection-tag-mobile">
+<button class="chapter-redirection-button" onclick="window.location.href='../../course/1/chapters/index.html'" type="button">
+<span class="button-text">View Chapters</span>
+</button>
+</div>
+</div>
+<img alt="Course Thumbnail" class="course-thumbnail-default img-fluid" src="..\..\..\static\media\student_dashboard\course_card\default-thumbnail.svg"/>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        function updateDonutChart(id, percent) {
+            percent = Math.round(percent);
+            if (percent > 100) {
+                percent = 100;
+            } else if (percent < 0) {
+                percent = 0;
+            }
+            const container = document.getElementById(id);
+            if (container) {
+                const circle = container.querySelector('.donut-segment');
+                circle.style.strokeDasharray = `${percent}, 100`;
+                const text = container.querySelector('.donut-text');
+                if (text) {
+                    text.textContent = `${percent}%`;
+                }
+            }
+        }
+
+        // Update donut charts for each course
+        document.querySelectorAll('.donut-container').forEach(container => {
+            const id = container.id;
+            const percent = parseFloat(container.dataset.percentage) || 0;
+            updateDonutChart(id, percent);
+        });
+    });
+</script>
+<link href="..\..\..\static\css\student_dashboard\partials\_themeforest_navigate_course_card.css" rel="stylesheet" type="text/css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;display=swap" rel="stylesheet"/>
+<style>
+</style>
+<div class="individual-course-card container-fluid wrapper">
+<div class="course-card-content">
+<div class="course-card-header">
+<p class="course-card-title-2">Week 2</p>
+<p class="course-card-description" title="Sample Description for Week 2">
+                Sample Description for Week 2
+            </p>
+<img alt="Course Thumbnail" class="course-default-thumbnail-mobile img-fluid" src="..\..\..\static\media\student_dashboard\course_card\default-thumbnail-mobile.svg"/>
+<div class="course-card-icons">
+<span class="icon"><img alt="Icon 4" id="videos" src="..\..\..\static\media\student_dashboard\course_card\video-icon.svg">
+<p class="video-course-icon">Video
+                        (2)
+                    </p>
+</img></span>
+<span class="icon">
+<img alt="Icon 3" id="files" src="..\..\..\static\media\student_dashboard\course_card\file-icon.svg"/>
+<p class="file-course-icon">File(6)<p>
+</p></p></span>
+<span class="icon markdown_icon">
+<img alt="Icon 2" id="markdown_contents" src="..\..\..\static\media\student_dashboard\course_card\markdown-icon.svg"/>
+<p class="markdown-course-icon">Markdown(0)</p>
+</span>
+<span class="icon assessments_icon"><img alt="Icon 1" id="assessments" src="..\..\..\static\media\student_dashboard\course_card\assessments-icon.svg"/>
+<p class="assessments-course-icon">Assessments
+                            (1)</p>
+</span>
+</div>
+</div>
+<div class="course-card-lists">
+<div class="prerequisite-courses">
+<div class="prerequisites-title">
+<span class="exclamation-mark">
+<img alt="Exclamation-Mark" class="prerequisite-Exclamation-Mark" src="..\..\..\static\media\student_dashboard\course_card\exclamation-mark.svg"/>
+</span>
+                    Prerequisites
+                    <span class="prerequisite-arrow-icon" onclick="toggleContent()">
+<!-- <i class="fas fa-chevron-down arrow-icon"></i> -->
+</span>
+</div>
+<ul>
+<div class="mandatory-course hidden-content">
+<span class="mandatory-title">Mandatory</span>
+<hr/>
+<li><span class="mandatory-course-title">No mandatory course available.</span></li>
+</div>
+<div class="optional-course hidden-content">
+<span class="optional-title">Optional</span>
+<hr/>
+<li>No optional course available.</li>
+</div>
+</ul>
+<div class="divider">
+</div>
+</div>
+<div class="chapters-list">
+<div class="chapter-heading">
+<span class="chapter-header-icon">
+<img alt="Chapter-icon" src="..\..\..\static\media\student_dashboard\course_card\chapter-icon.svg"/>
+</span>
+                    Chapters
+                    <span class="chapter-icon" onclick="toggleChapterContent()">
+<!-- <i class="fas fa-chevron-down arrow-icon-2"></i> -->
+</span>
+</div>
+<div class="chapter-container hidden-chapter" style="margin-top:-5px">
+<ul>
+<li>
+<img alt="Incomplete Icon" class="incomplete-icon" src="..\..\..\static\media\student_dashboard\course_card\incomplete-icon.svg"/>
+<div class="chapter-title">
+                                Chapter 3
+                            </div>
+</li>
+<li>
+<img alt="Incomplete Icon" class="incomplete-icon" src="..\..\..\static\media\student_dashboard\course_card\incomplete-icon.svg"/>
+<div class="chapter-title">
+                                Chapter 4
+                            </div>
+</li>
+</ul>
+</div>
+<div class="divider" style="margin-top:0px"></div>
+</div>
+</div>
+<div class="course-card-info container">
+<div class="row mb-3">
+<div class="col-12">
+<div class="course-dates d-flex align-items-center">
+<img alt="Calendar Icon" class="calendar-icon" src="..\..\..\static\media\student_dashboard\course_card\time.svg"/>
+<span class="start-title me-2">Start</span>
+<div class="start-date">
+<div class="start-schedule-date">
+                                    13 Sep,24
+                                </div>
+</div>
+</div>
+</div>
+</div>
+<div class="row mb-3">
+<div class="col-12">
+<div class="course-dates d-flex align-items-center">
+<img alt="Calendar Icon" class="calendar-icon me-2" src="..\..\..\static\media\student_dashboard\course_card\watch.svg"/>
+<span class="end-title me-2">End</span>
+<div class="end-date">
+<div class="end-schedule-date">
+                                    27 Sep,24
+                                </div>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-12">
+<div class="course-progress">
+<div class="donut-container" data-percentage="0" id="donut-2">
+<svg class="donut" viewbox="0 0 32 32">
+<circle class="donut-hole" cx="16" cy="16" r="14"></circle>
+<circle class="donut-ring" cx="16" cy="16" r="14"></circle>
+<circle class="donut-segment" cx="16" cy="16" r="14"></circle>
+<text class="donut-text" dy=".3em" x="50%" y="50%">0%</text>
+</svg>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="redirection-tag-laptop">
+<button class="content-redirection-button-laptop" onclick="window.location.href='../../course/2/chapters/index.html'" type="button">
+<span class="button-text">
+<img alt="Chapter Thumbnail" class="start-icon img-fluid" src="..\..\..\static\media\student_dashboard\course_card\soft-2.png"/>
+</span>
+<span class="start-text">Start</span>
+</button>
+</div>
+<div class="redirection-tag-mobile">
+<button class="chapter-redirection-button" onclick="window.location.href='../../course/2/chapters/index.html'" type="button">
+<span class="button-text">View Chapters</span>
+</button>
+</div>
+</div>
+<img alt="Course Thumbnail" class="course-thumbnail-default img-fluid" src="..\..\..\static\media\student_dashboard\course_card\default-thumbnail.svg"/>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        function updateDonutChart(id, percent) {
+            percent = Math.round(percent);
+            if (percent > 100) {
+                percent = 100;
+            } else if (percent < 0) {
+                percent = 0;
+            }
+            const container = document.getElementById(id);
+            if (container) {
+                const circle = container.querySelector('.donut-segment');
+                circle.style.strokeDasharray = `${percent}, 100`;
+                const text = container.querySelector('.donut-text');
+                if (text) {
+                    text.textContent = `${percent}%`;
+                }
+            }
+        }
+
+        // Update donut charts for each course
+        document.querySelectorAll('.donut-container').forEach(container => {
+            const id = container.id;
+            const percent = parseFloat(container.dataset.percentage) || 0;
+            updateDonutChart(id, percent);
+        });
+    });
+</script>
+</link></link></div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const dateElement = document.getElementById('current-date');
+        const today = new Date();
+
+        // Define month abbreviations
+        const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+        // Get day, month, and year
+        const day = today.getDate();
+        const month = monthNames[today.getMonth()];
+        const year = today.getFullYear();
+
+        // Set formatted date
+        dateElement.textContent = `${month} ${day}, ${year}`;
+    });
+</script>
+<script>
+        document.getElementById('toggle-button').addEventListener('click', function () {
+            const iconBox = document.getElementById('icon-box');
+            if (iconBox.style.display === 'none' || iconBox.style.display === '') {
+                iconBox.style.display = 'block';  // Show the icon box
+            } else {
+                iconBox.style.display = 'none';   // Hide the icon box
+            }
+        });
+        window.addEventListener('resize', function () {
+            const iconBox = document.getElementById('icon-box');
+            if (window.innerWidth > 600) {
+                iconBox.style.display = 'none';
+            }
+        });
+
+        document.getElementById('install-app').addEventListener('click', function () {
+            var card = document.getElementById('install-app-card');
+
+            // Toggle the visibility of the card
+            if (card.style.display === 'none' || card.style.display === '') {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        // script function for the back button ?//
+        document.getElementById('back-button').addEventListener('click', function () {
+            document.getElementById('install-app-card').style.display = 'none';
+        });
+        // script function for the back button ?//
+
+
+        // script function for the drop down //
+        document.getElementById('icon-trigger').addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent the default link behavior
+            const card = document.getElementById('dropdown-card');
+            // Toggle the card's visibility
+            if (card.style.display === 'none' || card.style.display === '') {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    </script>
+<script>
+        const modal = document.getElementById('profileModal');
+        const modalTrigger = document.querySelector('.profile-icon-trigger');
+
+        modalTrigger.addEventListener('click', (event) => {
+            event.preventDefault();
+            modal.style.display = 'block';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var profileTrigger = document.querySelector('.profile-icon-trigger-1');
+            var modal = document.getElementById('profileModal');
+            var modalOverlay = document.querySelector('.modal-overlay');
+
+            profileTrigger.addEventListener('click', function (event) {
+                event.preventDefault();
+                modal.style.display = 'block'; // Show the modal
+            });
+
+            // Close modal when clicking outside of modal-box
+            modalOverlay.addEventListener('click', function (event) {
+                if (event.target === modalOverlay) {
+                    modal.style.display = 'none'; // Hide the modal
+                }
+            });
+        });
+    </script>
+<!--begin::Scripts-->
+<script src="..\..\..\static\js\manifest.json"></script>
+<script src="..\..\..\static\js\serviceworker.js"></script>
+<script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/static/js/serviceworker.js')
+            .then(function(registration) {
+                console.log('Service Worker registered with scope:', registration.scope);
+            })                  
+            .catch(function(error) {
+                console.error('Service Worker registration failed:', error);
+            });
+        }
+        
+      </script>
+<!--end::Scripts-->
+<!--begin::Javascript-->
+<script>var hostUrl = "/static/";</script>
+<!--begin::Global Javascript Bundle(mandatory for all pages)-->
+<!--end::Global Javascript Bundle-->
+<!--begin::Vendors Javascript(used for this page only)-->
+<!--end::Vendors Javascript-->
+<!--begin::Custom Javascript(used for this page only)-->
+<!--end::Custom Javascript-->
+<!--end::Javascript-->
+</link></body>
+<!--end::Body-->
+</html>

@@ -1,0 +1,16 @@
+{
+    "name": "Jyanam LMS",
+    "short_name": "Jnyanam",
+    "description": "A Learning Management System for Jnyanam",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ff6600",
+    "icons": [
+        {
+            "src": "/static/media/student_dashboard/jnyanam_brand_logo.svg",
+            "sizes": "196x196",
+            "type": "image/png"
+        }
+    ]
+}

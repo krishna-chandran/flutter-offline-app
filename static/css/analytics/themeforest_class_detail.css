@@ -1,0 +1,917 @@
+.secondary-sidebar {
+    grid-area: sidebar;
+}
+
+.dashboard-container {
+    grid-area: main;
+    padding: 20px;
+
+}
+
+main {
+
+    grid-template-areas: 'sidebar main main main main main';
+    display: grid;
+}
+
+.secondary-sidebar {
+    width: 250px;
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    overflow-y: auto;
+    border-radius: 20px;
+}
+
+.sidebar-header {
+    margin-bottom: 20px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.add-new {
+    color: var(--orange);
+    text-decoration: none;
+}
+
+.add-new:hover {
+    color: var(--orange);
+}
+
+.search-container {
+    margin-bottom: 20px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.group-list {
+    list-style: none;
+    padding: 0;
+}
+
+.group-item {
+    margin-bottom: 10px;
+}
+
+.group-link {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    display: block;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.group-link:hover {
+    color: var(--orange);
+}
+
+.active {
+    color: #EA5E20;
+}
+
+.header {
+    background-color: transparent;
+}
+
+.custom-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-section {
+    flex: 1;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+}
+
+.custom-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.custom-breadcrumb {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.breadcrumb-item {
+    margin-right: 5px;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.breadcrumb-item:last-child {
+    margin-right: 0;
+}
+
+.breadcrumb-item.active .custom-link {
+    color: #EA5E20;
+}
+
+.custom-link {
+    color: #9E9DB0;
+    text-decoration: none;
+}
+
+.custom-link:hover {
+    color: var(--orange);
+}
+
+.breadcrumb-item.active .custom-link {
+    font-weight: bold;
+}
+
+
+.custom-link {
+    color: #6c757d;
+    text-decoration: none;
+}
+
+.custom-link:hover {
+    color: var(--orange);
+}
+
+.custom-link {
+    color: #6c757d;
+    text-decoration: none;
+}
+
+.action-item {
+    margin-left: 20px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 450;
+}
+
+.action-item:hover,
+.action-button:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+.action-button {
+    display: flex;
+    align-items: center;
+    color: #6c757d;
+    text-decoration: none;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.group-summaries {
+    flex-grow: 1;
+}
+
+.group-title {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.fixed-left {
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+
+.fixed-buttons {
+    margin-left: 16px;
+    border-radius: 50px;
+    padding: 5px;
+    border: none;
+    background-color: white;
+}
+
+.fixed-buttons.active {
+    background-color: var(--orange);
+}
+
+/* Apply filter to invert the image color to white */
+.fixed-buttons.active img {
+    filter: invert(1);
+}
+.toggle-view-icon >img{
+    width: 20px;
+    height:20px;
+    padding: 30px;
+}
+/* .toggle-view-icon {
+    width: 19px;
+} */
+
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block;
+}
+
+.summary-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.summary-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.summary-card-container-count {
+    flex: 1 1 calc(33.33% - 20px);
+    margin: 10px 10px 10px 0;
+}
+
+.summary-card-container {
+    /* flex: 1 1 calc(33.33% - 20px); */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    margin: 10px 10px 10px 0;
+}
+
+.summary-card {
+    background-color: white;
+    border-radius: 8px;
+
+}
+
+.summary-card-body {
+    padding: 50px;
+}
+
+
+.summary-card-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.summary-card-subtitle {
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.filter-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.filter-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+    padding-left: 10px;
+    color: #333;
+}
+
+.btn-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.toggle-btn {
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.toggle-btn[aria-pressed="true"] {
+    background-color: #EA5E20;
+    color: white;
+}
+
+.toggle-btn:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.form-control {
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    width: 120px;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #EA5E20;
+}
+
+.bg-active {
+    border-color: var(--orange);
+}
+
+.form-control {
+    display: inline-block;
+    height: auto;
+    line-height: normal;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.grid-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.grid-card-body {
+    padding: 20px;
+    text-align: left;
+    border-radius:16px;
+}
+
+.grid-card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #3F4254;
+}
+
+.grid-card-body p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #dcdcdc;
+}
+
+.grid-card-body p:last-child {
+    border-bottom: none;
+}
+
+.grid-card-body p b {
+    font-weight: bold;
+    font-size: 14px;
+    color: #3F4254;
+}
+
+.grid-card-body p span {
+    text-align: right;
+    font-size: 14px;
+    font-weight: bold;
+    color: #3F4254;
+}
+
+.view-btn {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: var(--orange);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.view-btn:hover {
+    background-color: #f6753d;
+}
+
+.table-container {
+    background: white;
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.styled-table {
+    width: 100%;
+    background-color: white;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px dotted #D9D9D9;
+    font-size: 14px;
+}
+
+.styled-table thead {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.chart-heading {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    margin-top: 0;
+}
+
+.styled-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.chart-container {
+    margin: 20px 0;
+}
+
+
+.chart-section {
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.chart-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.date-range {
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+    background-color: #F1F1F2;
+    border-radius: 6px;
+}
+
+
+.chart-canvas {
+    width: 100%;
+    height: 300px;
+}
+
+
+@media (min-width: 1921px) {
+    .grid-card {
+        border-radius: 32px;
+    }
+    /* Increase the font size */
+    body {
+        font-size: 21px;
+        /* Further increase font size */
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: 2em;
+        /* Scale up headings more */
+    }
+
+    p {
+        font-size: 1.5em;
+        /* Larger paragraph text */
+    }
+
+    .toggle-view-icon {
+        width: 35px;
+    }
+
+    .grid-card-body p b,
+    .grid-card-body p span,
+    .action-text {
+        font-size: 25px;
+    }
+    .grid-card-body p b {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .group-title {
+        font-size: 45px;
+    }
+
+
+
+    /* Enlarge buttons and input fields */
+    .btn,
+    .search-input,
+    select {
+        font-size: 1.5em;
+        /* Increase button font size */
+        padding: 15px;
+        /* Increase padding for buttons */
+    }
+    .search-input{
+        height:60px;
+    }
+    .search-container .search-input::placeholder {
+        font-size: 28px; /* Increase the placeholder font size */
+    }
+    .form-control {
+        font-size: 2rem;
+        padding: 10px;
+    }
+
+    .fa-plus {
+        font-size: 36px;
+    }
+
+    .toggle-btn {
+        font-size: 28px;
+    }
+
+    /* Sidebar and group list */
+    .secondary-sidebar {
+        width: 550px;
+        /* Increase width further */
+        padding: 30px;
+        /* Adjust padding */
+    }
+
+    .sidebar-header .title {
+        font-size: 1.5em;
+        /* Enlarge sidebar title */
+    }
+
+    .group-list .group-item .group-link {
+        font-size: 24px;
+        /* Increase group link size */
+        padding: 20px 30px;
+        /* Add padding */
+    }
+
+    /* Enlarge the dashboard header */
+    .header {
+        padding: 40px 0;
+        /* Adjust header padding */
+    }
+
+    .custom-title {
+        font-size: 45px;
+        /* Bigger page title */
+    }
+
+    .custom-breadcrumb .custom-link {
+        font-size: 33px;
+
+        /* Increase breadcrumb link size */
+    }
+
+    /* Buttons in the toolbar */
+    .action-item .action-button {
+        font-size: 28px;
+        /* Larger action button font */
+        padding: 10px;
+        /* Adjust padding */
+    }
+
+    .icon {
+        width: 2.5rem;
+        /* Increase icon size */
+        height: 2.5rem;
+        /* Increase icon size */
+        padding: 5px;
+    }
+
+    /* Summary cards */
+    .summary-card-title {
+        font-size: 47px;
+        /* Larger summary card numbers */
+    }
+
+    .summary-card-subtitle {
+        font-size: 25px;
+        /* Larger subtitle */
+    }
+
+    /* Filters section */
+    .filter-title {
+        font-size: 2em;
+        /* Larger filter title */
+    }
+
+    /* Summary cards in grid */
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+        /* Adjust grid for larger screens */
+        gap: 30px;
+        /* Increased gap between cards */
+        margin: 30px 0;
+        /* Adjust margin */
+    }
+
+    .grid-card {
+        min-height: 250px;
+        /* Increase minimum card height */
+        width: 550px;
+        /* Adjust card width */
+        transition: transform 0.2s, box-shadow 0.2s;
+        /* Add box-shadow transition */
+        margin: 30px;
+        /* Adjust margin */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        /* Add box shadow */
+        border-radius: 12px;
+    }
+
+    .grid-card:hover {
+        transform: scale(1.05);
+        /* Scale effect on hover */
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        /* Enhanced shadow on hover */
+    }
+
+    .grid-card-body {
+        padding: 40px;
+        border-radius:16px;
+        /* Adjust inner padding */
+    }
+
+    .grid-card-title {
+        font-size: 26px;
+        position: relative;
+        top:-10px;
+        /* Increase title font size */
+    }
+
+    .grid-card p {
+        font-size: 1.2em;
+        /* Increase paragraph font size */
+    }
+
+    /* Table view */
+    .styled-table {
+        font-size: 1.5em;
+        /* Larger table font */
+    }
+
+    .styled-table th,
+    .styled-table td {
+        padding: 20px;
+        /* Adjust padding */
+        font-size: 25px;
+    }
+
+    /* View buttons */
+    .view-btn {
+        font-size: 25px;
+        /* Larger button font */
+        padding: 20px 30px;
+        /* Adjust padding */
+    }
+    .fixed-left {
+        gap:40px;
+    }
+    .filter-section select{
+        font-size: 21px;
+        padding-left: 0px;
+        padding-top: 10px;
+    }
+    .grid-card-body p {
+        border-bottom: 3px dotted #E1E3EA;
+        /* Dotted line after each p */
+    }
+    
+}
+@media (min-width: 1440px) and (max-width:1920px) {
+
+    /* Increase the font size */
+    body {
+        font-size: 21px;
+        /* Further increase font size */
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: 1.5em;
+        /* Scale up headings more */
+    }
+
+    p {
+        font-size: 1em;
+        /* Larger paragraph text */
+    }
+
+    .toggle-view-icon {
+        width: 24px;
+    }
+
+    .grid-card-body p b,
+    .grid-card-body p span,
+    .action-text {
+        font-size: 15px;
+    }
+    .grid-card-body p b {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .group-title {
+        font-size: 1.2em;
+    }
+
+
+
+    /* Enlarge buttons and input fields */
+    .search-input,
+    select {
+        font-size: 1.5em;
+        /* Increase button font size */
+        padding: 5px;
+        /* Increase padding for buttons */
+    }
+    .search-input{
+        height:40px;
+    }
+    .search-container .search-input::placeholder {
+        font-size: 14px; /* Increase the placeholder font size */
+        position: relative;
+        top: -7px;
+    }
+    .form-control {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .fa-plus {
+        font-size: 26px;
+    }
+
+    .toggle-btn {
+        font-size: 18px;
+    }
+
+    /* Sidebar and group list */
+    .secondary-sidebar {
+        width: 350px;
+        /* Increase width further */
+        padding: 30px;
+        /* Adjust padding */
+    }
+
+    .sidebar-header .title {
+        font-size: 1em;
+        /* Enlarge sidebar title */
+    }
+
+    .group-list .group-item .group-link {
+        font-size: 15px;
+        /* Increase group link size */
+        padding: 20px 30px;
+        /* Add padding */
+    }
+
+    /* Enlarge the dashboard header */
+    .header {
+        padding: 40px 0;
+        /* Adjust header padding */
+    }
+
+    .custom-title {
+        font-size: 1.3em;
+        /* Bigger page title */
+    }
+
+    .custom-breadcrumb .custom-link {
+        font-size: 1.3em;
+
+        /* Increase breadcrumb link size */
+    }
+
+    /* Buttons in the toolbar */
+    .action-item .action-button {
+        font-size: 20px;
+        /* Larger action button font */ 
+    }
+
+    .icon {
+        width: 1.9rem;
+        /* Increase icon size */
+        height: 1.9rem;
+        /* Increase icon size */
+        padding: 5px;
+    }
+
+    /* Summary cards */
+    .summary-card-title {
+        font-size: 30px;
+        /* Larger summary card numbers */
+    }
+
+    .summary-card-subtitle {
+        font-size: 20px;
+        /* Larger subtitle */
+    }
+
+    /* Filters section */
+    .filter-title {
+        font-size: 1.3em;
+        /* Larger filter title */
+    }
+
+    
+
+    .grid-card-title {
+        font-size: 17px;
+        position: relative;
+        top:-10px;
+        /* Increase title font size */
+    }
+
+    .grid-card p {
+        font-size: 1.2em;
+        /* Increase paragraph font size */
+    }
+
+    /* Table view */
+    .styled-table {
+        font-size: 1.5em;
+        /* Larger table font */
+    }
+
+    .styled-table th,
+    .styled-table td {
+        padding: 20px;
+        /* Adjust padding */
+        font-size: 15px;
+    }
+
+    /* View buttons */
+    .view-btn {
+        font-size: 0.9em;
+        /* Larger button font */
+        padding: 10px 30px;
+        /* Adjust padding */
+    }
+    .fixed-left {
+        gap:10px;
+    }
+    .action-item {
+        padding: 7px;
+    }
+}

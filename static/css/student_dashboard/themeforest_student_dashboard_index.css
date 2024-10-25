@@ -1,0 +1,388 @@
+body {
+    background-color: #F2F6FF;
+}
+
+.container {
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+/* Styling for the welcome text and username */
+.welcome h1 {
+    width: 90%;
+    height: 56px;
+    gap: 6px;
+    opacity: 0px;
+    margin-left: 35px;
+    /* Aligns with the start of the logo */
+    margin-right: 50px;
+    font-size: 44px;
+    font-weight: 700;
+    font-family: Inter;
+    color: #000000;
+    ;
+    /* Change the username color to orange */
+}
+
+.welcome h4 {
+    margin-left: 45px;
+    width: 344px;
+    height: 23px;
+    margin-top: -20px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #636363;
+    font-family: Inter;
+    position: relative;
+}
+
+.username {
+    color: #EA5E20;
+    /* Set the 'username' to orange */
+    font-weight: 700;
+    /* Make it bold if desired */
+    font-family: Inter;
+}
+
+/* Container styles */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Adjusted min width for larger cards */
+    gap: 20px;
+    /* Increased gap for larger cards */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 26px;
+    padding: 0px;
+    /* Center alignment */
+    box-sizing: border-box;
+    color: #FFFFFF;
+}
+
+/* Card styles */
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 520px;
+    /* Increased width */
+    height: 520px;
+    /* Increased height */
+    padding-top: 26px;
+    box-sizing: border-box;
+    border-radius: 25.3px;
+    overflow: hidden;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.03);
+    border: 0.3px solid #F8F8F8;
+    background-color: #FFFFFF;
+    text-transform: capitalize;
+    transition: transform 0.3s ease, opacity 0.52s ease;
+    text-decoration: none;
+    /* Remove underline from link */
+}
+
+.card-image {
+    width: 420px;
+    height: 410px;
+    position: absolute;
+    bottom: 80px;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+hr {
+    width: 90%;
+    color: #B0B0B0;
+    border: 1px solid #B0B0B0;
+    position: relative;
+
+}
+
+.card-title {
+    width: 100%;
+    color: #000000;
+    position: relative;
+    margin-top: 398px;
+    text-align: center;
+    font-family: Inter;
+    font-weight: 600;
+}
+
+
+/* Add hover effect to change card border color */
+.card {
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+    border-color: #EA5E20;
+    /* This is the color you want the outline to change to */
+    transform: scale(1.05);
+    /* Optional: Add a slight scaling effect */
+}
+
+.card:hover .card-title {
+    color: #EA5E20;
+}
+
+.card:hover hr {
+    border-color: #EA5E20;
+}
+
+a {
+    text-decoration: none;
+    /* Removes the underline from all anchor tags */
+}
+
+/* Avatar and Notification styles */
+.avatar,
+.notification {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification img,
+.avatar img {
+    width: 22px;
+    height: 22px;
+}
+
+.avatar {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.navbar-padding-top {
+    padding-top: 20px;
+}
+
+.brand-padding-top {
+    padding-top: 55px;
+}
+
+.desc-padding-bottom {
+    padding-bottom: 110px;
+}
+
+@media (min-width: 1900px) and (max-width: 2560px) {
+
+    .container {
+        gap: 45px
+    }
+
+    .card {
+        width: auto;
+        height: 720px;
+    }
+
+    .card-image {
+        width: 85%;
+        height: 85%;
+        top: 25px;
+    }
+
+    .card-title {
+        margin-top: 590px;
+    }
+
+}
+
+@media (min-width: 1440px) and (max-width: 1700px) {
+
+    .card {
+        width: auto;
+        height: 510px;
+    }
+
+    .card-image {
+        width: 85%;
+        height: 78%;
+    }
+
+    .card-title {
+        margin-top: 380px;
+    }
+
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+
+    .ms-3 {}
+
+    .card {
+        width: auto;
+        height: 420px;
+    }
+
+    .card-image {
+        width: 85%;
+        height: 76%;
+    }
+
+    .card-title {
+        margin-top: 310px;
+    }
+
+    .welcome h1 {
+        font-size: 36px;
+    }
+
+    .welcome h4 {
+        font-size: 18px;
+    }
+
+}
+
+@media (min-width: 850px) and (max-width: 1024px) {
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .card {
+        width: auto;
+        height: 350px;
+    }
+
+    .card-image {
+        width: 85%;
+        height: 78%;
+        top: 26px;
+    }
+
+    .card-title {
+        margin-top: 260px;
+    }
+
+    .welcome h1 {
+        font-size: 34px;
+    }
+
+    .welcome h4 {
+        font-size: 15px;
+    }
+
+}
+
+@media (min-width: 475px) and (max-width: 849px) {
+
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .card {
+        width: auto;
+        height: 350px;
+    }
+
+    .card-image {
+        width: 85%;
+        height: 80%;
+        top: 25px;
+    }
+
+    .card-title {
+        margin-top: 270px;
+    }
+
+    .welcome h1 {
+        font-size: 33px;
+        margin-left: 10px;
+    }
+
+    .welcome h4 {
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 474px) {
+
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .card {
+        width: auto;
+        height: 350px;
+    }
+
+    .card-image {
+        width: 90%;
+        height: 80%;
+        top: 12px;
+    }
+
+    .card-title {
+        margin-top: 260px;
+    }
+
+    .welcome h1 {
+        font-size: 28px;
+        margin-left: 5px;
+    }
+
+    .welcome h4 {
+        font-size: 15px;
+        margin-left: 10px;
+        margin-top: -35px;
+    }
+
+}
+
+@media (min-width: 0px) and (max-width: 319px) {
+
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .card {
+        width: auto;
+        height: 320px;
+    }
+
+    .card-image {
+        width: 90%;
+        height: 80%;
+        top: 12px;
+    }
+
+    .card-title {
+        margin-top: 240px;
+    }
+
+    .welcome h1 {
+        font-size: 28px;
+        margin-left: 5px;
+    }
+
+    .welcome h4 {
+        font-size: 15px;
+        margin-left: 10px;
+        margin-top: -35px;
+    }
+
+}

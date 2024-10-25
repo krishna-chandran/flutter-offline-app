@@ -1,0 +1,440 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<!--begin::Head-->
+<head>
+<title>Jnyanam LMS</title>
+<meta charset="utf-8"/>
+<!--begin::Fonts(mandatory for all pages)-->
+<link href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" rel="stylesheet"/>
+<!--end::Fonts-->
+<!--begin::Vendor Stylesheets(used for this page only)-->
+<link href="..\..\..\..\..\..\..\static\assets_student\plugins\custom\datatables\datatables.bundle.css" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!--end::Vendor Stylesheets-->
+<!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
+<link href="..\..\..\..\..\..\..\static\assets_student\plugins\global\plugins.bundle.css" rel="stylesheet" type="text/css"/>
+<link href="..\..\..\..\..\..\..\static\assets_student\css\style.bundle.css" rel="stylesheet" type="text/css"/>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet"/>
+<!--end::Global Stylesheets Bundle-->
+<link href="..\..\..\..\..\..\..\static\css\student_dashboard\themeforest_navigate_page_menu_detail.css" rel="stylesheet" type="text/css">
+<script>
+            // Frame-busting to prevent site from being loaded within a frame without permission (click-jacking)
+            if (window.top != window.self) {
+                window.top.location.replace(window.self.location.href);
+            }
+        </script>
+</link></head>
+<!--end::Head-->
+<!--begin::Body-->
+<body class="header-tabs-enabled header-menu-enabled" id="kt_body">
+<!--begin::Theme mode setup on page load-->
+<script>
+            var defaultThemeMode = "light";
+            var themeMode;
+            if (document.documentElement) {
+                if (document.documentElement.hasAttribute("data-bs-theme-mode")) {
+                    themeMode = document.documentElement.getAttribute("data-bs-theme-mode");
+                } else {
+                    if (localStorage.getItem("data-bs-theme") !== null) {
+                        themeMode = localStorage.getItem("data-bs-theme");
+                    } else {
+                        themeMode = defaultThemeMode;
+                    }
+                }
+                if (themeMode === "system") {
+                    themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+                }
+                document.documentElement.setAttribute("data-bs-theme", themeMode);
+            }
+        </script>
+<!--end::Theme mode setup on page load-->
+<!--begin::Main-->
+<!--begin::Wrapper-->
+<div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
+<!--begin::Header-->
+<div class="header" id="kt_header">
+<header class="header-bg">
+<a href="..\..\..\..\..\..\../index.html"><img alt="Logo Icon" class="logo-icon" src="..\..\..\..\..\..\..\static\media\student_dashboard\jnyanam_brand_logo.svg"/></a>
+<button class="toggle-button" id="toggle-button">
+<img alt="Toggle Menu" src="..\..\..\..\..\..\..\static\media\student-navbar-orange\menu-orange.svg"/>
+</button>
+<a href="..\..\..\..\..\..\../index.html" style="display: inline-block;">
+<img alt="Home Icon" class="home-icon" src="..\..\..\..\..\..\..\static\media\student-navbar-orange\home-orange.svg" style="height: 27px; width: auto;"/>
+</a>
+<img alt="Notification Icon" class="notification-icon" id="notificationIcon" src="..\..\..\..\..\..\..\static\media\student-navbar-orange\notification-orange.svg"/>
+<a class="profile-icon-trigger" href="#/index.html">
+<img alt="User Icon" class="user-icon" src="..\..\..\..\..\..\..\static\assets_student\media\svg\student-icons\300-2.jpg"/>
+</a>
+<img alt="Microphone Icon" class="microphone-icon" src="..\..\..\..\..\..\..\static\media\student-navbar-orange\microphone-orange.svg"/>
+<img alt="language Icon" class="language-icon" src="..\..\..\..\..\..\..\static\media\student-navbar-orange\language-orange.svg"/>
+<a class="install-app" href="#/index.html" id="icon-trigger">
+<img alt="Notification Icon" class="icon-image" src="..\..\..\..\..\..\..\static\media\student-navbar-orange\installapp-orange.svg"/>
+</a>
+<div class="dropdown-card" id="dropdown-card">
+<button class="back-button" id="back-button">
+                                ← 
+                            </button>
+<h2 class="dropdown-title">Install Jnyanam App</h2>
+<br/>
+<img alt="QR Code" class="dropdown-image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXIAAAFyAQAAAADAX2ykAAACVElEQVR4nO2by23jMBCGv1kayFHuIKXQHWxJ25pUijugjgYk/HsgKdFZBJsgfhEYHgRL/A4DDH7Og2MT31nTr2/h4LzzzjvvvPPOf8ZbWYf80U7zATuxmp3mund6oD3O35iPkqRUXKtxuBiTvQkIkiRd8/e2x/kb83NRaHYtgKQl7+3Cfl37nf8ab2aH4tBp9+rz7HH+trzGYYGYguzEak+3x/mf8VWig4AZjCHIYDVNv1P+1rZAXs1+57/ET2ZmdgTi+QAQZH/ONYk2M7vm722P8zfis353hWo6BgQXE1ysCPtx9jh/W56m+IkJYJA0EqRxWGgekqTx1ex3/j8r+00pKLtWiVwOF3ezvbp/O+SrLiHrV0qhOBmCiKrSdf32yNfzeaiP7NBUu1ZFun4+d8pf6zeUXwAaB0nSQg7H7t8e+S3+7kou/Y28HRPl1eNvjzztMbwlWeOw0J7ZyfXbKd/ot0i3plLZ5wAef/vlt+R4y6quRNxuuH875Lf+xtbQoE2tahHs8bdTvsbfFNSmUUBTGnn+3C2/XfGupul9AeYjiumIYD0wWZBFrabH2OP8nfgg4tmM6Rhk9r6Qr5NgNcjjWA+1x/mb8G3zUfqkfwXg8bdjvp2fnN/E9H6pt75zuQ4uja3XtN/5T9cu06Y+2tsdce9puX475Lf8Gfb+Va1/pQ+c+7d7Pp7N9uvCUh8Nkp2eY4/zP+L/GYGdjmExMICwaDKwmNaD10dd8h/jbzO6EbWUBz6f0yvfzl81bUhg7z/7/VG/vPn/u5133nnnnXf+4fxfHzg8P06ffSEAAAAASUVORK5CYII="/>
+<br/>
+<button class="btn-install">Install now</button>
+<button class="btn-not-now">Not now</button>
+</div>
+</header>
+<div class="icon-box" id="icon-box">
+<div style="display: flex; align-items: center;">
+<a href="..\..\..\..\..\..\../index.html" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+<img alt="Home Icon" src="..\..\..\..\..\..\..\static\media\student-navbar-orange\home-orange.svg" style="height: 25px; margin-right: 8px;"/>
+<h3 class="notification-text" style="margin: 0;">Home</h3>
+</a>
+</div>
+<hr/> <!-- Line added -->
+<div style="display: flex; align-items: center;">
+<img alt="Notification Icon" src="..\..\..\..\..\..\..\static\media\student-navbar-orange\notification-orange.svg" style="height: 30px; margin-right: 8px;"/>
+<h3 class="notification-text">Notification</h3>
+<img alt="Arrow Icon" src="..\..\..\..\..\..\..\static\media\student-navbar-orange\right.svg" style="margin-left: 120px;"/>
+</div>
+<hr/> <!-- Line added -->
+<div style="display: flex; align-items: center;">
+<img alt="Notification Icon" src="..\..\..\..\..\..\..\static\media\student-navbar-orange\microphone-orange.svg" style="height: 30px; margin-right: 8px;"/>
+<h3 class="notification-text">Microphone</h3>
+</div>
+<hr/> <!-- Line added -->
+<div style="display: flex; align-items: center;">
+<img alt="Notification Icon" src="..\..\..\..\..\..\..\static\media\student-navbar-orange\language-orange.svg" style="height: 30px; margin-right: 8px;"/>
+<h3 class="notification-text">Language</h3>
+<img alt="Arrow Icon" src="..\..\..\..\..\..\..\static\media\student-navbar-orange\right.svg" style="margin-left: 130px;"/>
+</div>
+<hr/> <!-- Line added -->
+<div id="install-card-trigger" style="display: flex; align-items: center;">
+<img alt="Notification Icon" src="..\..\..\..\..\..\..\static\media\student-navbar-orange\installapp-orange.svg" style="height: 25px; margin-right: 8px;"/>
+<h3 class="notification-text">Install app</h3>
+<img alt="Arrow Icon" src="..\..\..\..\..\..\..\static\media\student-navbar-orange\right.svg" style="margin-left: 130px;"/>
+</div>
+<div class="install-card" id="install-card" style="width: 300px; margin-right: -20px;">
+<button class="back-button" id="back-button" onclick="hideCard()">←</button>
+<h2 class="card-title">Install Jnyanam App</h2>
+<br/>
+<img alt="QR Code" class="dropdown-image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXIAAAFyAQAAAADAX2ykAAACVElEQVR4nO2by23jMBCGv1kayFHuIKXQHWxJ25pUijugjgYk/HsgKdFZBJsgfhEYHgRL/A4DDH7Og2MT31nTr2/h4LzzzjvvvPPOf8ZbWYf80U7zATuxmp3mund6oD3O35iPkqRUXKtxuBiTvQkIkiRd8/e2x/kb83NRaHYtgKQl7+3Cfl37nf8ab2aH4tBp9+rz7HH+trzGYYGYguzEak+3x/mf8VWig4AZjCHIYDVNv1P+1rZAXs1+57/ET2ZmdgTi+QAQZH/ONYk2M7vm722P8zfis353hWo6BgQXE1ysCPtx9jh/W56m+IkJYJA0EqRxWGgekqTx1ex3/j8r+00pKLtWiVwOF3ezvbp/O+SrLiHrV0qhOBmCiKrSdf32yNfzeaiP7NBUu1ZFun4+d8pf6zeUXwAaB0nSQg7H7t8e+S3+7kou/Y28HRPl1eNvjzztMbwlWeOw0J7ZyfXbKd/ot0i3plLZ5wAef/vlt+R4y6quRNxuuH875Lf+xtbQoE2tahHs8bdTvsbfFNSmUUBTGnn+3C2/XfGupul9AeYjiumIYD0wWZBFrabH2OP8nfgg4tmM6Rhk9r6Qr5NgNcjjWA+1x/mb8G3zUfqkfwXg8bdjvp2fnN/E9H6pt75zuQ4uja3XtN/5T9cu06Y+2tsdce9puX475Lf8Gfb+Va1/pQ+c+7d7Pp7N9uvCUh8Nkp2eY4/zP+L/GYGdjmExMICwaDKwmNaD10dd8h/jbzO6EbWUBz6f0yvfzl81bUhg7z/7/VG/vPn/u5133nnnnXf+4fxfHzg8P06ffSEAAAAASUVORK5CYII="/>
+<br/><br/>
+<button class="btn-install">Install now</button>
+<button class="btn-not-now">Not now</button>
+</div>
+<hr/> <!-- Line added -->
+<div class="line"></div>
+<div class="profile-item">
+<a class="profile-icon-trigger-1" href="#/index.html">
+<div class="profile-icon-container">
+<img alt="Profile Icon" class="profile-icon" src="..\..\..\..\..\..\..\static\media\student_dashboard\profile_icon.svg"/>
+<h3 class="notification-text">Profile</h3>
+</div>
+</a>
+<img alt="Arrow Icon" src="..\..\..\..\..\..\..\static\media\student-navbar-orange\right.svg" style="margin-left: 150px;"/>
+</div>
+</div>
+</div>
+<!-- Modal Structure -->
+<div class="modal-overlay" id="profileModal">
+<div class="modal-box">
+<form action="/logout/" method="POST">
+<input name="csrfmiddlewaretoken" type="hidden" value="VZ1TcoXJncLUYv0qlc9X4qK65xO4mphQkdjT1OAsGiFjleZEd1t21r7eTNjbyAa7"/>
+<div class="edit-button">
+<a href="/accounts/login//index.html"></a>
+<button>Sign out</button>
+</div>
+<div class="modal-content">
+<img alt="default image" class="profile-image" src="..\..\..\..\..\..\..\static\media\avatars\300-1.jpg"/>
+<h4></h4>
+<p class="role"></p>
+<div class="info-container">
+<div class="info-item">
+<img alt="Email Icon" class="info-icon" src="..\..\..\..\..\..\..\static\media\student_dashboard\New_orange_design\communication.svg"/>
+<span></span>
+</div>
+<hr class="info-separator"/>
+<div class="info-item">
+<img alt="Password Icon" class="info-icon" src="..\..\..\..\..\..\..\static\media\student_dashboard\New_orange_design\users.svg"/>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+<!-- End::Modal Structure -->
+<!--end::Header-->
+<!--begin::Breadcrumb-->
+<div class="main-menu-content">
+<div class="page-title">
+<ul class="breadcrumb fw-semibold fs-base my-1 breadcrumb-large">
+<a class="back-button-1" href="../index.html">
+<img alt="Back" class="back-icon" src="..\..\..\..\..\..\..\static\media\student_dashboard\New_orange_design\backbutton.svg"/>
+</a>
+<li class="breadcrumb-item text-muted">
+<a class="text-muted text-hover-primary" href="..\..\..\..\..\..\../index.html">Home</a>
+</li>
+<li class="breadcrumb-item text-muted">
+<a class="text-muted text-hover-primary" href="..\..\..\..\chapters/index.html">Week 1</a>
+</li>
+<li class="breadcrumb-item text-muted">
+<a class="text-muted text-hover-primary" href="../index.html">Chapter 2</a>
+</li>
+<li class="breadcrumb-item">
+<a class="text-hover-primary active" href="./index.html" style="font-size: 18px; color: rgb(249, 77, 20);">
+                                english rhymes
+                            </a>
+</li>
+</ul>
+</div>
+<!--end::Breadcrumb-->
+<!--begin::Main Content-->
+<div class="container-fluid">
+<div class="row">
+<!-- Main Video Section -->
+<div class="col-lg-8 col-md-7 col-sm-12">
+<div class="main-container">
+<div class="iframe">
+<h1>English Rhymes</h1>
+<video class="internal-video" controls="">
+<source src="..\..\..\..\..\..\..\mediafiles\videos\english_rhymes.mp4" type="video/mp4"/>
+    Your browser does not support the video tag.
+</video> <br/>
+<button id="mark-as-complete">Completed</button>
+<div class="navigation-buttons">
+<a class="next-button" href="..\5/index.html">Next</a>
+</div>
+<div class="description-container">
+<h3><b>Description</b></h3>
+<p>A Collection Of Engaging And Fun English Rhymes Designed To Entertain And Educate Young Children.</p>
+</div>
+<!-- Hidden fields to store chapter and course IDs -->
+<input id="chapter_id" type="hidden" value="2"/>
+<input id="course_id" type="hidden" value="1"/>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const videoElement = document.querySelector('video');
+        const markAsCompleteButton = document.getElementById('mark-as-complete');
+        const chapterId = document.getElementById('chapter_id').value;
+        const courseId = document.getElementById('course_id').value;
+        let startTime = new Date().getTime();
+        let endTime;
+
+        function updateProgress(percentageCompleted, url) {
+            $.ajax({
+                url: url,
+                method: 'POST',
+                data: {
+                    csrfmiddlewaretoken: 'VZ1TcoXJncLUYv0qlc9X4qK65xO4mphQkdjT1OAsGiFjleZEd1t21r7eTNjbyAa7',
+                    page_id: '4',
+                    chapter_id: chapterId,
+                    course_id: courseId,
+                    percentage_completed: percentageCompleted,
+                    time_spent_seconds: Math.floor((new Date().getTime() - startTime) / 1000)
+                }
+            });
+        }
+
+        function updateAllProgress(percentageCompleted) {
+            updateProgress(percentageCompleted, '/courses/update_learn_course_page_progress/');
+            updateProgress(percentageCompleted, '/courses/update_learn_course_page_progress_metrics/');
+        }
+
+        
+
+        markAsCompleteButton.addEventListener('click', () => {
+            endTime = new Date().getTime();
+            updateAllProgress(100);
+            alert('Page marked as complete!');
+        });
+
+        window.addEventListener('beforeunload', () =>  {
+            if (videoElement) {
+                const percentageCompleted = Math.floor((videoElement.currentTime / videoElement.duration) * 100);
+                updateAllProgress(percentageCompleted);
+            } else {
+                endTime = new Date().getTime();
+                updateAllProgress(100);
+            }
+        });
+    });
+</script>
+</div>
+</div>
+</div>
+<!-- Related Videos Section -->
+<div class="col-lg-4 col-md-5 col-sm-12">
+<!-- Navbar Section -->
+<div class="navbar" id="future_tasks">
+<div class="d-flex justify-content-center">
+<div class="d-flex justify-content-center">
+<button class="btn tab-btn active" data-target="all" id="all-tab" onclick="showContent('all')">
+                                                All
+                                            </button>
+<button class="btn tab-btn" data-target="recommendations" id="recommendations-tab" onclick="showContent('recommendations')">
+                                                Recommendations
+                                            </button>
+</div>
+</div>
+</div>
+<br/>
+<!-- Content Sections -->
+<div class="related-pages" id="all-content">
+<a class="related-page" href="./index.html">
+<div class="page-thumbnail">
+<img alt="english rhymes" class="img-fluid" src="..\..\..\..\..\..\..\static\media\student_dashboard\course_card\page_bg.svg"/>
+</div>
+<div class="page-details">
+<h5 class="related-page-title active" title="english rhymes">english rhymes</h5>
+<p class="related-page-description" title="A collection of engaging and fun English rhymes designed to entertain and educate young children.">A collection of engaging and fun English rhymes designed to entertain and educate young children.</p>
+<span>
+<img alt="Tick Icon" class="tick-icon" src="..\..\..\..\..\..\..\static\media\student_dashboard\course_card\gray_mark.svg"/>
+</span>
+</div>
+</a>
+<a class="related-page" href="..\5/index.html">
+<div class="page-thumbnail">
+<img alt="ebberalininda chithrakale(kriyathmaka chatuvatike)" class="img-fluid" src="..\..\..\..\..\..\..\static\media\student_dashboard\course_card\page_bg.svg"/>
+</div>
+<div class="page-details">
+<h5 class="related-page-title" title="ebberalininda chithrakale(kriyathmaka chatuvatike)">ebberalininda chithrakale(kriyathmaka chatuvatike)</h5>
+<p class="related-page-description" title="Creative art activities that inspire children to explore and express their imagination through various forms of drawing and painting.">Creative art activities that inspire children to explore and express their imagination through various forms of drawing and painting.</p>
+<span>
+<img alt="Tick Icon" class="tick-icon" src="..\..\..\..\..\..\..\static\media\student_dashboard\course_card\gray_mark.svg"/>
+</span>
+</div>
+</a>
+<a class="related-page" href="..\6/index.html">
+<div class="page-thumbnail">
+<img alt="doniya chithra thiduvudhu( kriyathmaka chatuvatike)" class="img-fluid" src="..\..\..\..\..\..\..\static\media\student_dashboard\course_card\page_bg.svg"/>
+</div>
+<div class="page-details">
+<h5 class="related-page-title" title="doniya chithra thiduvudhu( kriyathmaka chatuvatike)">doniya chithra thiduvudhu( kriyathmaka chatuvatike)</h5>
+<p class="related-page-description" title="Creating boat-themed drawings that encourage children to express their creativity through fun and imaginative art activities.">Creating boat-themed drawings that encourage children to express their creativity through fun and imaginative art activities.</p>
+<span>
+<img alt="Tick Icon" class="tick-icon" src="..\..\..\..\..\..\..\static\media\student_dashboard\course_card\gray_mark.svg"/>
+</span>
+</div>
+</a>
+</div>
+<div class="related-pages" id="recommendations-content" style="display: none;">
+<p>No recommendations available.</p>
+</div>
+</div>
+</div>
+</div>
+<!--end::Main Content-->
+</div>
+</div>
+<!--end::Wrapper-->
+<!--end::Page-->
+<!--begin::Javascript-->
+<script>var hostUrl = "/static/";</script>
+<!--begin::Global Javascript Bundle(mandatory for all pages)-->
+<script src="/static/assets/plugins/global/plugins.bundle.js"></script>
+<script src="/static/assets/js/scripts.bundle.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!--end::Global Javascript Bundle-->
+<!--begin::Vendors Javascript(used for this page only)-->
+<script src="/static/assets/plugins/custom/datatables/datatables.bundle.js"></script>
+<!--end::Vendors Javascript-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!--end::Javascript-->
+<script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var profileTrigger = document.querySelector('.profile-icon-trigger-1');
+                var modal = document.getElementById('profileModal');
+                var modalOverlay = document.querySelector('.modal-overlay');
+    
+                profileTrigger.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    modal.style.display = 'block'; // Show the modal
+                });
+    
+                // Close modal when clicking outside of modal-box
+                modalOverlay.addEventListener('click', function (event) {
+                    if (event.target === modalOverlay) {
+                        modal.style.display = 'none'; // Hide the modal
+                    }
+                });
+            });
+        </script>
+<script>
+            function showContent(tab) {
+                // Hide both sections first
+                document.getElementById('all-content').style.display = 'none';
+                document.getElementById('recommendations-content').style.display = 'none';
+        
+                // Show the selected section based on the tab clicked
+                if (tab === 'all') {
+                    document.getElementById('all-content').style.display = 'block';
+                } else if (tab === 'recommendations') {
+                    document.getElementById('recommendations-content').style.display = 'block';
+                }
+        
+                // Update active tab class
+                document.getElementById('all-tab').classList.remove('active');
+                document.getElementById('recommendations-tab').classList.remove('active');
+                document.getElementById(tab + '-tab').classList.add('active');
+            }
+        </script>
+<script>   
+                document.getElementById('toggle-button').addEventListener('click', function() {
+                const iconBox = document.getElementById('icon-box');
+                iconBox.style.display = iconBox.style.display === 'block' ? 'none' : 'block';
+            });
+
+            // Displaying the drop downcard // 
+            document.getElementById('icon-trigger').addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default link behavior
+                const card = document.getElementById('dropdown-card');
+                // Toggle the card's visibility
+                if (card.style.display === 'none' || card.style.display === '') {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            document.getElementById('back-button').addEventListener('click', function() {
+                document.getElementById('dropdown-card').style.display = 'none';
+            });
+
+            document.getElementById('install-card-trigger').addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default action
+                const card = document.getElementById('install-card');
+                // Toggle the card's visibility
+                if (card.style.display === 'none' || card.style.display === '') {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            function hideCard() {
+                document.getElementById('install-card').style.display = 'none';
+            }
+
+        </script>
+<script>
+            const modal = document.getElementById('profileModal');
+            const modalTrigger = document.querySelector('.profile-icon-trigger');
+    
+            modalTrigger.addEventListener('click', (event) => {
+                event.preventDefault();
+                modal.style.display = 'block';
+            });
+    
+            window.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        </script>
+</body>
+<!--end::Body-->
+</html>

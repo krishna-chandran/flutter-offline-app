@@ -1,0 +1,64 @@
+#sidebar {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-content {
+    height: 100%;
+    overflow-y: auto;
+    padding: 20px;
+}
+.custom-card {
+    width: auto; /* Allow the card to adjust width based on content */
+    height: 343px; /* Fixed height */
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box; /* Include padding and border in element's width and height */
+    }
+
+.custom-card .card-body {
+    height: 100%; /* Full height of the card */
+    overflow-y: auto; /* Vertical scrolling if content overflows */
+    }
+
+.timeline-item {
+    display: flex;
+    align-items: center; /* Center align content vertically */
+    }
+
+.timeline-line {
+    flex: 0 0 2px; /* Fixed width for the line */
+    background-color: #ddd; /* Line color */
+    margin-right: 10px; /* Space between line and content */
+    }
+.pagination-hidden {
+    display: none;
+   }
+   
+.pagination-container {
+    padding-top: 0px; /* Adjust padding as needed */
+    margin-bottom: 0; /* Ensure no extra margin below */
+    display: flex;
+    justify-content: center; /* Center the pagination */
+    flex-shrink: 0; /* Prevent it from shrinking */
+    }
+
+.tab-content{
+    margin-bottom: 2rem; 
+    }
+.detail-content {
+    margin-top: -10px!important;
+    padding-top: -10px;
+    }
+
+@media (min-width:1200px){
+    .tab-content{
+            margin-bottom: 140px;
+    }
+}
+@media (min-width: 1200px) {
+    .detail-content {
+        margin-left: 20px !important;
+    }       
+} 

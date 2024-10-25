@@ -1,0 +1,655 @@
+#kt_body {
+    background-color: rgba(242, 246, 255, 1);
+}
+
+.menu-main-content {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+    text-align: left;
+    padding: 50px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.menu-main-content a {
+    width: 123px;
+    height: 22px;
+    gap: 0px;
+    opacity: 0px;
+    text-decoration: none;
+    color: rgba(126, 130, 153, 1);
+}
+
+.menu-nav-button,
+.menu-nav-link {
+    width: 57px;
+    height: 38px;
+    padding: 12px 20px;
+    gap: 10px;
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+.menu-nav-button.active,
+.menu-nav-link.active {
+    background-color: rgba(234, 94, 32, 1);
+    color: white;
+}
+
+.menu-nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+    /* Adjust as needed */
+}
+
+.search-input {
+    width: 180px;
+    height: 20px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+}
+
+.secondary-nav-bar a:hover {
+    color: rgba(126, 130, 153, 1);
+}
+
+.secondary-nav-bar .active {
+    color: rgba(234, 94, 32, 1);
+    font-size: 18px;
+}
+
+.menu-navigation-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 68px;
+    padding: 15px 0;
+    gap: 30px;
+}
+
+.start-now {
+    background-color: rgba(234, 94, 32, 1);
+    position: absolute;
+    bottom: 30px;
+    /* Positioning 10px from the bottom */
+    left: 370px;
+    transform: translateX(-50%);
+    /* Centers the button horizontally */
+    padding: 12px 20px;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    white-space: nowrap;
+    /* Prevents text wrapping */
+}
+
+.page-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    /* Distributes the cards evenly */
+}
+
+.page-card {
+    flex: 1 1 100%;
+    /* Single card per row */
+    height: auto;
+    padding: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: black;
+    box-sizing: border-box;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    background-image: url('../../media/student_dashboard/course_card/gallery-icon.svg');
+    background-size: 200px 150px;
+    /* Set the width of the image */
+    background-position: 70px center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.page-card:hover {
+    transform: scale(1.05);
+    /* Slightly enlarges the card on hover */
+    border: 2px solid #f2670b;
+}
+
+.card-heading {
+    margin: 10px 40px 10px 300px;
+    font-size: 1.2rem;
+}
+
+.page-description {
+    font-size: 0.9rem;
+    margin-bottom: auto;
+    margin: 10px 40px 80px 300px;
+    /* Adjust the margins */
+    max-width: calc(100% - 90px);
+    max-height: calc(1.2em * 6);
+    /* Limit to 7 lines (1.2em is the line height) */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    line-height: 1.2em;
+    /* Adjust line height to control spacing */
+    white-space: normal;
+    margin-right: 10px;
+    padding-right: 10px;
+    /* Add padding for a better scroll experience */
+}
+
+/* Optional: Style the scrollbar (Webkit browsers) */
+.page-description::-webkit-scrollbar {
+    width: 5px;
+}
+
+.page-description::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+
+.page-card:hover .go-arrow {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.fa-search {
+    position: relative;
+    right: 195px;
+    top: 1px;
+    color: #666;
+    font-family: "Roboto";
+}
+
+.menu-nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 30px;
+    /* Adjust as needed */
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: -35px;
+}
+
+.menu-main-content {
+    padding-top: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.go-arrow {
+    color: black;
+}
+
+.page-card {
+    cursor: pointer;
+}
+
+.page-card a {
+    text-decoration: none;
+    color: inherit;
+    /* Make the link inherit the color of the surrounding text */
+}
+
+.donut-container {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+}
+
+.donut {
+    width: 50%;
+    height: 50%;
+}
+
+.donut-hole {
+    fill: transparent;
+}
+
+.donut-ring {
+    fill: none;
+    stroke: #e0e0e0;
+    stroke-width: 4;
+}
+
+.donut-segment {
+    fill: none;
+    stroke: rgba(234, 94, 32, 1);
+    stroke-width: 4;
+    stroke-dasharray: 0, 100;
+    transition: stroke-dasharray 0.3s ease;
+    transform: rotate(-90deg);
+    transform-origin: center;
+}
+
+.donut-text {
+    font-size: 0.6em;
+    text-anchor: middle;
+    fill: rgba(234, 94, 32, 1);
+}
+
+.back-button-1 {
+    width: 38px;
+    margin-right: 10px;
+    background: #FFFFFF;
+    padding: 8px;
+    border-radius: 100px;
+}
+
+.back-icon {
+    height: 14.5px;
+    width: 18.5px;
+}
+
+
+/* For tablets and small desktops (min-width: 768px and max-width: 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .menu-navigation-bar {
+        height: 60px;
+        /* Adjust height for smaller tablets */
+        padding: 10px 0;
+        /* Adjust padding */
+        gap: 20px;
+        /* Adjust spacing between items */
+    }
+}
+
+@media (min-width: 501px) and (max-width: 768px) {
+
+    .secondary-nav-bar {
+        margin-left: 10px;
+    }
+
+    .menu-navigation-bar {
+        flex-direction: column;
+        /* Stack items vertically */
+        height: auto;
+        /* Allow height to adjust automatically */
+        padding: 10px;
+        /* Adjust padding for mobile view */
+        gap: 10px;
+        /* Adjust spacing between items */
+        align-items: flex-start;
+        /* Align items to the start for mobile */
+        margin-top: 16px;
+    }
+
+    .menu-nav-button,
+    .menu-nav-link {
+        width: 25px;
+        /* Further adjusted width for very small screens */
+        height: 12px;
+        /* Further adjusted height for very small screens */
+        padding: 6px 12px;
+        /* Further adjusted padding for very small screens */
+        gap: 1px;
+        /* Further adjusted gap for very small screens */
+        border-radius: 6px;
+        /* Further adjusted border-radius for very small screens */
+    }
+
+    .search-container {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    .search-input {
+        width: 100%;
+        max-width: 800px;
+    }
+
+    .page-card {
+        flex: 1 1 100%;
+        /* Single card per row */
+        height: auto;
+        padding: 20px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        border-radius: 20px;
+        border: 1px solid transparent;
+        transition: transform 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        color: black;
+        box-sizing: border-box;
+        background-color: white;
+        position: relative;
+        overflow: hidden;
+        background-image: url('../../media/student_dashboard/course_card/gallery-icon.svg');
+        background-size: 200px 150px;
+        /* Set the width of the image */
+        background-position: center 30px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    .card-heading {
+        margin: 200px 30px 10px 30px;
+        font-size: 18px;
+    }
+
+    .page-description {
+        font-size: 14px;
+        margin-bottom: auto;
+        margin: 10px 10px 60px 30px;
+        /* Adjust the margins */
+        max-width: calc(100% - 20px);
+        max-height: calc(1.2em * 5);
+        /* Limit to 7 lines (1.2em is the line height) */
+        overflow-y: auto;
+        /* Enable vertical scrolling */
+        line-height: 1.2em;
+        /* Adjust line height to control spacing */
+        white-space: normal;
+        margin-right: 10px;
+        padding-right: 10px;
+        /* Add padding for a better scroll experience */
+    }
+
+    /* Optional: Style the scrollbar (Webkit browsers) */
+    .page-description::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .page-description::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+    }
+
+    .start-now {
+        background-color: rgba(234, 94, 32, 1);
+        position: absolute;
+        bottom: 20px;
+        /* Positioning 10px from the bottom */
+        left: 90px;
+        transform: translateX(-50%);
+        /* Centers the button horizontally */
+        padding: 12px 20px;
+        color: white;
+        border-radius: 10px;
+        text-align: center;
+        white-space: nowrap;
+        /* Prevents text wrapping */
+    }
+
+}
+
+/* For mobile view (max-width: 500px) */
+@media (max-width: 500px) and (min-width: 400px) {
+
+    .menu-navigation-bar {
+        flex-direction: column;
+        /* Stack items vertically */
+        height: auto;
+        /* Allow height to adjust automatically */
+        padding: 10px;
+        /* Adjust padding for mobile view */
+        gap: 10px;
+        /* Adjust spacing between items */
+        align-items: flex-start;
+        /* Align items to the start for mobile */
+        margin-top: 16px;
+        margin-left: -10px;
+    }
+
+    .menu-nav-button,
+    .menu-nav-link {
+        width: 20px;
+        /* Further reduced width for extra small screens */
+        height: 10px;
+        /* Further reduced height for extra small screens */
+        padding: 4px 8px;
+        /* Further reduced padding for extra small screens */
+        gap: 1px;
+        /* Minimal gap for extra small screens */
+        border-radius: 4px;
+        /* Further reduced border-radius for extra small screens */
+        font-size: 10px;
+        /* Optional: adjust font size if necessary */
+    }
+
+    .search-container {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    .search-input {
+        width: 100%;
+        max-width: 800px;
+    }
+
+    .page-card {
+        flex: 1 1 100%;
+        /* Single card per row */
+        height: auto;
+        padding: 20px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        border-radius: 20px;
+        border: 1px solid transparent;
+        transition: transform 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        color: black;
+        box-sizing: border-box;
+        background-color: white;
+        position: relative;
+        overflow: hidden;
+        background-image: url('../../media/student_dashboard/course_card/gallery-icon.svg');
+        background-size: 150px 100px;
+        /* Set the width of the image */
+        background-position: center 30px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    .card-heading {
+        margin: 150px 30px 10px 10px;
+        font-size: 16px;
+    }
+
+    .page-description {
+        font-size: 12px;
+        margin-bottom: auto;
+        margin: 10px 10px 60px 10px;
+        /* Adjust the margins */
+        max-width: calc(100% - 10px);
+        max-height: calc(1.2em * 5);
+        /* Limit to 7 lines (1.2em is the line height) */
+        overflow-y: auto;
+        /* Enable vertical scrolling */
+        line-height: 1.2em;
+        /* Adjust line height to control spacing */
+        white-space: normal;
+        padding-right: 10px;
+        /* Add padding for a better scroll experience */
+    }
+
+    /* Optional: Style the scrollbar (Webkit browsers) */
+    .page-description::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .page-description::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+    }
+
+    .start-now {
+        background-color: rgba(234, 94, 32, 1);
+        position: absolute;
+        bottom: 25px;
+        /* Positioning 10px from the bottom */
+        left: 90px;
+        transform: translateX(-50%);
+        /* Centers the button horizontally */
+        padding: 12px 20px;
+        color: white;
+        border-radius: 10px;
+        text-align: center;
+        white-space: nowrap;
+        /* Prevents text wrapping */
+    }
+}
+
+@media (max-width: 400px) and (min-width: 200px) {
+
+    .menu-main-content {
+        margin-left: -30px;
+        margin-right: -30px;
+    }
+
+    .menu-navigation-bar {
+        flex-direction: column;
+        /* Stack items vertically */
+        height: auto;
+        /* Allow height to adjust automatically */
+        padding: 10px;
+        /* Adjust padding for mobile view */
+        gap: 10px;
+        /* Adjust spacing between items */
+        align-items: flex-start;
+        /* Align items to the start for mobile */
+        margin-top: 16px;
+        margin-left: -10px;
+    }
+
+    .menu-nav-button,
+    .menu-nav-link {
+        width: 20px;
+        /* Further reduced width for extra small screens */
+        height: 10px;
+        /* Further reduced height for extra small screens */
+        padding: 4px 8px;
+        /* Further reduced padding for extra small screens */
+        gap: 1px;
+        /* Minimal gap for extra small screens */
+        border-radius: 4px;
+        /* Further reduced border-radius for extra small screens */
+        font-size: 10px;
+        /* Optional: adjust font size if necessary */
+    }
+
+    .search-container {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    .search-input {
+        width: 100%;
+        max-width: 800px;
+    }
+
+    .page-card {
+        flex: 1 1 100%;
+        /* Single card per row */
+        height: auto;
+        padding: 20px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        border-radius: 20px;
+        border: 1px solid transparent;
+        transition: transform 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        color: black;
+        box-sizing: border-box;
+        background-color: white;
+        position: relative;
+        overflow: hidden;
+        background-image: url('../../media/student_dashboard/course_card/gallery-icon.svg');
+        background-size: 150px 100px;
+        /* Set the width of the image */
+        background-position: center 30px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    .card-heading {
+        margin: 150px 0px 10px 0px;
+        font-size: 16px;
+    }
+
+    .page-description {
+        font-size: 12px;
+        margin-bottom: auto;
+        margin: 10px 0px 60px 0px;
+        /* Adjust the margins */
+        max-width: calc(100% - 5px);
+        max-height: calc(1.2em * 5);
+        /* Limit to 7 lines (1.2em is the line height) */
+        overflow-y: auto;
+        /* Enable vertical scrolling */
+        line-height: 1.2em;
+        /* Adjust line height to control spacing */
+        white-space: normal;
+        /* Add padding for a better scroll experience */
+    }
+
+    /* Optional: Style the scrollbar (Webkit browsers) */
+    .page-description::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .page-description::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+    }
+
+    .start-now {
+        background-color: rgba(234, 94, 32, 1);
+        position: absolute;
+        bottom: 25px;
+        /* Positioning 10px from the bottom */
+        left: 70px;
+        transform: translateX(-50%);
+        /* Centers the button horizontally */
+        padding: 12px 20px;
+        color: white;
+        border-radius: 10px;
+        text-align: center;
+        white-space: nowrap;
+        /* Prevents text wrapping */
+    }
+}

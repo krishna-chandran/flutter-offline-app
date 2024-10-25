@@ -1,0 +1,62 @@
+
+.custom-card {
+  width: auto; /* Allow the card to adjust width based on content */
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box; /* Include padding and border in element's width and height */
+}
+
+.custom-card .card-body {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+}
+
+/* .timeline-line {
+    flex: 0 0 2px; 
+    background-color: #ddd; 
+    margin-right: 10px;
+    } */
+
+
+/*   
+.pagination-container {
+    padding-top: 0px;
+    margin-bottom: 0; 
+    display: flex;
+    justify-content: center; 
+    flex-shrink: 0; 
+    }
+
+.pagination{
+    justify-content: center; 
+}
+ */
+
+#kt_app_toolbar {
+  margin-top: 20px; /* Adjust the value as needed */
+}
+
+/* .tab-content{
+    margin-bottom: 2rem; 
+    } */
+.detail-content {
+  margin-top: -10px !important;
+  padding-top: -10px;
+}
+
+/* @media (min-width:1200px){
+    .tab-content{
+            margin-bottom: 140px;
+    }
+} */
+@media (min-width: 1200px) {
+  .detail-content {
+    margin-left: 20px !important;
+  }
+}

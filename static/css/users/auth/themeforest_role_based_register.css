@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Inter';
+    background-color: #F2F6FF;
+}
+
+/* Sticky navbar styles */
+.navbar {
+    position: sticky;
+    /* Make the navbar sticky */
+    top: 0;
+    /* Stick to the top of the viewport */
+    background-color: white;
+    /* Ensure the background is solid */
+    padding: 10px 25px;
+    z-index: 1;
+    /* Ensure it stays on top of other elements */
+}
+
+/* Role heading styles */
+.role-heading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Role selection container */
+.role-selection-container {
+    max-width: 60%;
+    margin: 50px auto;
+    /* Centering the container */
+}
+
+/* Flex column for role boxes */
+.role-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow items to wrap to the next line */
+    justify-content: space-between;
+    /* Distribute space evenly between items */
+}
+
+/* Role item styles */
+.role-item {
+    margin: 15px;
+    /* Add margin for gap between items */
+    display: flex;
+    flex-direction: column;
+    /* Each role box stacks vertically */
+    align-items: center;
+    /* Center items horizontally */
+    text-align: center;
+}
+
+/* Role icon styling */
+.role-icon {
+    cursor: pointer;
+    width: 195px;
+    /* Fixed width */
+    height: 227px;
+    /* Fixed height */
+    border-radius: 50%;
+    /* Make it circular */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Light shadow */
+    object-fit: cover;
+    /* Ensures the image covers the circle */
+    margin-bottom: 10px;
+    /* Space between icon and name */
+}
+
+/* Role name styling */
+.role-name {
+    margin-top: 10px;
+}
+
+/* Navbar styling */
+.logo {
+    max-width: 120px;
+    max-height: 60px;
+    width: auto;
+    height: auto;
+}
+
+/* Media query for mobile devices (up to 767px) */
+@media (max-width: 767px) {
+    .role-heading-container {
+        font-size: 13px;
+    }
+
+    .role-boxes {
+        justify-content: center;
+        /* Center items on smaller screens */
+    }
+
+    .role-item {
+        flex: 1 1 calc(100% - 30px);
+        /* Full width on smaller screens */
+    }
+
+    .role-icon {
+        width: 250px;
+        /* Adjust icon size for mobile */
+        height: 250px;
+        /* Adjust icon size for mobile */
+    }
+
+    .logo {
+        width: 27%;
+
+    }
+
+    .navbar {
+        padding: 10px;
+    }
+}
+
+/* Media query for tablets (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .role-boxes {
+        justify-content: center;
+        /* Center items on tablets */
+    }
+
+    .role-item {
+        flex: 1 1 calc(50% - 30px);
+        /* Adjust role item width for tablets */
+    }
+
+    .role-icon {
+        width: 175px;
+        /* Adjust icon size for tablets */
+        height: 175px;
+        /* Adjust icon size for tablets */
+    }
+}
+
+/* Media query for laptops (1024px to 1439px) */
+@media (min-width: 1024px) and (max-width: 1921px) {
+    .role-boxes {
+        justify-content: space-around;
+        /* Space out items for laptops */
+    }
+
+    .role-item {
+        flex: 1 1 calc(30% - 30px);
+        /* Adjust role item width for laptops */
+    }
+
+    .role-icon {
+        width: 200px;
+        /* Adjust icon size for laptops */
+        height: 200px;
+        /* Adjust icon size for laptops */
+    }
+}
+
+/* Media query for desktops (1440px and above) */
+@media (min-width: 1921px) {
+    .role-boxes {
+        justify-content: space-between;
+        /* Distribute space evenly for desktops */
+    }
+
+    .role-icon {
+        width: 400px;
+        /* Larger icon for desktops */
+        height: 400px;
+        /* Larger icon for desktops */
+    }
+
+    .logo {
+        max-width: 300px;
+        max-height: 500px;
+        /* Increase logo size */
+    }
+
+    .navbar {
+        padding: 30px 50px;
+    }
+
+    .role-heading-container {
+        font-size: 30px;
+    }
+
+    p.role-name {
+        font-size: 26px;
+    }
+
+}

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<!--begin::Head-->
+<head>
+<title>Jyanam LMS</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport"/>
+<link href="/static/assets/media/logos/favicon.ico" rel="shortcut icon"/>
+<link href="..\..\..\..\..\..\static\js\manifest.json" rel="manifest"/>
+<!--begin::Fonts(mandatory for all pages)-->
+<link href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" rel="stylesheet">
+<!--end::Fonts-->
+<link href="..\..\..\..\..\..\static\media\student_dashboard\jnyanam_brand_logo.svg" rel="icon" sizes="196x196" type="image/svg"/>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet"/>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<!--begin::Vendor Stylesheets(used for this page only)-->
+<!--end::Global Stylesheets Bundle-->
+<!--begin::Custom Stylesheets-->
+<link href="..\..\..\..\..\..\static\css\student_dashboard\themeforest_student_dashboard_base.css" rel="stylesheet" type="text/css">
+<!--end::Custom Stylesheets-->
+<script>// Frame-busting to prevent site from being loaded within a frame without permission (click-jacking) if (window.top != window.self) { window.top.location.replace(window.self.location.href); }</script>
+</link></link></head>
+<!--end::Head-->
+<!--begin::Body-->
+<body>
+<!--begin::Navbar-->
+<nav class="navbar">
+<div class="logo">
+<a href="..\..\..\..\..\../index.html">
+<img alt="Logo" src="..\..\..\..\..\..\static\media\student_dashboard\New_orange_design\Jnyanam with logo 1.svg"/>
+</a>
+</div>
+<button class="toggle-button" id="toggle-button">
+<img alt="Toggle Menu" src="..\..\..\..\..\..\static\media\navbar-icons\general.svg"/>
+</button>
+<ul id="icon-list" style="margin-left: auto;">
+<li>
+<a href="..\..\..\..\..\../index.html">
+<img alt="Notification Icon" src="..\..\..\..\..\..\static\media\student_dashboard\New_orange_design\home-new.svg" style="width: 25px; height: auto;"/>
+</a>
+</li>
+<li>
+<a href="#/index.html">
+<img alt="Notification Icon" src="..\..\..\..\..\..\static\media\student_dashboard\New_orange_design\notification-new.svg"/>
+</a>
+</li>
+<li>
+<a href="#/index.html">
+<img alt="Notification Icon" src="..\..\..\..\..\..\static\media\student_dashboard\New_orange_design\mic-new.svg"/>
+</a>
+</li>
+<li>
+<a href="#/index.html">
+<img alt="language Icon" class="language-icon" src="..\..\..\..\..\..\static\media\student_dashboard\New_orange_design\language-new.svg" style="width: 25px;"/>
+</a>
+</li>
+<li>
+<a href="#/index.html" id="icon-trigger">
+<img alt="Notification Icon" src="..\..\..\..\..\..\static\media\student_dashboard\New_orange_design\devices-new.svg" style="width: 25px; height: auto;"/>
+</a>
+<div class="dropdown-card" id="dropdown-card">
+<h2 class="dropdown-title">Install Jnyanam App</h2>
+<br/>
+<img alt="QR Code" class="dropdown-image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXIAAAFyAQAAAADAX2ykAAACb0lEQVR4nO2aQY6cMBBFX8VIWdJSDjBHMTcb5WZwlNzALEdy62dhG+hORplREANSedFt8Ft8qfTL5cImPjOmb5/CwXnnnXfeeeedf4+3OjpsmJcf7mbD3NaGA/U4vxfflb84Asw/0HTD2mIQzCEDtJdn0+/8x/i5OtQGgvTzJW/fmXVH63F+H77720sDQ9MtZHteOpt+5z/JR70ZURl71Ztp/Go9zv8X3/zbC5hBzDc0WZBNzbzbFsjZ9Dv/IX4yM7Nb3X/tNQExBdnAvZTPx+pxfie++Hd1qJjbbLphenTv+fQ7/48hSaqzFERMICUAgjT2EhBElKTxbPqd/xAfE0D/ZkCQDb1ETLW/QVQ+WI/z+/LTi1SOudPt3vbaXs2/s7VK+qT6nX9vSJI09pmagZeV4uklSXt+viLf+pMJGfNtW2lNLwK4m5i7rGP0OL8vv/Uvi02lDFEZjYTl0f17Pb7GVylofdxk6phCm3l8L8i3gKag5uQ6IbaDU3GyPL4X5Jfzb2ixTKCR5RBccrbH96J8ixvNv8vWS0xB0OcSaY/vJfklP1MPRJutV826a/Q9vhfjl/oKNPb5ub6q1k0e34vy9fw7DSFb/PVdBqGddanf9w3CUXqc35dv/m2j1lLNsA9FtPv3qvx6f1IjYEP5uRvMHaXIGg/U4/xe/HbD3WyzZSEvRZb3ny/KP9bPywffXsun3y3n8b06b8PcAbOV1LwG2YYv0eP8zny9vxFUPvfHdLetk0+v3/nH8bT/Uu7iJFoTS5naxPL8fEF+c/+KtQlNX3sedeb956vyf96fXEe/PgTPz84777zzzju/H/8bKKwR1YsdFKQAAAAASUVORK5CYII="/>
+<br/>
+<button class="install-app-btn">Install app</button>
+</div>
+</li>
+<li>
+<a class="profile-icon-trigger" href="#/index.html">
+<img alt="Profile Icon" class="profile-icon" src="..\..\..\..\..\..\static\media\student_dashboard\profile_icon.svg"/>
+</a>
+</li>
+</ul>
+</nav>
+<!--end::Navbar-->
+<!-- Modal Structure -->
+<div class="modal-overlay" id="profileModal">
+<div class="modal-box">
+<form action="/logout/" method="POST">
+<input name="csrfmiddlewaretoken" type="hidden" value="EKWAFKkflYnOlGuTEbrge9Qn9NWlC9cX7BpFlmCsmELrLdc8e92dSeI8DB9wXSrB"/>
+<div class="edit-button">
+<a href="/accounts/login//index.html"></a>
+<button>Sign out</button>
+</div>
+<div class="modal-content">
+<img alt="default image" class="profile-image" src="..\..\..\..\..\..\static\media\avatars\300-1.jpg"/>
+<h4></h4>
+<p class="role"></p>
+<div class="info-container">
+<div class="info-item">
+<img alt="Email Icon" class="info-icon" src="..\..\..\..\..\..\static\media\student_dashboard\New_orange_design\communication.svg"/>
+<span></span>
+</div>
+<hr class="info-separator"/>
+<div class="info-item">
+<img alt="Password Icon" class="info-icon" src="..\..\..\..\..\..\static\media\student_dashboard\New_orange_design\users.svg"/>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+<!-- End::Modal Structure -->
+<div class="icon-box" id="icon-box">
+<!-- Home Section -->
+<a href="..\..\..\..\..\../index.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: inherit; width: 100%;">
+<div style="display: flex; align-items: center;">
+<img alt="Home Icon" src="..\..\..\..\..\..\static\media\student_dashboard\New_orange_design\home-new.svg" style="height: 25px; margin-right: 8px;"/>
+<h3 class="notification-text" style="margin: 0;">Home</h3>
+</div>
+</a>
+<div class="custom-line"></div>
+<!-- Notification Section -->
+<a href="#/index.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: inherit; width: 100%;">
+<div style="display: flex; align-items: center;">
+<img alt="Notification Icon" src="..\..\..\..\..\..\static\media\student_dashboard\New_orange_design\notification-new.svg" style="height: 30px; margin-right: 8px; padding-bottom: 4px;"/>
+<h3 class="notification-text">Notification</h3>
+</div>
+<img alt="Arrow Icon" src="..\..\..\..\..\..\static\media\student_dashboard\New_orange_design\arrows.svg" style="height: 20px;"/>
+</a>
+<div class="custom-line"></div>
+<!-- Microphone Section -->
+<a href="#/index.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: inherit; width: 100%;">
+<div style="display: flex; align-items: center;">
+<img alt="Microphone Icon" class="microphone-icon" src="..\..\..\..\..\..\static\media\student_dashboard\New_orange_design\mic-new.svg" style="height: 30px; margin-right: 8px; padding-bottom: 4px;"/>
+<h3 class="notification-text">Microphone</h3>
+</div>
+</a>
+<div class="custom-line"></div>
+<!-- Language Section -->
+<a href="#/index.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: inherit; width: 100%;">
+<div style="display: flex; align-items: center;">
+<img alt="Language Icon" class="language-icon" src="..\..\..\..\..\..\static\media\student_dashboard\New_orange_design\language-new.svg" style="height: 30px; margin-right: 8px; padding-bottom: 4px;"/>
+<h3 class="notification-text">Language</h3>
+</div>
+<img alt="Arrow Icon" src="..\..\..\..\..\..\static\media\student_dashboard\New_orange_design\arrows.svg" style="height: 20px;"/>
+</a>
+<div class="custom-line"></div>
+<!-- Install App Section -->
+<a href="#/index.html" id="install-app" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: inherit; width: 100%;">
+<div style="display: flex; align-items: center;">
+<img alt="Install App Icon" src="..\..\..\..\..\..\static\media\student_dashboard\New_orange_design\devices-new.svg" style="height: 25px; margin-right: 8px;"/>
+<h3 class="notification-text">Install app</h3>
+</div>
+<img alt="Arrow Icon" src="..\..\..\..\..\..\static\media\student_dashboard\New_orange_design\arrows.svg" style="height: 20px;"/>
+</a>
+<!-- Hidden card that will appear on click -->
+<div class="install-app-card" id="install-app-card">
+<!-- Back Option -->
+<button class="back-button" id="back-button">←</button>
+<h2>Install Jnyanam App</h2>
+<img alt="QR Code" class="dropdown-image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXIAAAFyAQAAAADAX2ykAAACb0lEQVR4nO2aQY6cMBBFX8VIWdJSDjBHMTcb5WZwlNzALEdy62dhG+hORplREANSedFt8Ft8qfTL5cImPjOmb5/CwXnnnXfeeeedf4+3OjpsmJcf7mbD3NaGA/U4vxfflb84Asw/0HTD2mIQzCEDtJdn0+/8x/i5OtQGgvTzJW/fmXVH63F+H77720sDQ9MtZHteOpt+5z/JR70ZURl71Ztp/Go9zv8X3/zbC5hBzDc0WZBNzbzbFsjZ9Dv/IX4yM7Nb3X/tNQExBdnAvZTPx+pxfie++Hd1qJjbbLphenTv+fQ7/48hSaqzFERMICUAgjT2EhBElKTxbPqd/xAfE0D/ZkCQDb1ETLW/QVQ+WI/z+/LTi1SOudPt3vbaXs2/s7VK+qT6nX9vSJI09pmagZeV4uklSXt+viLf+pMJGfNtW2lNLwK4m5i7rGP0OL8vv/Uvi02lDFEZjYTl0f17Pb7GVylofdxk6phCm3l8L8i3gKag5uQ6IbaDU3GyPL4X5Jfzb2ixTKCR5RBccrbH96J8ixvNv8vWS0xB0OcSaY/vJfklP1MPRJutV826a/Q9vhfjl/oKNPb5ub6q1k0e34vy9fw7DSFb/PVdBqGddanf9w3CUXqc35dv/m2j1lLNsA9FtPv3qvx6f1IjYEP5uRvMHaXIGg/U4/xe/HbD3WyzZSEvRZb3ny/KP9bPywffXsun3y3n8b06b8PcAbOV1LwG2YYv0eP8zny9vxFUPvfHdLetk0+v3/nH8bT/Uu7iJFoTS5naxPL8fEF+c/+KtQlNX3sedeb956vyf96fXEe/PgTPz84777zzzju/H/8bKKwR1YsdFKQAAAAASUVORK5CYII=" style="width: 90%; height: 40%; margin: 0 auto; display: block;"/>
+<br/>
+<button class="install-app-btn">Install app</button>
+</div>
+<div class="custom-line"></div>
+<!-- Profile Section -->
+<!-- Profile Section with Modal Trigger -->
+<a class="profile-icon-trigger-1" href="#/index.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: inherit; width: 100%;">
+<div style="display: flex; align-items: center;">
+<img alt="Profile Icon" src="..\..\..\..\..\..\static\media\student_dashboard\profile_icon.svg" style="height: 30px; margin-right: 8px; padding-bottom: 3px; padding-top: 3px;"/>
+<h3 class="notification-text">Profile</h3>
+</div>
+<img alt="Arrow Icon" src="..\..\..\..\..\..\static\media\student_dashboard\New_orange_design\arrows.svg" style="height: 20px;"/>
+</a>
+</div>
+<link href="..\..\..\..\..\..\static\css\student_dashboard\themeforest_navigate_page_menu.css" rel="stylesheet" type="text/css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<body class="header-tabs-enabled header-menu-enabled" id="kt_body">
+<div class="menu-main-content">
+<div class="secondary-nav-bar">
+<a class="back-button-1" href="..\..\..\chapters/index.html">
+<img alt="Back" class="back-icon" src="..\..\..\..\..\..\static\media\student_dashboard\New_orange_design\backbutton.svg"/>
+</a>
+<a class="text-muted text-hover-primary" href="..\..\..\..\..\../index.html">Home/</a>
+<a class="text-muted text-hover-primary" href="..\..\..\chapters/index.html">Week 1/</a>
+<a class="text-muted text-hover-primary active" href="./index.html">Monday</a>
+</div>
+<div class="menu-navigation-bar">
+<div class="menu-nav-left">
+<a class="menu-nav-link active" href="/menus/course/1/chapter/1/page/?status=all/index.html">All</a>
+<a class="menu-nav-link" href="/menus/course/1/chapter/1/page/?status=upcoming/index.html">Upcoming</a>
+<a class="menu-nav-link" href="/menus/course/1/chapter/1/page/?status=in_progress/index.html">In Progress</a>
+<a class="menu-nav-link" href="/menus/course/1/chapter/1/page/?status=completed/index.html">Completed</a>
+</div>
+<div class="menu-nav-right">
+<div class="search-container">
+<input class="search-input" placeholder="    Search..." type="text"/>
+<i class="fa fa-search"></i>
+</div>
+</div>
+</div>
+<div class="card-container">
+<div class="chapter-menu">
+<div class="page-list">
+<div class="page-card card-container">
+<h3 class="card-heading" title="identify the object -104 (q5)">identify the object -104 (q5)</h3>
+<p class="page-description" title="A task where users identify and label various objects from a given set or image.">A task where users identify and label various objects from a given set or image.</p>
+<a class="start-now" onclick="location.href='9/index.html';" style="color: white;width: 67px;height: 15px; border-radius: 10px; padding: 12px 20px;">
+                                    Start now</a>
+<div class="donut-container" id="donut-9">
+<svg class="donut" viewbox="0 0 32 32">
+<circle class="donut-hole" cx="16" cy="16" r="14"></circle>
+<circle class="donut-ring" cx="16" cy="16" r="14"></circle>
+<circle class="donut-segment" cx="16" cy="16" r="14" stroke-dasharray="0, 100"></circle>
+<text class="donut-text" dy=".3em" x="50%" y="50%">0%</text>
+</svg>
+</div>
+</div>
+<div class="page-card card-container">
+<h3 class="card-heading" title="english rhymes">english rhymes</h3>
+<p class="page-description" title="A collection of engaging and fun English rhymes designed to entertain and educate young children.">A collection of engaging and fun English rhymes designed to entertain and educate young children.</p>
+<a class="start-now" onclick="location.href='4/index.html';" style="color: white;width: 67px;height: 15px; border-radius: 10px; padding: 12px 20px;">
+                                    Start now</a>
+<div class="donut-container" id="donut-4">
+<svg class="donut" viewbox="0 0 32 32">
+<circle class="donut-hole" cx="16" cy="16" r="14"></circle>
+<circle class="donut-ring" cx="16" cy="16" r="14"></circle>
+<circle class="donut-segment" cx="16" cy="16" r="14" stroke-dasharray="0, 100"></circle>
+<text class="donut-text" dy=".3em" x="50%" y="50%">0%</text>
+</svg>
+</div>
+</div>
+<div class="page-card card-container">
+<h3 class="card-heading" title="drag and drop tree plant vine -201 (q2)">drag and drop tree plant vine -201 (q2)</h3>
+<p class="page-description" title='"An interactive activity where users drag and drop elements to create and manage a virtual tree and vine ecosystem."'>"An interactive activity where users drag and drop elements to create and manage a virtual tree and vine ecosystem."</p>
+<a class="start-now" onclick="location.href='8/index.html';" style="color: white;width: 67px;height: 15px; border-radius: 10px; padding: 12px 20px;">
+                                    Start now</a>
+<div class="donut-container" id="donut-8">
+<svg class="donut" viewbox="0 0 32 32">
+<circle class="donut-hole" cx="16" cy="16" r="14"></circle>
+<circle class="donut-ring" cx="16" cy="16" r="14"></circle>
+<circle class="donut-segment" cx="16" cy="16" r="14" stroke-dasharray="0, 100"></circle>
+<text class="donut-text" dy=".3em" x="50%" y="50%">0%</text>
+</svg>
+</div>
+</div>
+<div class="page-card card-container">
+<h3 class="card-heading" title="test for file upload and other quesiton">test for file upload and other quesiton</h3>
+<p class="page-description" title="testing description">testing description</p>
+<a class="start-now" onclick="location.href='14/index.html';" style="color: white;width: 67px;height: 15px; border-radius: 10px; padding: 12px 20px;">
+                                    Start now</a>
+<div class="donut-container" id="donut-14">
+<svg class="donut" viewbox="0 0 32 32">
+<circle class="donut-hole" cx="16" cy="16" r="14"></circle>
+<circle class="donut-ring" cx="16" cy="16" r="14"></circle>
+<circle class="donut-segment" cx="16" cy="16" r="14" stroke-dasharray="0, 100"></circle>
+<text class="donut-text" dy=".3em" x="50%" y="50%">0%</text>
+</svg>
+</div>
+</div>
+<div class="page-card card-container">
+<h3 class="card-heading" title="test file question">test file question</h3>
+<p class="page-description" title="des">des</p>
+<a class="start-now" onclick="location.href='15/index.html';" style="color: white;width: 67px;height: 15px; border-radius: 10px; padding: 12px 20px;">
+                                    Start now</a>
+<div class="donut-container" id="donut-15">
+<svg class="donut" viewbox="0 0 32 32">
+<circle class="donut-hole" cx="16" cy="16" r="14"></circle>
+<circle class="donut-ring" cx="16" cy="16" r="14"></circle>
+<circle class="donut-segment" cx="16" cy="16" r="14" stroke-dasharray="0, 100"></circle>
+<text class="donut-text" dy=".3em" x="50%" y="50%">0%</text>
+</svg>
+</div>
+</div>
+<div class="page-card card-container">
+<h3 class="card-heading" title="poshane mattu arogya rakshane (teacher training)">poshane mattu arogya rakshane (teacher training)</h3>
+<p class="page-description" title='Poshane Mattu Arogya Rakshane" is a teacher training program focused on nutrition and health protection education.'>Poshane Mattu Arogya Rakshane" is a teacher training program focused on nutrition and health protection education.</p>
+<a class="start-now" onclick="location.href='1/index.html';" style="color: white;width: 67px;height: 15px; border-radius: 10px; padding: 12px 20px;">
+                                    Start now</a>
+<div class="donut-container" id="donut-1">
+<svg class="donut" viewbox="0 0 32 32">
+<circle class="donut-hole" cx="16" cy="16" r="14"></circle>
+<circle class="donut-ring" cx="16" cy="16" r="14"></circle>
+<circle class="donut-segment" cx="16" cy="16" r="14" stroke-dasharray="0, 100"></circle>
+<text class="donut-text" dy=".3em" x="50%" y="50%">0%</text>
+</svg>
+</div>
+</div>
+<div class="page-card card-container">
+<h3 class="card-heading" title="Gida Mara Balli (English) story">Gida Mara Balli (English) story</h3>
+<p class="page-description" title='Gida Mara Balli" is a story about the interconnectedness of plants, trees, and vines, illustrating the balance of nature.'>Gida Mara Balli" is a story about the interconnectedness of plants, trees, and vines, illustrating the balance of nature.</p>
+<a class="start-now" onclick="location.href='2/index.html';" style="color: white;width: 67px;height: 15px; border-radius: 10px; padding: 12px 20px;">
+                                    Start now</a>
+<div class="donut-container" id="donut-2">
+<svg class="donut" viewbox="0 0 32 32">
+<circle class="donut-hole" cx="16" cy="16" r="14"></circle>
+<circle class="donut-ring" cx="16" cy="16" r="14"></circle>
+<circle class="donut-segment" cx="16" cy="16" r="14" stroke-dasharray="0, 100"></circle>
+<text class="donut-text" dy=".3em" x="50%" y="50%">0%</text>
+</svg>
+</div>
+</div>
+<div class="page-card card-container">
+<h3 class="card-heading" title="garbini shriyaara araike (community learning)">garbini shriyaara araike (community learning)</h3>
+<p class="page-description" title='"Garbini Shriyaara Araike" focuses on supporting pregnant women through community-based learning and care, fostering collective well-being and knowledge.'>"Garbini Shriyaara Araike" focuses on supporting pregnant women through community-based learning and care, fostering collective well-being and knowledge.</p>
+<a class="start-now" onclick="location.href='3/index.html';" style="color: white;width: 67px;height: 15px; border-radius: 10px; padding: 12px 20px;">
+                                    Start now</a>
+<div class="donut-container" id="donut-3">
+<svg class="donut" viewbox="0 0 32 32">
+<circle class="donut-hole" cx="16" cy="16" r="14"></circle>
+<circle class="donut-ring" cx="16" cy="16" r="14"></circle>
+<circle class="donut-segment" cx="16" cy="16" r="14" stroke-dasharray="0, 100"></circle>
+<text class="donut-text" dy=".3em" x="50%" y="50%">0%</text>
+</svg>
+</div>
+</div>
+<div class="page-card card-container">
+<h3 class="card-heading" title="drag and drop tree plant vine -201 (q3)">drag and drop tree plant vine -201 (q3)</h3>
+<p class="page-description" title='"An interactive activity where users drag and drop elements to create and manage a virtual tree and vine ecosystem."'>"An interactive activity where users drag and drop elements to create and manage a virtual tree and vine ecosystem."</p>
+<a class="start-now" onclick="location.href='7/index.html';" style="color: white;width: 67px;height: 15px; border-radius: 10px; padding: 12px 20px;">
+                                    Start now</a>
+<div class="donut-container" id="donut-7">
+<svg class="donut" viewbox="0 0 32 32">
+<circle class="donut-hole" cx="16" cy="16" r="14"></circle>
+<circle class="donut-ring" cx="16" cy="16" r="14"></circle>
+<circle class="donut-segment" cx="16" cy="16" r="14" stroke-dasharray="0, 100"></circle>
+<text class="donut-text" dy=".3em" x="50%" y="50%">0%</text>
+</svg>
+</div>
+</div>
+<div class="page-card card-container">
+<h3 class="card-heading" title="Select correct option">Select correct option</h3>
+<p class="page-description" title="Sample description">Sample description</p>
+<a class="start-now" onclick="location.href='13/index.html';" style="color: white;width: 67px;height: 15px; border-radius: 10px; padding: 12px 20px;">
+                                    Start now</a>
+<div class="donut-container" id="donut-13">
+<svg class="donut" viewbox="0 0 32 32">
+<circle class="donut-hole" cx="16" cy="16" r="14"></circle>
+<circle class="donut-ring" cx="16" cy="16" r="14"></circle>
+<circle class="donut-segment" cx="16" cy="16" r="14" stroke-dasharray="0, 100"></circle>
+<text class="donut-text" dy=".3em" x="50%" y="50%">0%</text>
+</svg>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+<script>
+    function updateDonutChart(id, percent) {
+        percent = Math.round(percent);
+        if (percent > 100) {
+            percent = 100;
+        } else if (percent < 0) {
+            percent = 0;
+        }
+        const container = document.getElementById(id);
+        if (container) {
+            const circle = container.querySelector('.donut-segment');
+            circle.style.strokeDasharray = `${percent}, 100`;
+            const text = container.querySelector('.donut-text');
+            if (text) {
+                text.textContent = `${percent}%`;
+            }
+        }
+    }
+
+    // Example usage
+    
+        
+            
+                updateDonutChart('donut-9', 0);
+            
+        
+    
+        
+            
+                updateDonutChart('donut-4', 0);
+            
+        
+    
+        
+            
+                updateDonutChart('donut-8', 0);
+            
+        
+    
+        
+            
+                updateDonutChart('donut-14', 0);
+            
+        
+    
+        
+            
+                updateDonutChart('donut-15', 0);
+            
+        
+    
+        
+            
+                updateDonutChart('donut-1', 0);
+            
+        
+    
+        
+            
+                updateDonutChart('donut-2', 0);
+            
+        
+    
+        
+            
+                updateDonutChart('donut-3', 0);
+            
+        
+    
+        
+            
+                updateDonutChart('donut-7', 0);
+            
+        
+    
+        
+            
+                updateDonutChart('donut-13', 0);
+            
+        
+    
+
+</script>
+<script>
+        document.getElementById('toggle-button').addEventListener('click', function () {
+            const iconBox = document.getElementById('icon-box');
+            if (iconBox.style.display === 'none' || iconBox.style.display === '') {
+                iconBox.style.display = 'block';  // Show the icon box
+            } else {
+                iconBox.style.display = 'none';   // Hide the icon box
+            }
+        });
+        window.addEventListener('resize', function () {
+            const iconBox = document.getElementById('icon-box');
+            if (window.innerWidth > 600) {
+                iconBox.style.display = 'none';
+            }
+        });
+
+        document.getElementById('install-app').addEventListener('click', function () {
+            var card = document.getElementById('install-app-card');
+
+            // Toggle the visibility of the card
+            if (card.style.display === 'none' || card.style.display === '') {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        // script function for the back button ?//
+        document.getElementById('back-button').addEventListener('click', function () {
+            document.getElementById('install-app-card').style.display = 'none';
+        });
+        // script function for the back button ?//
+
+
+        // script function for the drop down //
+        document.getElementById('icon-trigger').addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent the default link behavior
+            const card = document.getElementById('dropdown-card');
+            // Toggle the card's visibility
+            if (card.style.display === 'none' || card.style.display === '') {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    </script>
+<script>
+        const modal = document.getElementById('profileModal');
+        const modalTrigger = document.querySelector('.profile-icon-trigger');
+
+        modalTrigger.addEventListener('click', (event) => {
+            event.preventDefault();
+            modal.style.display = 'block';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var profileTrigger = document.querySelector('.profile-icon-trigger-1');
+            var modal = document.getElementById('profileModal');
+            var modalOverlay = document.querySelector('.modal-overlay');
+
+            profileTrigger.addEventListener('click', function (event) {
+                event.preventDefault();
+                modal.style.display = 'block'; // Show the modal
+            });
+
+            // Close modal when clicking outside of modal-box
+            modalOverlay.addEventListener('click', function (event) {
+                if (event.target === modalOverlay) {
+                    modal.style.display = 'none'; // Hide the modal
+                }
+            });
+        });
+    </script>
+<!--begin::Scripts-->
+<script src="..\..\..\..\..\..\static\js\manifest.json"></script>
+<script src="..\..\..\..\..\..\static\js\serviceworker.js"></script>
+<script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/static/js/serviceworker.js')
+            .then(function(registration) {
+                console.log('Service Worker registered with scope:', registration.scope);
+            })                  
+            .catch(function(error) {
+                console.error('Service Worker registration failed:', error);
+            });
+        }
+        
+      </script>
+<!--end::Scripts-->
+<!--begin::Javascript-->
+<script>var hostUrl = "/static/";</script>
+<!--begin::Global Javascript Bundle(mandatory for all pages)-->
+<!--end::Global Javascript Bundle-->
+<!--begin::Vendors Javascript(used for this page only)-->
+<!--end::Vendors Javascript-->
+<!--begin::Custom Javascript(used for this page only)-->
+<!--end::Custom Javascript-->
+<!--end::Javascript-->
+</link></body>
+<!--end::Body-->
+</html>

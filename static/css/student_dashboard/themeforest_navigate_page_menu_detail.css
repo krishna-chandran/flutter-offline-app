@@ -1,0 +1,2220 @@
+.page-title {
+    padding-left: 0px;
+    padding-top: 10px;
+}
+
+.main-container {
+    position: relative;
+    width: 100%;
+    /* Maintain aspect ratio for video */
+    margin-bottom: 10px;
+}
+
+.row {
+    margin-right: 10px;
+}
+
+.iframe {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 880px;
+    height: auto;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+#kt_body {
+    background-color: rgba(242, 246, 255, 1);
+}
+
+.main-menu-content {
+    padding-left: 40px;
+}
+
+/*Modal box css starts */
+
+/* Modal overlay */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* Modal box */
+.modal-box {
+    position: absolute;
+    top: 30%;
+    right: 2%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    padding: 20px;
+    width: 300px;
+    border-radius: 32px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Edit button */
+.edit-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 3;
+}
+
+.edit-button button {
+    background-color: #FF453A;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 16px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Modal content styling */
+.modal-content {
+    padding-top: 10px;
+}
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px auto;
+    display: block;
+    background-color: #eaeaea;
+}
+
+/* Username styling */
+.modal-content h4 {
+    margin: 15px 0 5px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Inter;
+}
+
+/* Role styling */
+.modal-content .role {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+    font-family: Inter;
+}
+
+/* Info container */
+.info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: 1px solid #E7E7E7;
+    border-radius: 14px;
+    padding-top: 15px;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.info-separator {
+    border: none;
+    border-top: 1px solid #E7E7E7;
+    margin: 10px 0;
+    /* Adjust vertical spacing around the separator */
+    width: 100%;
+    /* Full width of the container */
+}
+
+/* Info items */
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.info-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.info-item span,
+.password-link {
+    font-size: 14px;
+    color: #333;
+}
+
+.password-link:hover {
+    text-decoration: underline;
+}
+
+/*Modal box css ends */
+
+.profile-icon-container {
+    display: flex;
+    align-items: center;
+    /* Vertically centers the icon and text */
+    gap: 10px;
+    /* Adds space between the icon and text */
+}
+
+.profile-icon {
+    width: 24px;
+    /* Set the size of the icon */
+    height: 24px;
+    /* Set the size of the icon */
+}
+
+.notification-text {
+    margin: 0;
+    /* Remove default margin from the h3 */
+    font-size: 16px;
+    /* Adjust text size if necessary */
+}
+
+/* Media query for screen width 1548px or less */
+
+@media (min-width: 2100px) and (max-width: 2800px) {
+
+    .main-menu-content {
+        margin-left: 30px;
+    }
+}
+
+@media (min-width: 1800px) {
+    .container-fluid {
+        margin-top: 10px;
+        margin-bottom: 0;
+        /* Ensure bottom margin is reduced */
+    }
+
+    .main-menu-content {
+        margin-left: 10px;
+    }
+
+    .iframe {
+        width: 100%;
+        left: 0;
+        padding: 0;
+        position: relative;
+        border-radius: 0;
+    }
+
+    .related-page {
+        display: block;
+        /* Further reduce bottom margin for related pages */
+    }
+
+    .page-thumbnail img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .page-details {
+        padding-bottom: 8px;
+        /* Further reduce space between image and text */
+    }
+
+}
+
+@media (max-width: 1548px) {
+    .iframe {
+        width: 100%;
+        left: 0;
+        padding-right: 20px;
+    }
+
+    .main-menu-content {
+        margin-left: 10px;
+    }
+
+    .navbar {
+        margin-right: 20px;
+    }
+}
+
+/* Media query for mobile view (778px or less) */
+
+@media (max-width:820px) {
+
+    .logo-icon {
+        margin-left: -20px;
+    }
+
+    .container-fluid {
+        margin-top: 10px;
+    }
+
+    .main-menu-content {
+        padding-left: 20px;
+    }
+
+    .iframe {
+        width: 100%;
+        left: 0;
+        padding: 0;
+        /* Remove padding to fit the screen */
+        position: relative;
+        /* Adjust position */
+        border-radius: 0;
+        /* Remove border radius for mobile */
+    }
+
+    .col-lg-8,
+    .col-md-7 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .col-lg-4,
+    .col-md-5 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-top: 60px;
+        /* Add space between sections */
+    }
+
+    .related-page {
+        display: block;
+        /* Space between related pages */
+    }
+
+    .page-thumbnail img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .page-details {
+        padding-top: 10px;
+        /* Space between image and text */
+    }
+}
+
+/* Media query for smaller mobile screens (500px or less) */
+
+@media (max-width: 500px) {
+    .container-fluid {
+        margin-top: 20px;
+    }
+
+    .iframe {
+        padding: 0;
+        border-radius: 0;
+        /* Simplify layout for small screens */
+    }
+
+    .logo-icon {
+        margin-left: -30px;
+    }
+}
+
+/* Start - render pages based codes */
+
+/* General Styles for iframe */
+.content-iframe-webpage {
+    width: 100%;
+    height: 450px;
+    /* Default height */
+    border-radius: 20px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.full-screen-webpage {
+    position: absolute;
+    bottom: 10px;
+    z-index: 1000;
+    right: 30px;
+    border-style: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.full-screen-webpage:hover {
+    background-color: rgb(94, 94, 216);
+}
+
+#mark-as-complete {
+    position: absolute;
+    bottom: -60px;
+    left: 0px;
+    background-color: #f2670b;
+    /* Light green color */
+    border: 2px solid #f2670b;
+    /* Slightly darker green border */
+    border-radius: 12px;
+    /* Rounded corners */
+    padding: 8px 17px;
+    /* Padding inside the button */
+    font-size: 14px;
+    /* Font size */
+    color: #fff;
+    /* Text color */
+    text-align: center;
+    /* Center the text */
+    text-decoration: none;
+    /* Remove underline from text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Shadow effect */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    /* Smooth transition effects */
+
+    /* Adding the image as a background */
+    background-image: url('../../media/student-navbar-orange/check-squared.svg');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 20px 20px;
+
+    /* Add padding to ensure space for the icon */
+    padding-left: 40px;
+    /* Adjust based on icon size */
+}
+
+.previous-button {
+    position: absolute;
+    bottom: -60px;
+    right: 110px;
+    border: 2px solid #f2670b;
+    border-radius: 12px;
+    padding: 8px 17px;
+    font-size: 14px;
+    color: #f2670b;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    /* Adding the image as a background */
+    background-image: url('../../media/student-navbar-orange/left-square.svg');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 20px 20px;
+
+    /* Add padding to ensure space for the icon */
+    padding-left: 40px;
+    /* Adjust based on icon size */
+}
+
+.next-button {
+    position: absolute;
+    bottom: -60px;
+    right: 10px;
+    border: 2px solid #f2670b;
+    border-radius: 12px;
+    padding: 8px 17px;
+    font-size: 14px;
+    color: #f2670b;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    /* Background Image */
+    background-image: url('../../media/student-navbar-orange/right-square.svg');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px 20px;
+    /* Adjust size of image */
+    padding-right: 40px;
+    /* Space for the image */
+}
+
+/* Media query for very small mobile screens */
+@media (max-width: 331px) and (min-width: 250px) {
+
+    #mark-as-complete,
+    .previous-button,
+    .next-button {
+        padding: 2px 6px;
+        /* Reduce padding further */
+        font-size: 8px;
+        /* Smaller font size */
+        border-radius: 6px;
+        /* Smaller rounded corners */
+        background-size: 12px 12px;
+        /* Further reduce the background image size */
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        /* Reduce shadow */
+    }
+
+    #mark-as-complete {
+        padding-left: 25px;
+        /* Further reduce padding-left for smaller icon */
+    }
+
+    .previous-button {
+        padding-left: 25px;
+        /* Further reduce padding-left for smaller icon */
+        position: absolute;
+        bottom: -60px;
+        right: 70px;
+        /* Adjust the position for smaller screens */
+    }
+
+    .next-button {
+        padding-right: 25px;
+        /* Further reduce padding-right for smaller icon */
+    }
+}
+
+/* Media query for very small mobile screens */
+@media (max-width: 480px) and (min-width: 330px) {
+
+    #mark-as-complete,
+    .previous-button,
+    .next-button {
+        padding: 4px 8px;
+        /* Reduce padding */
+        font-size: 10px;
+        /* Smaller font size */
+        border-radius: 8px;
+        /* Smaller rounded corners */
+        background-size: 14px 14px;
+        /* Reduce the background image size */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        /* Reduce shadow */
+    }
+
+    #mark-as-complete {
+        padding-left: 30px;
+        /* Adjust padding-left for the smaller icon */
+    }
+
+    .previous-button {
+        padding-left: 30px;
+        /* Adjust padding-left for the smaller icon */
+        position: absolute;
+        bottom: -60px;
+        right: 80px;
+    }
+
+    .next-button {
+        padding-right: 30px;
+        /* Adjust padding-right for the smaller icon */
+    }
+}
+
+.previous-button-1 {
+    position: absolute;
+    bottom: 0px;
+    right: 140px;
+    border: 2px solid #f2670b;
+    border-radius: 12px;
+    padding: 8px 17px;
+    font-size: 14px;
+    color: #f2670b;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    /* Adding the image as a background */
+    background-image: url('../../media/student-navbar-orange/left-square.svg');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 20px 20px;
+
+    /* Add padding to ensure space for the icon */
+    padding-left: 40px;
+    /* Adjust based on icon size */
+}
+
+.next-button-1 {
+    position: absolute;
+    bottom: 0px;
+    right: 40px;
+    border: 2px solid #f2670b;
+    border-radius: 12px;
+    padding: 8px 17px;
+    font-size: 14px;
+    color: #f2670b;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    /* Background Image */
+    background-image: url('../../media/student-navbar-orange/right-square.svg');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px 20px;
+    /* Adjust size of image */
+    padding-right: 40px;
+    /* Space for the image */
+}
+
+@media (max-width: 366px) and (min-width: 250px) {
+
+    .previous-button-1,
+    .next-button-1 {
+        padding: 8px 12px;
+        /* Reduce padding further */
+        font-size: 8px;
+        /* Smaller font size */
+        border-radius: 6px;
+        /* Smaller rounded corners */
+        background-size: 12px 12px;
+        /* Further reduce the background image size */
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        /* Reduce shadow */
+    }
+
+    .previous-button-1 {
+        padding-left: 25px;
+        /* Further reduce padding-left for smaller icon */
+        position: absolute;
+        right: 75px;
+        bottom: 5px;
+    }
+
+    .next-button-1 {
+        padding-right: 25px;
+        /* Further reduce padding-right for smaller icon */
+        bottom: 5px;
+        position: absolute;
+        right: 5px;
+    }
+}
+
+
+@media (max-width: 396px) and (min-width: 360px) {
+
+    .previous-button-1,
+    .next-button-1 {
+        padding: 8px 12px;
+        /* Reduce padding */
+        font-size: 10px;
+        /* Smaller font size */
+        border-radius: 8px;
+        /* Smaller rounded corners */
+        background-size: 14px 14px;
+        /* Reduce the background image size */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        /* Reduce shadow */
+    }
+
+    .previous-button-1 {
+        padding-left: 30px;
+        /* Adjust padding-left for the smaller icon */
+        position: absolute;
+        right: 90px;
+        bottom: 5px;
+    }
+
+    .next-button-1 {
+        padding-right: 30px;
+        /* Adjust padding-right for the smaller icon */
+        bottom: 5px;
+        position: absolute;
+        right: 20px;
+    }
+}
+
+@media (max-width: 480px) and (min-width: 396px) {
+
+    .previous-button-1,
+    .next-button-1 {
+        padding: 8px 12px;
+        /* Reduce padding */
+        font-size: 10px;
+        /* Smaller font size */
+        border-radius: 8px;
+        /* Smaller rounded corners */
+        background-size: 14px 14px;
+        /* Reduce the background image size */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        /* Reduce shadow */
+    }
+
+    .previous-button-1 {
+        padding-left: 30px;
+        /* Adjust padding-left for the smaller icon */
+        position: absolute;
+        right: 120px;
+        bottom: 5px;
+    }
+
+    .next-button-1 {
+        padding-right: 30px;
+        /* Adjust padding-right for the smaller icon */
+        bottom: 5px;
+    }
+}
+
+.description-container {
+    position: absolute;
+    bottom: -140px;
+    left: 0px;
+    max-height: 4.5em;
+    /* Allows space for two lines of text (approx.) */
+    overflow-y: auto;
+    /* Enables vertical scrolling */
+}
+
+.description-container-1 {
+    max-height: 3.5em;
+    /* Allows space for two lines of text (approx.) */
+    overflow-y: auto;
+}
+
+@media only screen and (max-width: 1200px) {
+    .description-container-1 {
+        left: 10px;
+        /* Reduced left position for wider screens */
+    }
+}
+
+/* #mark-as-complete:hover { */
+/* background-color: green; */
+/* Slightly darker green on hover */
+/* transform: scale(1.05); */
+/* Slightly increase size on hover */
+/* } */
+
+.internal-video {
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.external-video-container {
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.ppt-container {
+    height: 65vh;
+    border-radius: 20px;
+}
+
+.assessment {
+    overflow-y: auto;
+    margin-bottom: 10px;
+    margin-left: -10px;
+}
+
+.assessment .form-group {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.assessment .btn {
+    margin-top: 5px;
+}
+
+.assessment label {
+    margin-bottom: 5px;
+}
+
+.markdown-container {
+    width: 100%;
+    height: 570px;
+    /* Default height */
+    overflow-x: hidden;
+
+}
+
+/* START Media queries for the  markdown height 
+
+/* Media query for tablets and smaller laptops (768px to 1023px) */
+@media (max-width: 1023px) {
+
+    .iframe {
+        width: 100%;
+        left: 0;
+        padding: 0;
+        /* Remove padding to fit the screen */
+        position: relative;
+        /* Adjust position */
+        border-radius: 0;
+        /* Remove border radius for mobile */
+    }
+
+    .col-lg-8,
+    .col-md-7 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .col-lg-4,
+    .col-md-5 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-top: 140px;
+        /* Add space between sections */
+    }
+}
+
+/* Media query for large screens (Desktops) */
+@media (min-width: 2000px) and (max-width: 2800px) {
+    .markdown-container {
+        height: 920px;
+        /* Increase height for large desktop screens */
+    }
+}
+
+@media (min-width: 1600px) and (max-width: 2000px) {
+    .markdown-container {
+        height: 880px;
+        /* Increase height for large desktop screens */
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1600px) {
+    .markdown-container {
+        height: 780px;
+        /* Increase height for large desktop screens */
+    }
+}
+
+/* Media query for laptops (1024px to 1199px) */
+@media (max-width: 1200px) and (min-width: 768px) {
+    .markdown-container {
+        height: 850px;
+        /* Slightly reduce height for laptops */
+    }
+}
+
+/* Media query for tablets and smaller laptops (768px to 1023px) */
+@media (max-width: 1023px) and (min-width: 600px) {
+    .markdown-container {
+        height: 400px;
+        /* Further reduce height for smaller devices */
+    }
+}
+
+/* Media query for mobile view (599px or less) */
+@media (max-width: 516px) {
+    .markdown-container {
+        height: 270px;
+        /* Decrease height significantly for mobile screens */
+    }
+}
+
+/* END Media queries for the  markdown height 
+
+
+/* Media query for large screens (Desktops) */
+@media (min-width: 2500px) and (max-width:2800px) {
+    .content-iframe-webpage {
+        height: 850px;
+        width: 1600px;
+        /* Increase height for very large screens */
+    }
+
+    .full-screen-webpage {
+        position: absolute;
+        bottom: 10px;
+        z-index: 1000;
+        right: 100px;
+        border-style: none;
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
+    }
+}
+
+@media (min-width: 2400px) and (max-width:2500px) {
+    .content-iframe-webpage {
+        height: 850px;
+        width: 1500px;
+        /* Increase height for very large screens */
+    }
+
+    .full-screen-webpage {
+        position: absolute;
+        bottom: 10px;
+        z-index: 1000;
+        right: 180px;
+        border-style: none;
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
+    }
+}
+
+@media (min-width: 2300px) and (max-width:2400px) {
+    .content-iframe-webpage {
+        height: 850px;
+        width: 1450px;
+        /* Increase height for very large screens */
+    }
+}
+
+@media (min-width: 2200px) and (max-width:2300px) {
+    .content-iframe-webpage {
+        height: 850px;
+        width: 1400px;
+        /* Increase height for very large screens */
+    }
+
+    .full-screen-webpage {
+        position: absolute;
+        bottom: 10px;
+        z-index: 1000;
+        right: 10px;
+        border-style: none;
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
+    }
+}
+
+@media (min-width: 2100px) and (max-width:2200px) {
+    .content-iframe-webpage {
+        height: 850px;
+        width: 1300px;
+        /* Increase height for very large screens */
+    }
+}
+
+@media (min-width: 2000px) and (max-width:2100px) {
+    .content-iframe-webpage {
+        height: 750px;
+        width: 1250px;
+        /* Increase height for very large screens */
+    }
+
+    .full-screen-webpage {
+        position: absolute;
+        bottom: 10px;
+        z-index: 1000;
+        right: -300px;
+        border-style: none;
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
+    }
+}
+
+@media (min-width: 1800px) and (max-width: 2000px) {
+    .content-iframe-webpage {
+        height: 750px;
+        width: 1130px;
+        /* Increase height for very large screens */
+    }
+
+    .full-screen-webpage {
+        position: absolute;
+        bottom: 10px;
+        z-index: 1000;
+        right: -100px;
+        border-style: none;
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
+    }
+}
+
+@media (min-width: 1700px) and (max-width: 1800px) {
+    .content-iframe-webpage {
+        height: 600px;
+        width: 1030px;
+        /* Increase height for very large screens */
+    }
+}
+
+@media (min-width: 1600px) and (max-width: 1700px) {
+    .content-iframe-webpage {
+        height: 600px;
+        width: 950px;
+        /* Increase height for very large screens */
+    }
+
+    .full-screen-webpage {
+        position: absolute;
+        bottom: 10px;
+        z-index: 1000;
+        right: 2px;
+        border-style: none;
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
+    }
+}
+
+@media (min-width: 1500px) and (max-width: 1600px) {
+    .content-iframe-webpage {
+        height: 520px;
+        width: 930px;
+        /* Increase height for very large screens */
+    }
+
+    .full-screen-webpage {
+        position: absolute;
+        bottom: 10px;
+        z-index: 1000;
+        right: 40px;
+        border-style: none;
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
+    }
+
+}
+
+@media (min-width: 1400px) and (max-width: 1500px) {
+    .content-iframe-webpage {
+        height: 520px;
+        width: 860px;
+        /* Increase height for very large screens */
+    }
+
+    .full-screen-webpage {
+        position: absolute;
+        bottom: 30px;
+        z-index: 1000;
+        right: 80px;
+        border-style: none;
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
+    }
+}
+
+@media (min-width: 1200px) and (max-width :1400) {
+    .content-iframe-webpage {
+        height: 520px;
+        /* Increase height for large desktop screens */
+    }
+}
+
+/* Media query for laptops (1024px to 1199px) */
+
+@media (max-width: 1200px) and (min-width: 768px) {
+    .content-iframe-webpage {
+        height: 450px;
+        /* Slightly reduce height for laptops */
+    }
+}
+
+/* Media query for tablets and smaller laptops (768px to 1023px) */
+
+@media (max-width: 1023px) and (min-width: 600px) {
+    .content-iframe-webpage {
+        height: 500px;
+        /* Further reduce height for smaller devices */
+    }
+}
+
+/* Media query for mobile view (599px or less) */
+
+@media (max-width: 516px) {
+    .content-iframe-webpage {
+        height: 250px;
+        /* Decrease height significantly for mobile screens */
+    }
+
+    .full-screen-webpage {
+        z-index: 100;
+    }
+}
+
+.question-container {
+    position: relative;
+    height: 380px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+}
+
+.question-heading {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    right: 10px;
+    /* Stretches the heading from start (left) to end (right) */
+    text-align: center;
+    /* Center the text within the full-width heading */
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    /* Optional background for readability */
+    padding: 5px;
+    border-radius: 20px;
+}
+
+/* Media query for screens ≤ 750px (tablet or small screens) */
+@media only screen and (max-width: 750px) {
+    .question-heading {
+        font-size: 16px;
+        /* Slightly reduce font size */
+        padding: 4px;
+        /* Adjust padding for smaller screens */
+    }
+}
+
+/* Media query for screens ≤ 500px (mobile devices) */
+@media only screen and (max-width: 500px) {
+    .question-heading {
+        font-size: 14px;
+        /* Reduce font size for mobile */
+        padding: 3px;
+        /* Further adjust padding for mobile view */
+        border-radius: 15px;
+        /* Optional: slightly reduce border radius */
+    }
+}
+
+/* Media query for screens ≤ 350px (small mobile) */
+@media only screen and (max-width: 350px) {
+    .question-heading {
+        font-size: 12px;
+        /* Further reduce font size for very small screens */
+        padding: 2px;
+        /* Minimized padding */
+        border-radius: 10px;
+        /* Further reduce border radius */
+    }
+}
+
+
+.image-options {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    z-index: 3;
+}
+
+.option-image {
+    max-width: 120px;
+    height: auto;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    z-index: 3;
+}
+
+/* Media query for screens between 500px and 750px (tablet) */
+@media only screen and (min-width: 500px) and (max-width: 600px) {
+    .option-image {
+        max-width: 100px;
+        /* Adjusted for medium screens */
+    }
+
+    .image-options {
+        margin-right: -70px;
+    }
+}
+
+/* Media query for screens ≤ 500px (mobile) */
+@media only screen and (max-width: 500px) {
+    .option-image {
+        max-width: 70px;
+        /* Adjusted for mobile view */
+    }
+
+    .image-options {
+        margin-right: -60px;
+        margin-top: 60px;
+    }
+}
+
+/* Media query for screens ≤ 350px (small mobile) */
+@media only screen and (max-width: 400px) {
+    .option-image {
+        max-width: 50px;
+        /* Further reduce for very small screens */
+    }
+
+    .image-options {
+        margin-right: -50px;
+        margin-top: 80px;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .option-image {
+        max-width: 50px;
+        /* Further reduce for very small screens */
+    }
+
+    .image-options {
+        margin-right: -50px;
+        margin-top: 130px;
+    }
+}
+
+input[type="radio"]:checked+.option-image {
+    border-color: #007bff;
+}
+
+.radio-image-option {
+    display: none;
+    z-index: 3;
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+.nav-link {
+    background-color: #f8f9fa;
+    margin-right: 5px;
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+}
+
+.nav-link.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.tab-content {
+    margin-top: 20px;
+}
+
+.btn-navigation {
+    margin-top: 20px;
+}
+
+.gif-container {
+    position: absolute;
+    /* Or absolute if you prefer */
+    display: flex;
+    top: 230px;
+    left: 0px;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1;
+    /* Ensures GIFs are above other content */
+}
+
+.back-button-1 {
+    width: 40px;
+    margin-right: 10px;
+    background: #FFFFFF;
+    padding: 9px;
+    border-radius: 100px;
+}
+
+.back-icon {
+    height: 18.5px;
+    width: 18.5px;
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 2800px) {
+
+    .assessment {
+        margin-left: 0px;
+    }
+
+    .container-fluid {
+        margin-left: 0px;
+    }
+
+    .gif {
+        width: 480px;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+    .gif-container {
+        top: 230px;
+        /* Adjusted for mobile */
+        left: -50px;
+        /* Keep the left position fixed or change if needed */
+        gap: 5px;
+        /* Reduced gap for smaller screens */
+        flex-direction: column;
+        z-index: 1;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+    .gif-container {
+        top: 230px;
+        /* Adjusted for mobile */
+        left: -120px;
+        /* Keep the left position fixed or change if needed */
+        gap: 5px;
+        /* Reduced gap for smaller screens */
+        flex-direction: column;
+        z-index: 1;
+    }
+
+    .question-container {
+        margin-left: -25px;
+    }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1024px) {
+    .gif-container {
+        top: 230px;
+        /* Adjusted for mobile */
+        left: -120px;
+        /* Keep the left position fixed or change if needed */
+        gap: 5px;
+        /* Reduced gap for smaller screens */
+        flex-direction: column;
+        z-index: 1;
+    }
+
+    .question-container {
+        margin-left: -25px;
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 900px) {
+    .gif-container {
+        top: 230px;
+        /* Adjusted for mobile */
+        left: -50px;
+        /* Keep the left position fixed or change if needed */
+        gap: 5px;
+        /* Reduced gap for smaller screens */
+        flex-direction: column;
+        z-index: 1;
+    }
+
+    .question-container {
+        margin-left: -25px;
+    }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 800px) {
+    .gif-container {
+        position: absolute;
+        /* Or absolute if you prefer */
+        display: flex;
+        top: 230px;
+        left: -80px;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 1;
+        /* Ensures GIFs are above other content */
+    }
+
+    .question-container {
+        margin-left: -25px;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 700px) {
+    .gif-container {
+        position: absolute;
+        /* Or absolute if you prefer */
+        display: flex;
+        top: 230px;
+        left: -70px;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 1;
+        /* Ensures GIFs are above other content */
+    }
+
+    .question-container {
+        margin-left: -25px;
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 600px) {
+    .gif-container {
+        position: absolute;
+        /* Or absolute if you prefer */
+        display: flex;
+        top: 230px;
+        left: -60px;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 1;
+        /* Ensures GIFs are above other content */
+    }
+
+    .question-container {
+        margin-left: -25px;
+    }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 500px) {
+    .gif-container {
+        position: absolute;
+        /* Or absolute if you prefer */
+        display: flex;
+        top: 230px;
+        left: -30px;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 1;
+        /* Ensures GIFs are above other content */
+    }
+
+    .question-container {
+        height: 300px;
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 400px) {
+    .gif-container {
+        position: absolute;
+        /* Or absolute if you prefer */
+        display: flex;
+        top: 180px;
+        left: -60px;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 1;
+        /* Ensures GIFs are above other content */
+    }
+
+    .question-container {
+        height: 250px;
+        margin-left: -20px;
+    }
+}
+
+
+.gif {
+    padding-right: 130px;
+    width: 480px;
+    height: auto;
+}
+
+
+/* Media query for screens between larger screens */
+@media only screen and (min-width: 1800px) and (max-width: 2800px) {
+    .gif {
+        padding-right: 100px;
+        width: 580px;
+        /* Adjusted width for mid-sized screens */
+        height: auto;
+        margin-top: -70px;
+    }
+}
+
+/* Media query for screens between 500px and 750px */
+@media only screen and (min-width: 650px) and (max-width: 750px) {
+    .gif {
+        padding-right: 100px;
+        width: 380px;
+        /* Adjusted width for mid-sized screens */
+        height: auto;
+    }
+}
+
+/* Media query for screens ≤ 500px (mobile) */
+@media only screen and (max-width: 650px) {
+    .gif {
+        padding-right: 10px;
+        width: 250px;
+        /* Smaller width for mobile */
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .gif {
+        padding-right: 10px;
+        width: 200px;
+        /* Smaller width for mobile */
+        height: auto;
+    }
+}
+
+/* end - render pages based codes */
+
+.header-bg {
+    /* background-image: url("../../media/student_dashboard/nav_bg.svg"); */
+    height: 80px;
+    background-color: white;
+}
+
+.logo-icon {
+    position: absolute;
+    top: 15px;
+    left: 48px;
+    object-fit: cover;
+    height: 50px;
+}
+
+.notification-icon {
+    position: absolute;
+    top: 15px;
+    right: 325px;
+    width: 30px;
+}
+
+.notification-icons {
+    position: absolute;
+    top: 15px;
+    right: 180px;
+    width: 30px;
+}
+
+.user-icon {
+    position: absolute;
+    top: 15px;
+    right: 60px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-link {
+    color: rgb(57, 194, 57);
+}
+
+.tab-btn {
+    /* Default background color */
+    color: black;
+    /* Text color */
+    margin-right: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#recommendations-tab {
+    border: 2px solid rgba(234, 94, 32, 1);
+    border-radius: 5px;
+    /* Black border */
+}
+
+#all-tab {
+    border: 2px solid rgba(234, 94, 32, 1);
+    border-radius: 5px;
+    /* Black border */
+}
+
+/* Optional: You can also add hover effect */
+#recommendations-tab:hover {
+    border-color: rgba(234, 94, 32, 1);
+    /* Change border color on hover if desired */
+}
+
+.tab-btn.active {
+    background-color: rgba(234, 94, 32, 1);
+    /* Orange background for active tab */
+    color: white;
+}
+
+/* Optional: Hover effect */
+.tab-btn:hover {
+    background-color: rgba(234, 94, 32, 1);
+    /* Darker hover color */
+}
+
+
+.related-pages {
+    max-height: 870px;
+    overflow-y: auto;
+    /* overflow-x: hidden; */
+}
+
+.related-page {
+    display: flex;
+    /* Increase space between related pages */
+    position: relative;
+    padding-bottom: 15px;
+    /* Increase padding inside the element */
+    width: 100%;
+    /* Set a default width; you can adjust this as needed */
+    height: auto;
+    /* Set height to auto; you can specify a fixed height if needed */
+}
+
+.page-details {
+    padding-left: 15px;
+    /* Add space between the image and text */
+    font-size: 1.1em;
+    /* Increase the font size for better readability */
+}
+
+.lock-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: scale(1.1);
+    border-radius: 20px;
+}
+
+.locked {
+    transform: scale(1);
+    /* opacity: 0.98; */
+}
+
+.lock-overlay {
+    transform: scale(1);
+    opacity: 0.2;
+}
+
+.lock-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.lock-overlay:hover {
+    opacity: 1;
+}
+
+.page-thumbnail {
+    flex: 0 0 140px;
+    overflow: hidden;
+}
+
+.page-thumbnail img {
+    width: 100%;
+    height: 75px;
+    contain: center;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgb(255, 225, 212);
+}
+
+.page-details {
+    padding-left: 10px;
+    max-width: 60%;
+}
+
+.page-details h5 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.page-details p {
+    margin: 0;
+    font-size: 14px;
+    color: gray;
+}
+
+.related-page-title.active {
+    color: rgb(249, 77, 20);
+}
+
+.breadcrumb-large .breadcrumb-item a {
+    font-size: 14px;
+    /* Adjust the font size as needed */
+}
+
+.breadcrumb-large .breadcrumb-item {
+    font-size: 14px;
+    /* Ensure the font size is applied to the items as well */
+}
+
+/* .menu-main-content {
+    background-image: url('{% static "assets_student/media/svg/student-icons/Modal_bg.svg" %}');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+} */
+
+.notification-icon {
+    width: 25px;
+    height: 30px;
+    top: 16px;
+}
+
+.modal-content {
+    background-image: url("{% static 'assets_student/media/svg/student-icons/Modal_bg.svg' %}");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+}
+
+/* Custom backdrop for the modal */
+.modal-backdrop.show {
+    opacity: 1;
+    /* Increase opacity to make the background darker */
+    background-color: rgba(0, 0, 0, 1);
+    /* Use rgba to control opacity and color */
+}
+
+/* Styling for the input group to include the down arrow icon */
+.input-group-text {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.input-group-text img.user-icon {
+    width: 20px;
+    /* Adjust size as needed */
+    height: 20px;
+    /* Adjust size as needed */
+}
+
+.modal-backdrop.show {
+    opacity: 0.95;
+    /* Adjust the opacity to make the background more or less transparent */
+    background-color: black;
+    /* Set the background color to black */
+}
+
+.modal-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* Ensure the modal takes up at least the full viewport height */
+}
+
+.dropdown-menu {
+    width: 100%;
+}
+
+.input-group.mb-3 {
+    position: relative;
+}
+
+.input-group .form-control {
+    display: inline-block;
+    width: calc(100% - 40px);
+    /* Adjust width to leave space for the dropdown button */
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: block;
+    /* or display: flex; */
+    float: left;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+
+.home-icon {
+    position: absolute;
+    top: 18px;
+    right: 400px;
+    width: 25px;
+}
+
+.microphone-icon {
+    position: absolute;
+    top: 18px;
+    right: 260px;
+    width: 20px;
+}
+
+.language-icon {
+    position: absolute;
+    right: 200px;
+    top: 18px;
+    width: 25px;
+}
+
+.install-app {
+    position: absolute;
+    right: 130px;
+    top: 18px;
+}
+
+.related-page-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.related-page-description {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tick-icon {
+    vertical-align: middle;
+    scale: 0.6;
+}
+
+.related-page-path {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline;
+}
+
+.related-page-status {
+    display: flex;
+    align-items: center;
+}
+
+/* Dropdown card styling */
+.dropdown-card {
+    display: none;
+    /* Hidden by default */
+    position: absolute;
+    margin-right: 30px;
+    margin-top: 30px;
+    /* Adjust as needed */
+    right: 0;
+    /* Align the card with the icon */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    z-index: 1000;
+}
+
+/* Styling for the back button */
+.back-button {
+    background: none;
+    border: none;
+    color: rgb(249, 77, 20);
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+/* Dropdown card styling */
+.install-card {
+    display: none;
+    /* Hidden by default */
+    position: absolute;
+    top: 0px;
+    /* Adjust the position as needed */
+    /* Align the card with the trigger element */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 340px;
+    z-index: 1000;
+}
+
+/* Styling for the install app button */
+/* Style for Install button */
+.btn-install {
+    background-color: #f2670b;
+    /* Orange background */
+    color: white;
+    /* Text color */
+    padding: 10px 20px;
+    /* Padding inside the button */
+    border: none;
+    /* Remove border */
+    border-radius: 25px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    font-size: 16px;
+    /* Font size */
+    margin-right: 10px;
+    /* Space between buttons */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Add shadow */
+    transition: background-color 0.3s ease;
+    /* Smooth transition on hover */
+}
+
+.btn-install:hover {
+    background-color: #d95702;
+    /* Darker orange on hover */
+}
+
+/* Style for Not Now button */
+.btn-not-now {
+    background-color: transparent;
+    /* Transparent background */
+    color: #f2670b;
+    /* Orange text */
+    padding: 10px 20px;
+    /* Padding inside the button */
+    border: 2px solid #f2670b;
+    /* Orange border */
+    border-radius: 25px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    font-size: 16px;
+    /* Font size */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Smooth transition on hover */
+}
+
+.btn-not-now:hover {
+    background-color: #f2670b;
+    /* Orange background on hover */
+    color: white;
+    /* White text on hover */
+}
+
+
+.icon-image {
+    width: 25px;
+    height: auto;
+}
+
+.dropdown-card {
+    display: none;
+    /* Adjust based on your needs */
+    position: absolute;
+    background-color: #fff;
+    padding: 20px;
+    padding-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 300px;
+    top: 50px;
+    right: 20px;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: rgb(249, 77, 20);
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.dropdown-title {
+    font-size: 18px;
+}
+
+.dropdown-image {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Style for Install button */
+.btn-install {
+    background-color: #f2670b;
+    /* Orange background */
+    color: white;
+    /* Text color */
+    padding: 10px 20px;
+    /* Padding inside the button */
+    border: none;
+    /* Remove border */
+    border-radius: 25px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    font-size: 16px;
+    /* Font size */
+    margin-right: 10px;
+    /* Space between buttons */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Add shadow */
+    transition: background-color 0.3s ease;
+    /* Smooth transition on hover */
+}
+
+.btn-install:hover {
+    background-color: #d95702;
+    /* Darker orange on hover */
+}
+
+/* Style for Not Now button */
+.btn-not-now {
+    background-color: transparent;
+    /* Transparent background */
+    color: #f2670b;
+    /* Orange text */
+    padding: 10px 20px;
+    /* Padding inside the button */
+    border: 2px solid #f2670b;
+    /* Orange border */
+    border-radius: 25px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    font-size: 16px;
+    /* Font size */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Smooth transition on hover */
+}
+
+.btn-not-now:hover {
+    background-color: #f2670b;
+    /* Orange background on hover */
+    color: white;
+    /* White text on hover */
+}
+
+
+.install-card {
+    display: none;
+    /* Adjust based on your needs */
+    position: absolute;
+    background-color: #fff;
+    padding: 20px;
+    padding-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    right: 20px;
+}
+
+.card-title {
+    font-size: 18px;
+}
+
+.card-image {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Style for Install button */
+.btn-install {
+    background-color: #f2670b;
+    /* Orange background */
+    color: white;
+    /* Text color */
+    padding: 10px 20px;
+    /* Padding inside the button */
+    border: none;
+    /* Remove border */
+    border-radius: 25px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    font-size: 16px;
+    /* Font size */
+    margin-right: 10px;
+    /* Space between buttons */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Add shadow */
+    transition: background-color 0.3s ease;
+    /* Smooth transition on hover */
+}
+
+.btn-install:hover {
+    background-color: #d95702;
+    /* Darker orange on hover */
+}
+
+/* Style for Not Now button */
+.btn-not-now {
+    background-color: transparent;
+    /* Transparent background */
+    color: #f2670b;
+    /* Orange text */
+    padding: 10px 20px;
+    /* Padding inside the button */
+    border: 2px solid #f2670b;
+    /* Orange border */
+    border-radius: 25px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    font-size: 16px;
+    /* Font size */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Smooth transition on hover */
+}
+
+.btn-not-now:hover {
+    background-color: #f2670b;
+    /* Orange background on hover */
+    color: white;
+    /* White text on hover */
+}
+
+#submit-button {
+    background-color: #e45e05;
+    /* Orange background */
+    color: white;
+    /* Text color */
+    margin-left: 15px;
+    padding: 10px 20px;
+    /* Padding inside the button */
+    border: none;
+    /* Remove border */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    font-size: 16px;
+    /* Font size */
+    margin-right: 10px;
+    /* Space between buttons */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Add shadow */
+    transition: background-color 0.3s ease;
+    /* Smooth transition on hover */
+}
+
+@media only screen and (min-width: 500px) and (max-width: 1200px) {
+    #submit-button {
+        margin-left: -5px;
+    }
+}
+
+
+@media only screen and (min-width: 250px) and (max-width: 499px) {
+    #submit-button {
+        margin-left: -5px;
+        padding: 6px 10px;
+    }
+}
+
+#custom-btn {
+    background-color: #e45e05;
+    /* Orange background */
+    color: white;
+}
+
+.profile-item {
+    display: flex;
+    align-items: center;
+}
+
+.profile-icon {
+    height: 30px;
+    margin-right: 8px;
+}
+
+@media (min-width: 601px) and (max-width: 3800px) {
+    .toggle-button {
+        display: none;
+    }
+
+    .icon-box {
+        display: none;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+
+    /* Default styles for the icon box */
+    .icon-box {
+        display: none;
+        width: 300px;
+        /* Hidden by default */
+        position: absolute;
+        top: 81px;
+        right: 20px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .toggle-button {
+        display: block;
+        /* Make it visible */
+    }
+
+    .logo {
+        left: 10px;
+    }
+
+    .notification-icon,
+    .user-icon,
+    .microphone-icon,
+    .language-icon,
+    .install-app,
+    .home-icon {
+        display: none;
+        /* Hide the icons */
+    }
+
+    .toggle-button {
+        display: block;
+        /* Show the toggle button */
+        position: absolute;
+        right: 30px;
+        top: 20px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 300px) {
+
+    /* Default styles for the icon box */
+    .icon-box {
+        display: none;
+        width: 240px;
+        /* Hidden by default */
+        position: absolute;
+        top: 81px;
+        right: 20px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .toggle-button {
+        display: block;
+        /* Make it visible */
+    }
+
+    .logo {
+        left: 10px;
+    }
+
+    .notification-icon,
+    .user-icon,
+    .microphone-icon,
+    .language-icon,
+    .install-app {
+        display: none;
+        /* Hide the icons */
+    }
+
+    .toggle-button {
+        display: block;
+        /* Show the toggle button */
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+}

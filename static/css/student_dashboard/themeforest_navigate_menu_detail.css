@@ -1,0 +1,894 @@
+.menu-main-content {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+    text-align: left;
+    padding: 40px 10px;
+}
+
+
+.menu-main-content a {
+    width: 123px;
+    height: 22px;
+    gap: 0px;
+    opacity: 0px;
+    text-decoration: none;
+    color: #7E8299;
+
+}
+
+body {
+    background: #F2F6FF;
+
+}
+
+.second-navigation-bar {
+    width: 100%;
+    max-width: 100%;
+    height: 40px;
+    /* Fixed height */
+    /* position: absolute;  */
+    margin-top: -10px;
+    /* Distance from the top */
+    margin-bottom: 10px;
+    left: 30px;
+    /* Distance from the left */
+    display: flex;
+    /* Flexbox for layout */
+    justify-content: space-between;
+    /* Space between left and right sections */
+    gap: 0px;
+    /* No gap between child elements */
+    border-bottom: none;
+    /* Remove bottom border */
+    opacity: 1;
+    /* Fully visible */
+    z-index: 1000;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.menu-nav-left {
+    display: flex;
+    /* Flexbox for alignment */
+    align-items: center;
+    /* Center vertically */
+}
+
+.nav-text {
+    font-family: 'Inter', sans-serif;
+    /* Font family */
+    font-size: 22px;
+    /* Font size */
+    font-weight: 500;
+    /* Font weight */
+    line-height: 22px;
+    /* Line height */
+    text-align: left;
+    /* Text alignment */
+    color: #B1B2BE;
+    /* Text color */
+    margin-left: 5px;
+}
+
+.span-whitespace {
+    font-family: 'Inter', sans-serif;
+    /* Font family */
+    font-size: 22px;
+    /* Font size */
+    font-weight: 500;
+    /* Font weight */
+    line-height: 22px;
+    /* Line height */
+    text-align: left;
+    /* Text alignment */
+    color: #EA5E20;
+}
+
+.months {
+    font-family: 'Inter', sans-serif;
+    /* Font family */
+    font-size: 16px;
+    /* Font size */
+    font-weight: 300;
+    /* Font weight */
+    line-height: 22px;
+    /* Line height */
+    text-align: left;
+    /* Text alignment */
+    color: #EA5E20;
+}
+
+.menu-nav-right {
+    display: flex;
+    /* Flexbox for alignment */
+    align-items: center;
+    /* Center vertically */
+    justify-content: flex-end;
+}
+
+.nav-date {
+    font-family: 'SF Pro', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.43px;
+    text-align: center;
+    width: 90px;
+    height: 35px;
+    padding: 6px 10px;
+    color: #EA5E20;
+    border-radius: 20px;
+    opacity: 1;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    position: relative;
+    left: 10px;
+}
+
+.menu-navigation-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 68px;
+    padding: 15px 0;
+    gap: 30px;
+}
+
+.menu-nav-button,
+.menu-nav-link {
+    width: 57px;
+    height: 38px;
+    padding: 12px 20px;
+    gap: 10px;
+    border-radius: 6px 0 0 0;
+    opacity: 0.8;
+}
+
+.menu-nav-button.active,
+.menu-nav-link.active {
+    background-color: #f0f0f0;
+    color: rgb(23, 22, 22);
+}
+
+.search-input {
+    width: 180px;
+    height: 15px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    justify-content: flex-start;
+    padding-left: 0px;
+    padding-right: 0px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.individual-menu-card {
+    width: 286px;
+    height: 300px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #F1F1F2;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    /* Ensure text is visible over the image */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding-right: 40px;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+.individual-menu-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55.8%, rgba(0, 0, 0, 0.7) 100%);
+    z-index: 1;
+    /* Ensure it sits above the image but below the content */
+    pointer-events: none;
+    /* Ensure it doesn't interfere with interactions */
+}
+
+.individual-menu-card:hover {
+    border: 2px solid #EA5E20;
+    color: #EA5E20;
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.12);
+    transform: scale(1.05);
+}
+
+.bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    pointer-events: none;
+    /* Ensure the image doesn't interfere with interactions */
+    overflow: hidden;
+}
+
+.chapter-thumbnail {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* Hide any overflow */
+    border-radius: 10px;
+}
+
+.chapter-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensure the image covers the card */
+    z-index: 0;
+    border-radius: inherit;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.bg-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.menu-card-content {
+    width: 100%;
+    text-align: center;
+    /* Center text horizontally */
+    padding: 10px 0;
+    /* Add padding above and below the text */
+}
+
+.menu-card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+    /* Remove default margin */
+}
+
+.back-button-1 {
+    width: 20px;
+    margin-right: 10px;
+    background: #FFFFFF;
+    padding: 12px;
+    border-radius: 100px;
+}
+
+.back-icon {
+    width: 21.5px;
+    height: 21.5px;
+}
+
+
+
+/* .go-arrow {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 34px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateX(-100px);
+    z-index: 2;
+    color: #040506;
+} */
+
+/* .individual-menu-card:hover .go-arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.go-arrow a {
+    color: #040506;
+    text-decoration: none;
+}
+
+.go-arrow a:hover {
+    color: #0056b3;
+} */
+
+.fa-search {
+    position: absolute;
+    right: 180px;
+    top: 10px;
+    color: #666;
+    font-family: "Roboto";
+}
+
+.menu-nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* padding-right: 20px; */
+    padding: 0;
+    margin-right: 0;
+    /* Adjust as needed */
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* margin-right: -20px; */
+    margin-right: 0;
+    /* Adjust this value to move the container to the left */
+}
+
+
+.individual-menu-card {
+    position: relative;
+}
+
+.individual-menu-card a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.individual-menu-card .menu-card-content {
+    z-index: 2;
+}
+
+.menu-card-title::before {
+    content: "";
+    display: block;
+    width: calc(100% + 20px);
+    /* Adjust the width of the line */
+    height: 0.1px;
+    /* Adjust the thickness of the line */
+    background: #FFFFFF;
+    /* Line color */
+    margin: 0 auto 10px auto;
+    /* Center it and add spacing from the title */
+    /* border: 1px solid #FFFFFF; */
+    position: absolute;
+    left: -10px;
+    top: -20px;
+    z-index: 1;
+}
+
+.individual-menu-card:hover .menu-card-title::before {
+    background: #EA5E20;
+    /* Line color on hover */
+}
+
+.individual-menu-card .menu-card-title {
+    font-size: 18px;
+    /* adjust font size as needed */
+    font-weight: bold;
+    /* adjust font weight as needed */
+    /* color: rgb(237, 165, 49); */
+    color: #FFFFFF;
+    /* adjust color as needed */
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    text-align: center;
+    width: calc(100% - 40px);
+}
+
+.individual-menu-card:hover .menu-card-title,
+.individual-menu-card:hover .go-arrow {
+    color: #EA5E20;
+    /* Changes the text and arrow color */
+}
+
+/* tablet */
+@media (min-width: 720px) and (max-width: 820px) {
+    .card-container {
+        padding-left: 40px;
+    }
+
+    .menu-main-content {
+        padding: 50px;
+        padding-top: 10px;
+    }
+
+}
+
+/* mobile M */
+@media (min-width: 375px) and (max-width: 720px) {
+    .card-container {
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .menu-main-content {
+        padding: 10px;
+        padding-top: 10px;
+    }
+
+    .second-navigation-bar {
+        height: 70px;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    .individual-menu-card {
+        width: 340px;
+        /* Increase card width */
+        height: 315px;
+        /* Increase card height */
+        padding: 25px;
+        /* Adjust padding for better content fit */
+    }
+
+    .menu-card-title::before {
+        content: "";
+        display: block;
+        width: calc(90% + 20px);
+        /* Adjust the width of the line */
+        height: 0.1px;
+        /* Adjust the thickness of the line */
+        background: #FFFFFF;
+        /* Line color */
+        margin: 0 auto 10px auto;
+        /* Center it and add spacing from the title */
+        /* border: 1px solid #FFFFFF; */
+        position: absolute;
+        left: 5px;
+        top: -20px;
+        z-index: 1;
+    }
+
+    .nav-text {
+        font-size: 26px;
+        margin-left: -10px;
+    }
+
+    .span-whitespace {
+        font-size: 26px;
+        /* Reduce font size for 'Months' */
+    }
+
+    .nav-date {
+        font-size: 12px;
+        /* Reduce font size for 'Date' */
+        width: 70px;
+        /* Adjust width for better fit */
+        height: 25px;
+        /* Adjust height for better fit */
+    }
+
+}
+
+/* mobile S */
+@media (max-width: 375px) {
+    .card-container {
+        padding-left: 1px;
+        padding-right: 1px;
+        padding-top: 0;
+    }
+
+    .menu-main-content {
+        padding: 5px;
+        padding-top: 10px;
+    }
+
+    .second-navigation-bar {
+        height: 70px;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    .nav-text {
+        font-size: 18px;
+        margin-left: -10px;
+    }
+
+    .span-whitespace {
+        font-size: 18px;
+        /* Reduce font size for 'Months' */
+    }
+
+    .nav-date {
+        font-size: 12px;
+        /* Reduce font size for 'Date' */
+        width: 70px;
+        /* Adjust width for better fit */
+        height: 25px;
+        /* Adjust height for better fit */
+    }
+
+    .menu-card-title::before {
+        content: "";
+        display: block;
+        width: calc(90% + 50px);
+        /* Adjust the width of the line */
+        height: 0.1px;
+        /* Adjust the thickness of the line */
+        background: #FFFFFF;
+        /* Line color */
+        margin: 0 auto 10px auto;
+        /* Center it and add spacing from the title */
+        /* border: 1px solid #FFFFFF; */
+        position: absolute;
+        left: -13px;
+        top: -20px;
+        z-index: 1;
+    }
+
+}
+
+/* Media query for mobile large devices */
+@media (min-width: 425px) and (max-width: 767px) {
+
+    .card-container {
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .individual-menu-card {
+        width: 380px;
+        /* Adjust card width */
+        height: 355px;
+        /* Adjust card height */
+        padding: 20px;
+        /* Adjust padding */
+    }
+
+    .chapter-thumbnail img {
+        width: 100%;
+        height: 100%;
+        /* Maintain aspect ratio */
+        object-fit: cover;
+        /* Ensure the image covers the card */
+        z-index: 0;
+        overflow: hidden;
+    }
+
+    .menu-main-content {
+        padding: 15px;
+        /* Adjust padding for content */
+    }
+
+    .second-navigation-bar {
+        height: 65px;
+        /* Adjust navigation bar height */
+        margin: 0;
+        /* Remove any extra margins */
+    }
+
+    .menu-card-title::before {
+        content: "";
+        display: block;
+        width: calc(90% + 30px);
+        /* Adjust the width of the line */
+        height: 0.1px;
+        /* Adjust the thickness of the line */
+        background: #FFFFFF;
+        /* Line color */
+        margin: 0 auto 10px auto;
+        /* Center it and add spacing from the title */
+        /* border: 1px solid #FFFFFF; */
+        position: absolute;
+        left: 1px;
+        top: -25px;
+        z-index: 1;
+    }
+}
+
+/* tablet view */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .second-navigation-bar {
+        height: 60px;
+        /* Set height */
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    .card-container {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 3px;
+    }
+
+    .individual-menu-card {
+        width: 335px;
+        /* Adjust card width */
+        height: 312px;
+        /* Adjust card height */
+        padding-right: 5px;
+        /* Adjust padding */
+        overflow: hidden;
+    }
+
+    .menu-main-content {
+        padding: 15px;
+        /* Adjust padding for content */
+    }
+
+    .nav-text {
+        font-size: 18px;
+    }
+
+    .span-whitespace {
+        font-size: 18px;
+        /* Reduce font size for 'Months' */
+    }
+
+    .nav-date {
+        font-size: 14px;
+        /* Adjust font size */
+        width: 85px;
+        /* Adjust width */
+        height: 30px;
+        /* Adjust height */
+        left: -5px;
+    }
+
+    .menu-card-title::before {
+        content: "";
+        display: block;
+        width: calc(90% + 28px);
+        /* Adjust the width of the line */
+        height: 0.1px;
+        /* Adjust the thickness of the line */
+        background: #FFFFFF;
+        /* Line color */
+        margin: 0 auto 10px auto;
+        /* Center it and add spacing from the title */
+        /* border: 1px solid #FFFFFF; */
+        position: absolute;
+        left: 1px;
+        top: -20px;
+        z-index: 1;
+    }
+
+    .individual-menu-card:hover {
+        transform: scale(1.05);
+        /* Adjust hover scale for tablets */
+    }
+
+    .chapter-thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* Ensure the image covers the card */
+        z-index: 0;
+        overflow: hidden;
+    }
+
+}
+
+/* laptop */
+@media (min-width: 1024px) and (max-width: 1270px) {
+    .second-navigation-bar {
+        height: 70px;
+        /* Set height */
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    .card-container {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 3px;
+    }
+
+    .menu-main-content {
+        padding: 15px;
+        /* Adjust padding for content */
+    }
+
+    .individual-menu-card {
+        width: 300px;
+        /* Adjust card width */
+        height: 312px;
+        /* Adjust card height */
+        padding-right: 5px;
+        /* Adjust padding */
+        overflow: hidden;
+    }
+
+    .nav-date {
+        font-size: 16px;
+        /* Adjust font size */
+        width: 100px;
+        /* Adjust width */
+        height: 30px;
+        /* Adjust height */
+        left: -5px;
+    }
+
+    .menu-card-title::before {
+        content: "";
+        display: block;
+        width: calc(90% + 44px);
+        /* Adjust the width of the line */
+        height: 0.1px;
+        /* Adjust the thickness of the line */
+        background: #FFFFFF;
+        /* Line color */
+        margin: 0 auto 10px auto;
+        /* Center it and add spacing from the title */
+        /* border: 1px solid #FFFFFF; */
+        position: absolute;
+        left: -10px;
+        top: -22px;
+        z-index: 1;
+    }
+}
+
+/* Media query for large laptops (1440px and up) */
+@media (min-width: 1300px) and (max-width: 1440px) {
+    .second-navigation-bar {
+        height: 70px;
+        /* Set height */
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    .card-container {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 0;
+    }
+
+    .menu-main-content {
+        padding: 10px;
+        /* Adjust padding for content */
+    }
+
+    .nav-date {
+        font-size: 16px;
+        /* Adjust font size */
+        width: 100px;
+        /* Adjust width */
+        height: 30px;
+        /* Adjust height */
+        left: -5px;
+    }
+
+    .individual-menu-card {
+        width: 327px;
+        /* Adjust card width */
+        height: 312px;
+        /* Adjust card height */
+        padding-right: 5px;
+        /* Adjust padding */
+        overflow: hidden;
+    }
+
+    .menu-card-title::before {
+        content: "";
+        display: block;
+        width: calc(90% + 35px);
+        /* Adjust the width of the line */
+        height: 0.1px;
+        /* Adjust the thickness of the line */
+        background: #FFFFFF;
+        /* Line color */
+        margin: 0 auto 10px auto;
+        /* Center it and add spacing from the title */
+        /* border: 1px solid #FFFFFF; */
+        position: absolute;
+        left: -5px;
+        top: -22px;
+        z-index: 1;
+    }
+}
+
+/* Media query for 4K screens (2560px and up) */
+@media (min-width: 2560px) {
+    .second-navigation-bar {
+        height: 70px;
+        /* Set height */
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    .menu-main-content {
+        padding: 10px;
+        /* Adjust padding for content */
+    }
+
+    .card-container {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 0;
+    }
+
+    .nav-date {
+        font-size: 16px;
+        /* Adjust font size */
+        width: 100px;
+        /* Adjust width */
+        height: 30px;
+        /* Adjust height */
+        left: -5px;
+    }
+
+    .nav-text {
+        font-size: 18px;
+    }
+
+    .span-whitespace {
+        font-size: 18px;
+        /* Reduce font size for 'Months' */
+    }
+
+    .individual-menu-card {
+        width: 480px;
+        /* Adjust card width */
+        height: 450px;
+        /* Adjust card height */
+        padding-right: 5px;
+        /* Adjust padding */
+        overflow: hidden;
+    }
+
+    .menu-card-title::before {
+        content: "";
+        display: block;
+        width: calc(90% + 32px);
+        /* Adjust the width of the line */
+        height: 0.1px;
+        /* Adjust the thickness of the line */
+        background: #FFFFFF;
+        /* Line color */
+        margin: 0 auto 10px auto;
+        /* Center it and add spacing from the title */
+        /* border: 1px solid #FFFFFF; */
+        position: absolute;
+        left: 4px;
+        top: -38px;
+        z-index: 1;
+    }
+}

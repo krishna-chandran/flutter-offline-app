@@ -1,0 +1,825 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Inter';
+    background-color: #F2F6FF;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: white;
+    border-radius: 55px;
+    width: 60px;
+    margin: 20px;
+}
+
+.block-content {
+    grid-area: main;
+}
+
+main {
+
+    grid-template-areas: 'sidebar main main main main main';
+    display: grid;
+}
+
+:root {
+    --orange: #EA5E20;
+}
+
+/* Style for active menu item */
+.nav-item.active .nav-link {
+    background-color: #EA5E20;
+}
+
+/* Hover state for all nav items */
+.nav-item .nav-link:hover {
+    color: #EA5E20;
+    border-radius: 50px;
+}
+
+/* Basic tooltip style */
+.nav-item {
+    position: relative;
+    list-style-type: none;
+}
+
+
+.nav-item[data-title]:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    /* Position it to the right */
+    transform: translateY(-50%);
+    white-space: nowrap;
+    background-color: white;
+    color: black;
+    padding: 8px 12px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+    font-size: 14px;
+}
+
+/* Right arrow style */
+.nav-item[data-title]:hover::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    margin-left: -10px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent white transparent transparent;
+}
+
+
+
+/* Navbar styles */
+.navbar {
+    /* background-image: url("../../media/student_dashboard/nav_bg.svg"); */
+    background-size: cover;
+    background-position: top;
+    background-color: #fff;
+    width: auto;
+    height: 85px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 1;
+    margin: -8px;
+
+}
+
+.navbar .logo img {
+    height: 55px;
+}
+
+.logo {
+    position: absolute;
+    left: 40px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 20px;
+}
+
+.navbar ul li {
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* space between icon and text */
+
+}
+
+.navbar ul li a img {
+    height: 30px;
+    /* Adjust the size as needed */
+    width: 45px;
+    justify-content: end;
+
+}
+
+/* Modal overlay */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* Modal box */
+.modal-box {
+    position: absolute;
+    top: 30%;
+    right: 2%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    padding: 20px;
+    width: 300px;
+    border-radius: 32px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Edit button */
+.edit-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.edit-button button {
+    background-color: #FF453A;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 16px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Modal content styling */
+.modal-content {
+    padding-top: 10px;
+}
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px auto;
+    display: block;
+    background-color: #eaeaea;
+}
+
+/* Username styling */
+.modal-content h4 {
+    margin: 15px 0 5px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Inter;
+}
+
+/* Role styling */
+.modal-content .role {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+    font-family: Inter;
+}
+
+/* Info container */
+.info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: 1px solid #E7E7E7;
+    border-radius: 14px;
+    padding-top: 15px;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.info-separator {
+    border: none;
+    border-top: 1px solid #E7E7E7;
+    margin: 10px 0;
+    /* Adjust vertical spacing around the separator */
+    width: 100%;
+    /* Full width of the container */
+}
+
+/* Info items */
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.info-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.info-item span,
+.password-link {
+    font-size: 14px;
+    color: #333;
+}
+
+.password-link:hover {
+    text-decoration: underline;
+}
+
+
+/* Style the icon list items */
+#icon-list li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+/* Style the links within the dropdown */
+#icon-list li a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+/* Add spacing between the icon and text */
+#icon-list li a img {
+    margin-right: 10px;
+}
+
+.icon-box {
+    width: 300px;
+    /* Fixed width */
+    height: auto;
+    /* Adjust height based on content */
+    background-color: white;
+    /* Background color */
+    border-radius: 14px;
+    /* Rounded corners */
+    padding: 10px;
+    /* Padding inside the box */
+    position: absolute;
+    /* Position it absolutely within its parent container */
+    top: 86px;
+    /* Position from the top */
+    right: 20px;
+    /* Position from the left */
+    display: flex;
+    flex-direction: column;
+    /* Arrange icons vertically */
+    align-items: center;
+    /* Center align icons */
+    gap: 10px;
+    /* Space between items */
+    box-shadow: 2px 2px 2px 2px rgba(234, 94, 32, 1);
+    /* Add some shadow for depth */
+    z-index: 1;
+    /* Ensure it appears above other content */
+    background-color: rgba(255, 255, 255, 1);
+    display: none;
+}
+
+.icon-box img {
+    width: 40px;
+    /* Size of each icon */
+    height: 40px;
+    /* Ensure a square shape */
+}
+
+.custom-line {
+    height: 1px;
+    /* Thickness of the line */
+    background-color: #ccc;
+    /* Line color */
+    width: 100%;
+    /* Full width */
+    margin: 10px 0;
+    /* Space around the line */
+}
+
+.line {
+    width: 100%;
+    /* Full width of the box */
+    height: 1px;
+    /* Line thickness */
+    background-color: black;
+    /* Line color */
+}
+
+.notification-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25.5px;
+    letter-spacing: 3%;
+    /* This is equivalent to 3% of the current font-size */
+    margin: 0;
+    /* To remove default margins */
+    color: black;
+}
+
+.install-app-btn {
+    background-color: #EA5E20;
+    color: white;
+    font-size: 18px;
+    width: 280px;
+    /* Increase font size */
+    padding: 12px 24px;
+    /* Adjust padding for button size */
+    border: none;
+    /* Remove default border */
+    border-radius: 30px;
+    /* Add border radius */
+    cursor: pointer;
+    /* Change cursor on hover */
+    transition: background-color 0.3s ease;
+    /* Add transition for hover effect */
+}
+
+/* Hover effect */
+.install-app-btn:hover {
+    background-color: #EA5E20;
+    /* Change background on hover */
+}
+
+/* Dropdown card styling */
+.dropdown-card {
+    display: none;
+    /* Hidden by default */
+    position: absolute;
+    top: 85px;
+    margin-right: 30px;
+    /* Adjust as needed */
+    right: 0;
+    /* Align the card with the icon */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    z-index: 99;
+}
+
+.dropdown-title {
+    font-size: 18px;
+    margin: 0;
+    /* Remove default margin if needed */
+}
+
+.dropdown-image {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+
+.install-app-card {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    padding: 20px;
+    padding-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    top: 0;
+    right: 0px;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: #EA5E20;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.install-app-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #EA5E20;
+    border: none;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.aside-primary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.aside-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 5rem;
+}
+
+.scrollable-nav {
+    overflow-y: auto;
+    padding: 1rem 0;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.nav-item {
+    margin-bottom: 0.5rem;
+}
+
+.nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    color: gray;
+}
+
+.nav-link.active {
+    color: blue;
+    /* Change this to your active color */
+}
+
+.aside-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+}
+
+.user-avatar {
+    cursor: pointer;
+}
+
+.user-menu {
+    display: none;
+    /* Show on hover */
+}
+
+.menu-item {
+    padding: 0.5rem;
+}
+
+.menu-link {
+    color: gray;
+    text-decoration: none;
+}
+
+.menu-link:hover {
+    text-decoration: underline;
+    /* Optional hover effect */
+}
+
+.separator {
+    height: 1px;
+    background-color: lightgray;
+    /* Change to desired separator color */
+    margin: 0.5rem 0;
+}
+
+.notification-switch {
+    display: flex;
+    align-items: center;
+}
+
+/* Media Query for 344px to 600px screen width */
+/* Hide the toggle button and dropdown container on larger screens */
+
+/* Large Screens (1900px - 2560px) */
+@media (min-width: 1900px) and (max-width: 2560px) {
+    .modal-box {
+        top: 20%;
+        /* Slightly higher position for large screens */
+    }
+}
+
+/* Wide Desktop (1440px - 1700px) */
+@media (min-width: 1440px) and (max-width: 1700px) {
+    .modal-box {
+        top: 28%;
+        /* Well-centered for wide desktops */
+    }
+}
+
+/* Desktop (1024px - 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .modal-box {
+        top: 30%;
+        /* Use your original value here */
+    }
+}
+
+/* Small Desktop or Large Tablet (850px - 1024px) */
+@media (min-width: 850px) and (max-width: 1024px) {
+    .modal-box {
+        top: 32%;
+        /* Slightly lower for larger tablets/small desktops */
+    }
+}
+
+/* Tablet and Small Desktop (475px - 849px) */
+@media (min-width: 475px) and (max-width: 849px) {
+    .modal-box {
+        top: 35%;
+        /* Adjusted top for medium screens */
+    }
+}
+
+/* Mobile Portrait (320px - 474px) */
+@media (min-width: 320px) and (max-width: 474px) {
+    .modal-box {
+        top: 38%;
+        /* Lower position for smaller mobile screens */
+    }
+}
+
+/* Extra Small Mobile (0px - 319px) */
+@media (min-width: 0px) and (max-width: 319px) {
+    .modal-box {
+        top: 40%;
+        /* Lowest position for extra small screens */
+    }
+}
+
+/* Hide the toggle button on larger screens */
+@media (min-width: 850px) {
+
+    .navbar .logo img {
+        height: 45px;
+    }
+
+    .toggle-button {
+        display: none;
+    }
+
+    .icon-box {
+        display: none;
+    }
+
+    ul {
+        display: block;
+    }
+}
+
+@media (min-width: 344px) and (max-width: 850px) {
+
+    .navbar .logo img {
+        height: 45px;
+    }
+
+    .logo {
+        left: 10px;
+    }
+
+    #icon-list li {
+        display: none;
+        /* Hide the icons */
+    }
+
+    .toggle-button {
+        display: block;
+        /* Show the toggle button */
+        position: absolute;
+        right: 10px;
+        top: 30px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 344px) {
+
+    .navbar .logo img {
+        height: 40px;
+    }
+
+    .logo {
+        left: 10px;
+    }
+
+    #icon-list li {
+        display: none;
+        /* Hide the icons */
+    }
+
+    .icon-box {
+        width: 87%;
+        left: 12px;
+        right: 10px;
+    }
+
+    .toggle-button {
+        display: block;
+        /* Show the toggle button */
+        position: absolute;
+        right: 0px;
+        top: 30px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 1;
+    }
+}
+
+
+@media (min-width: 0px) and (max-width:425px) {
+
+    .navbar .logo img {
+        height: 40px;
+    }
+
+    .icon-box {
+        width: 85%;
+    }
+
+}
+
+/* 
+Media query for fixing modal box */
+@media (min-width: 475px) and (max-width:850px) {
+
+    .modal-box {
+        position: fixed;
+        margin-top: -30px;
+        margin-left: -40px;
+    }
+
+}
+
+@media (min-width: 0px) and (max-width:475px) {
+
+    .modal-box {
+        position: fixed;
+        margin-top: -60px;
+        margin-left: -80px;
+    }
+
+}
+
+/* Media Query for Screens Larger than 1921px */
+@media (min-width: 1921px) {
+
+    /* Increase font size for better readability */
+    body {
+        font-size: 18px;
+    }
+
+    /* Adjust sidebar width and padding */
+    .sidebar {
+        width: 80px;
+        padding: 25px;
+        font-size: 20px;
+    }
+
+    /* Increase spacing between nav items */
+    .nav-item {
+        margin-bottom: 1rem;
+    }
+
+    /* Adjust navbar size and padding */
+    .navbar {
+        height: 100px;
+        padding: 30px;
+    }
+
+    .navbar ul li a {
+        font-size: 18px;
+    }
+
+    .navbar .logo img {
+        height: 70px;
+    }
+
+    /* Adjust icon box width and icon sizes */
+    .icon-box {
+        width: 350px;
+    }
+
+    .icon-box img {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Increase modal size */
+    .modal-box {
+        width: 400px;
+        padding: 30px;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .modal-content h4 {
+        font-size: 22px;
+    }
+
+    .modal-content .role {
+        font-size: 16px;
+    }
+
+    /* Info items increase spacing */
+    .info-item {
+        font-size: 18px;
+    }
+
+    .install-app-btn {
+        font-size: 20px;
+        padding: 16px 32px;
+    }
+
+    /* Increase sidebar and aside dimensions */
+    .aside-nav {
+        padding-top: 6rem;
+    }
+
+    .aside-footer {
+        margin-bottom: 2rem;
+    }
+
+    .scrollable-nav {
+        padding: 2rem 0;
+    }
+
+    /* Increase the size of notification text */
+    .notification-text {
+        font-size: 19px;
+    }
+
+    /* Adjust modal overlay for full-screen effect */
+    .modal-overlay {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    /* Dropdown card styling */
+    .dropdown-card {
+        width: 400px;
+    }
+
+    /* Custom adjustments for button sizing */
+    .install-app-btn {
+        font-size: 20px;
+        padding: 16px 32px;
+    }
+
+    a.nav-link {
+        font-size: 37px;
+        padding: 10px;
+    }
+}

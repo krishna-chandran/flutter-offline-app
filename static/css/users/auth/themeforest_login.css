@@ -1,0 +1,319 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Inter';
+    background-color: #F2F6FF;
+}
+
+/* Navbar (Logo Section) */
+.navbar-left {
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 10px 25px;
+    gap: 20px;
+    width: 100%;
+    z-index: 10;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    max-width: 120px;
+    max-height: 70px;
+    width: auto;
+    height: auto;
+}
+
+/* Split Layout */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Left Section: Navbar and Form */
+.left-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    padding: 0px;
+}
+
+.form-container {
+    padding: 40px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #181C32;
+    margin-bottom: 20px;
+}
+
+/* Add space below each label */
+.label {
+    margin-bottom: 10px;
+    display: block;
+    /* Ensures the label is a block element */
+}
+
+/* To also add space for the error message */
+.input-group {
+    margin-bottom: 20px;
+    /* Adjust the space between each input group */
+}
+
+p {
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Input Fields */
+.input-group {
+    margin-bottom: 20px;
+    /* Gap between inputs */
+}
+
+.custom-input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Password Input Styles */
+.password-input {
+    position: relative;
+    width: 100%;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+/* Error Message Styles */
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.forgot-password {
+    color: #EA5E20;
+    text-decoration: none;
+    float: right;
+    font-size: 0.9rem;
+}
+
+/* Button Styles */
+.custom-login-btn {
+    background-color: #FFCEAD;
+    color: #EA5E20;
+    border: none;
+    padding: 15px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    /* Space above the button */
+}
+
+.custom-login-btn:hover {
+    background-color: #f2a97f;
+}
+
+/* Signup Link Styles */
+.custom-signup {
+    margin-top: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+
+.signup-link {
+    color: #EA5E20;
+    margin-left: 5px;
+    text-decoration: underline;
+}
+
+/* Right Section: Image */
+.right-section {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2F6FF;
+}
+
+.img-overlay {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-section {
+        width: 100%;
+    }
+
+    .right-section {
+        display: none;
+    }
+
+    .form-container {
+        max-width: 100%;
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+    .navbar-left {
+        padding: 10px;
+    }
+
+    .custom-signup {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .custom-login-btn {
+        padding: 12px;
+    }
+
+    .custom-input {
+        font-size: 14px;
+    }
+
+    .error-message {
+        font-size: 0.8rem;
+    }
+
+    .logo {
+        width: 80%;
+    }
+}
+
+/* Media Query for Very Large Screens (above 1920px) */
+@media (min-width: 1920px) {
+    h1 {
+        font-size: 4rem;
+        /* Significantly increase the font size for the main heading */
+    }
+
+    p {
+        font-size: 1.6rem;
+        /* Increase paragraph font size */
+    }
+
+    .custom-input {
+        padding: 20px;
+        /* Increase padding for input fields */
+        font-size: 20px;
+        /* Increase font size of input fields */
+        border-radius: 40px;
+        /* Make the input fields even more rounded */
+    }
+
+    /* Increase the size of the input placeholder */
+    .custom-input::placeholder {
+        font-size: 1.8rem;
+        /* Increase the font size of the placeholder text */
+    }
+
+    .custom-login-btn {
+        padding: 25px;
+        /* Increase button padding */
+        font-size: 22px;
+        /* Increase button font size */
+        border-radius: 40px;
+        /* Make the button more rounded */
+    }
+
+    .error-message {
+        font-size: 1.4rem;
+        /* Increase error message font size */
+    }
+
+    .forgot-password,
+    .signup-link,
+    .custom-signup span,
+    label {
+        font-size: 2rem;
+        /* Increase the font size of both links */
+    }
+
+    /* Increase the checkbox size and "Remember Me" label size */
+    input[type="checkbox"] {
+        transform: scale(1.5);
+        /* Make the checkbox larger */
+        margin-right: 10px;
+        /* Add space between the checkbox and label */
+    }
+
+    /* Center-align "Remember Me" checkbox and label */
+    .remember-me-container {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        /* Add space above the checkbox */
+    }
+
+    .navbar-left {
+        padding: 30px 50px;
+        /* Increase navbar padding */
+    }
+
+    .logo {
+        max-width: 300px;
+        max-height: 700px;
+        /* Increase logo size */
+    }
+
+    .form-container {
+        padding: 60px;
+        /* Increase the padding around the form container */
+    }
+
+    .input-group {
+        margin-bottom: 30px;
+        /* Increase space between input groups */
+    }
+
+    .password-toggle {
+        font-size: 2rem;
+        /* Increase the size of the password toggle icon */
+    }
+
+    .custom-signup {
+        margin-top: 30px;
+        /* Increase the space above the sign-up section */
+    }
+}

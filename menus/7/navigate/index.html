@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<!--begin::Head-->
+<head>
+<title>Jyanam LMS</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport"/>
+<link href="/static/assets/media/logos/favicon.ico" rel="shortcut icon"/>
+<link href="..\..\..\static\js\manifest.json" rel="manifest"/>
+<!--begin::Fonts(mandatory for all pages)-->
+<link href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" rel="stylesheet">
+<!--end::Fonts-->
+<link href="..\..\..\static\media\student_dashboard\jnyanam_brand_logo.svg" rel="icon" sizes="196x196" type="image/svg"/>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet"/>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<!--begin::Vendor Stylesheets(used for this page only)-->
+<!--end::Global Stylesheets Bundle-->
+<!--begin::Custom Stylesheets-->
+<link href="..\..\..\static\css\student_dashboard\themeforest_student_dashboard_base.css" rel="stylesheet" type="text/css">
+<!--end::Custom Stylesheets-->
+<script>// Frame-busting to prevent site from being loaded within a frame without permission (click-jacking) if (window.top != window.self) { window.top.location.replace(window.self.location.href); }</script>
+</link></link></head>
+<!--end::Head-->
+<!--begin::Body-->
+<body>
+<!--begin::Navbar-->
+<nav class="navbar">
+<div class="logo">
+<a href="..\..\../index.html">
+<img alt="Logo" src="..\..\..\static\media\student_dashboard\New_orange_design\Jnyanam with logo 1.svg"/>
+</a>
+</div>
+<button class="toggle-button" id="toggle-button">
+<img alt="Toggle Menu" src="..\..\..\static\media\navbar-icons\general.svg"/>
+</button>
+<ul id="icon-list" style="margin-left: auto;">
+<li>
+<a href="..\..\../index.html">
+<img alt="Notification Icon" src="..\..\..\static\media\student_dashboard\New_orange_design\home-new.svg" style="width: 25px; height: auto;"/>
+</a>
+</li>
+<li>
+<a href="#/index.html">
+<img alt="Notification Icon" src="..\..\..\static\media\student_dashboard\New_orange_design\notification-new.svg"/>
+</a>
+</li>
+<li>
+<a href="#/index.html">
+<img alt="Notification Icon" src="..\..\..\static\media\student_dashboard\New_orange_design\mic-new.svg"/>
+</a>
+</li>
+<li>
+<a href="#/index.html">
+<img alt="language Icon" class="language-icon" src="..\..\..\static\media\student_dashboard\New_orange_design\language-new.svg" style="width: 25px;"/>
+</a>
+</li>
+<li>
+<a href="#/index.html" id="icon-trigger">
+<img alt="Notification Icon" src="..\..\..\static\media\student_dashboard\New_orange_design\devices-new.svg" style="width: 25px; height: auto;"/>
+</a>
+<div class="dropdown-card" id="dropdown-card">
+<h2 class="dropdown-title">Install Jnyanam App</h2>
+<br/>
+<img alt="QR Code" class="dropdown-image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXIAAAFyAQAAAADAX2ykAAACeUlEQVR4nO2bTYrcMBCFv4oMs5RvkKPINwu5mX2UPkBAXjbYvCwkuX/IZBjwmPZQtTDd7W/xoFCp9FRt4jMx/fgUDs4777zzzjvv/Hu81eiAeXuwGszt3XCgHud35pMkKYNZDxAXbCDIBoIkSY/8V+txfmd+bis0aSlf9buv7+rCPlSP8/vw3dN3TX3GiIKU1+e3r6ff+f/HcwYNuoU0AtMQBPOxepz/Gj5KGgFSBmA1G8oDJC1H63F+V34ys9paATC/iZSDgLW0z8fqcX4nvtTnB5NyNU0/FzT1GMRHA/PV9Dv/QdTDT1yQcqvFKVMe0u2TJI2vpt/5D6LkraRRCxAX2nYcBARpjFI5Int+T8nbQFBxrUp/NXfYEK+mMV6LiVW6rxfV7/y7UetulO6aaOLyUJXx+nxyvrjOZvYrg3R5E1MfVFvnYlceqcf5ffj79Zu2TmssrvOyGdPVhPb1e1I+5dWYrEPjXC0tq3uy3TkdL6vf+ffitn5v10T3hlXpnxfff0/Npwxl/UqSWR9KuwXxav/gv1qP8zvzsxnEazMpW5GWLh2kHGTDoXqc35O3IS5U1/liVo5GI8DUA1O/uv98Tr75z3OPJa2mqQ+LldGcuHYQ/3SkvB6lx/l9+eo/J7VT0bgN5KStyUp+Pjor3/znFu1WIaiaWO03959PzN/PT0a11F7eqiddPY/j9Di/M7/NT1Z/4zYf2xovG47U4/xOPLeqXLfZHDancpuK9fvB78KbtbNQWcnbkI7X52/Bt1t9qD11uSl0f+Ok/HY+qtdEt6p8N7Uhuf98Ur7NX5UILbW0/NZxHc/vSXnz/3c777zzzjvv/OH8X9EEzFKpXTJ4AAAAAElFTkSuQmCC"/>
+<br/>
+<button class="install-app-btn">Install app</button>
+</div>
+</li>
+<li>
+<a class="profile-icon-trigger" href="#/index.html">
+<img alt="Profile Icon" class="profile-icon" src="..\..\..\static\media\student_dashboard\profile_icon.svg"/>
+</a>
+</li>
+</ul>
+</nav>
+<!--end::Navbar-->
+<!-- Modal Structure -->
+<div class="modal-overlay" id="profileModal">
+<div class="modal-box">
+<form action="/logout/" method="POST">
+<input name="csrfmiddlewaretoken" type="hidden" value="439K4xPhIeme5vnG6QhEjE6cPQszrISDI5vBUonNh7EEjQmyy9Ik75F0GGI1d6c1"/>
+<div class="edit-button">
+<a href="/accounts/login//index.html"></a>
+<button>Sign out</button>
+</div>
+<div class="modal-content">
+<img alt="default image" class="profile-image" src="..\..\..\static\media\avatars\300-1.jpg"/>
+<h4></h4>
+<p class="role"></p>
+<div class="info-container">
+<div class="info-item">
+<img alt="Email Icon" class="info-icon" src="..\..\..\static\media\student_dashboard\New_orange_design\communication.svg"/>
+<span></span>
+</div>
+<hr class="info-separator"/>
+<div class="info-item">
+<img alt="Password Icon" class="info-icon" src="..\..\..\static\media\student_dashboard\New_orange_design\users.svg"/>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+<!-- End::Modal Structure -->
+<div class="icon-box" id="icon-box">
+<!-- Home Section -->
+<a href="..\..\../index.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: inherit; width: 100%;">
+<div style="display: flex; align-items: center;">
+<img alt="Home Icon" src="..\..\..\static\media\student_dashboard\New_orange_design\home-new.svg" style="height: 25px; margin-right: 8px;"/>
+<h3 class="notification-text" style="margin: 0;">Home</h3>
+</div>
+</a>
+<div class="custom-line"></div>
+<!-- Notification Section -->
+<a href="#/index.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: inherit; width: 100%;">
+<div style="display: flex; align-items: center;">
+<img alt="Notification Icon" src="..\..\..\static\media\student_dashboard\New_orange_design\notification-new.svg" style="height: 30px; margin-right: 8px; padding-bottom: 4px;"/>
+<h3 class="notification-text">Notification</h3>
+</div>
+<img alt="Arrow Icon" src="..\..\..\static\media\student_dashboard\New_orange_design\arrows.svg" style="height: 20px;"/>
+</a>
+<div class="custom-line"></div>
+<!-- Microphone Section -->
+<a href="#/index.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: inherit; width: 100%;">
+<div style="display: flex; align-items: center;">
+<img alt="Microphone Icon" class="microphone-icon" src="..\..\..\static\media\student_dashboard\New_orange_design\mic-new.svg" style="height: 30px; margin-right: 8px; padding-bottom: 4px;"/>
+<h3 class="notification-text">Microphone</h3>
+</div>
+</a>
+<div class="custom-line"></div>
+<!-- Language Section -->
+<a href="#/index.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: inherit; width: 100%;">
+<div style="display: flex; align-items: center;">
+<img alt="Language Icon" class="language-icon" src="..\..\..\static\media\student_dashboard\New_orange_design\language-new.svg" style="height: 30px; margin-right: 8px; padding-bottom: 4px;"/>
+<h3 class="notification-text">Language</h3>
+</div>
+<img alt="Arrow Icon" src="..\..\..\static\media\student_dashboard\New_orange_design\arrows.svg" style="height: 20px;"/>
+</a>
+<div class="custom-line"></div>
+<!-- Install App Section -->
+<a href="#/index.html" id="install-app" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: inherit; width: 100%;">
+<div style="display: flex; align-items: center;">
+<img alt="Install App Icon" src="..\..\..\static\media\student_dashboard\New_orange_design\devices-new.svg" style="height: 25px; margin-right: 8px;"/>
+<h3 class="notification-text">Install app</h3>
+</div>
+<img alt="Arrow Icon" src="..\..\..\static\media\student_dashboard\New_orange_design\arrows.svg" style="height: 20px;"/>
+</a>
+<!-- Hidden card that will appear on click -->
+<div class="install-app-card" id="install-app-card">
+<!-- Back Option -->
+<button class="back-button" id="back-button">←</button>
+<h2>Install Jnyanam App</h2>
+<img alt="QR Code" class="dropdown-image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXIAAAFyAQAAAADAX2ykAAACeUlEQVR4nO2bTYrcMBCFv4oMs5RvkKPINwu5mX2UPkBAXjbYvCwkuX/IZBjwmPZQtTDd7W/xoFCp9FRt4jMx/fgUDs4777zzzjvv/Hu81eiAeXuwGszt3XCgHud35pMkKYNZDxAXbCDIBoIkSY/8V+txfmd+bis0aSlf9buv7+rCPlSP8/vw3dN3TX3GiIKU1+e3r6ff+f/HcwYNuoU0AtMQBPOxepz/Gj5KGgFSBmA1G8oDJC1H63F+V34ys9paATC/iZSDgLW0z8fqcX4nvtTnB5NyNU0/FzT1GMRHA/PV9Dv/QdTDT1yQcqvFKVMe0u2TJI2vpt/5D6LkraRRCxAX2nYcBARpjFI5Int+T8nbQFBxrUp/NXfYEK+mMV6LiVW6rxfV7/y7UetulO6aaOLyUJXx+nxyvrjOZvYrg3R5E1MfVFvnYlceqcf5ffj79Zu2TmssrvOyGdPVhPb1e1I+5dWYrEPjXC0tq3uy3TkdL6vf+ffitn5v10T3hlXpnxfff0/Npwxl/UqSWR9KuwXxav/gv1qP8zvzsxnEazMpW5GWLh2kHGTDoXqc35O3IS5U1/liVo5GI8DUA1O/uv98Tr75z3OPJa2mqQ+LldGcuHYQ/3SkvB6lx/l9+eo/J7VT0bgN5KStyUp+Pjor3/znFu1WIaiaWO03959PzN/PT0a11F7eqiddPY/j9Di/M7/NT1Z/4zYf2xovG47U4/xOPLeqXLfZHDancpuK9fvB78KbtbNQWcnbkI7X52/Bt1t9qD11uSl0f+Ok/HY+qtdEt6p8N7Uhuf98Ur7NX5UILbW0/NZxHc/vSXnz/3c777zzzjvv/OH8X9EEzFKpXTJ4AAAAAElFTkSuQmCC" style="width: 90%; height: 40%; margin: 0 auto; display: block;"/>
+<br/>
+<button class="install-app-btn">Install app</button>
+</div>
+<div class="custom-line"></div>
+<!-- Profile Section -->
+<!-- Profile Section with Modal Trigger -->
+<a class="profile-icon-trigger-1" href="#/index.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: inherit; width: 100%;">
+<div style="display: flex; align-items: center;">
+<img alt="Profile Icon" src="..\..\..\static\media\student_dashboard\profile_icon.svg" style="height: 30px; margin-right: 8px; padding-bottom: 3px; padding-top: 3px;"/>
+<h3 class="notification-text">Profile</h3>
+</div>
+<img alt="Arrow Icon" src="..\..\..\static\media\student_dashboard\New_orange_design\arrows.svg" style="height: 20px;"/>
+</a>
+</div>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="..\..\..\static\css\student_dashboard\themeforest_navigate_menu_detail.css" rel="stylesheet" type="text/css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<div class="menu-main-content">
+<div class="second-navigation-bar">
+<div class="menu-nav-left">
+<div class="back-button-1">
+<a class="back-button" href="..\..\../index.html">
+<img alt="Back" class="back-icon" src="..\..\..\static\media\student_dashboard\New_orange_design\backbutton.svg"/>
+</a>
+</div>
+<span class="nav-text">
+<!-- Breadcrumb navigation dynamically generated -->
+<a href="..\..\../index.html">Home</a> /
+                
+                <span class="span-whitespace">
+                    
+                    LKG
+                    
+                </span>
+</span>
+</div>
+<!-- Right side with current date -->
+<div class="menu-nav-right">
+<span class="nav-date" id="current-date"></span>
+</div>
+</div>
+<div class="card-container">
+</div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const dateElement = document.getElementById('current-date');
+        const today = new Date();
+
+        // Define month abbreviations
+        const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+        // Get day, month, and year
+        const day = today.getDate();
+        const month = monthNames[today.getMonth()];
+        const year = today.getFullYear();
+
+        // Set formatted date
+        dateElement.textContent = `${month} ${day}, ${year}`;
+    });
+</script>
+<script>
+        document.getElementById('toggle-button').addEventListener('click', function () {
+            const iconBox = document.getElementById('icon-box');
+            if (iconBox.style.display === 'none' || iconBox.style.display === '') {
+                iconBox.style.display = 'block';  // Show the icon box
+            } else {
+                iconBox.style.display = 'none';   // Hide the icon box
+            }
+        });
+        window.addEventListener('resize', function () {
+            const iconBox = document.getElementById('icon-box');
+            if (window.innerWidth > 600) {
+                iconBox.style.display = 'none';
+            }
+        });
+
+        document.getElementById('install-app').addEventListener('click', function () {
+            var card = document.getElementById('install-app-card');
+
+            // Toggle the visibility of the card
+            if (card.style.display === 'none' || card.style.display === '') {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        // script function for the back button ?//
+        document.getElementById('back-button').addEventListener('click', function () {
+            document.getElementById('install-app-card').style.display = 'none';
+        });
+        // script function for the back button ?//
+
+
+        // script function for the drop down //
+        document.getElementById('icon-trigger').addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent the default link behavior
+            const card = document.getElementById('dropdown-card');
+            // Toggle the card's visibility
+            if (card.style.display === 'none' || card.style.display === '') {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    </script>
+<script>
+        const modal = document.getElementById('profileModal');
+        const modalTrigger = document.querySelector('.profile-icon-trigger');
+
+        modalTrigger.addEventListener('click', (event) => {
+            event.preventDefault();
+            modal.style.display = 'block';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var profileTrigger = document.querySelector('.profile-icon-trigger-1');
+            var modal = document.getElementById('profileModal');
+            var modalOverlay = document.querySelector('.modal-overlay');
+
+            profileTrigger.addEventListener('click', function (event) {
+                event.preventDefault();
+                modal.style.display = 'block'; // Show the modal
+            });
+
+            // Close modal when clicking outside of modal-box
+            modalOverlay.addEventListener('click', function (event) {
+                if (event.target === modalOverlay) {
+                    modal.style.display = 'none'; // Hide the modal
+                }
+            });
+        });
+    </script>
+<!--begin::Scripts-->
+<script src="..\..\..\static\js\manifest.json"></script>
+<script src="..\..\..\static\js\serviceworker.js"></script>
+<script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/static/js/serviceworker.js')
+            .then(function(registration) {
+                console.log('Service Worker registered with scope:', registration.scope);
+            })                  
+            .catch(function(error) {
+                console.error('Service Worker registration failed:', error);
+            });
+        }
+        
+      </script>
+<!--end::Scripts-->
+<!--begin::Javascript-->
+<script>var hostUrl = "/static/";</script>
+<!--begin::Global Javascript Bundle(mandatory for all pages)-->
+<!--end::Global Javascript Bundle-->
+<!--begin::Vendors Javascript(used for this page only)-->
+<!--end::Vendors Javascript-->
+<!--begin::Custom Javascript(used for this page only)-->
+<!--end::Custom Javascript-->
+<!--end::Javascript-->
+</link></body>
+<!--end::Body-->
+</html>
